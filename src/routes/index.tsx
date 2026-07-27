@@ -23,30 +23,30 @@ const FaqSection = lazy(() => import("@/components/home/FaqSection").then(m => (
 
 const HERO_SLIDES = [
   {
-    headline: "Connecting People, Ideas, and Opportunities to Create Meaningful Change.",
-    description: "Join a movement where individuals and organizations come together to learn, collaborate, and make a lasting impact on our communities.",
-    primaryCta: { label: "Join The Movement", href: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard" },
+    headline: "Find Your Purpose. Make a Real Difference.",
+    description: "Join a welcoming community of volunteers, professionals, and NGOs working together to create lasting social impact. Your time and skills have the power to change lives.",
+    primaryCta: { label: "Become a Volunteer", href: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard" },
     image: images.hero.home[0],
     alt: "Volunteers and community members collaborating",
   },
   {
-    headline: "Recognizing Every Contribution You Make.",
-    description: "Your efforts, skills, and participation deserve recognition. Disha provides opportunities to learn, contribute, and celebrate meaningful achievements.",
-    primaryCta: { label: "Explore Our Impact", href: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard" },
+    headline: "Turn Your Passion Into Purposeful Action.",
+    description: "Whether you're a student, a working professional, or a retiree, Disha provides meaningful volunteering opportunities where your contribution truly matters.",
+    primaryCta: { label: "Start Making an Impact", href: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard" },
     image: images.gallery[0],
     alt: "A community celebrating meaningful achievements",
   },
   {
-    headline: "Initiatives Designed to Empower and Inspire.",
-    description: "Explore programs that support continuous learning, community development, and personal growth for everyone involved.",
-    primaryCta: { label: "Explore Initiatives", href: "/programs" },
+    headline: "Volunteer Opportunities That Match Your Skills.",
+    description: "From on-the-ground community service to skill-based digital volunteering, discover opportunities that fit your schedule and expertise.",
+    primaryCta: { label: "Explore Opportunities", href: "/programs" },
     image: images.gallery[2],
     alt: "Community members engaging in learning programs",
   },
   {
-    headline: "Building a Better Future Together.",
-    description: "Whether you are volunteering, mentoring, or leading, your actions create ripples of positive change that shape tomorrow.",
-    primaryCta: { label: "Get Involved", href: "/volunteer" },
+    headline: "Building a Stronger, More Connected India.",
+    description: "When you volunteer with Disha For India, you don't just give time—you become part of a community dedicated to shaping a better tomorrow.",
+    primaryCta: { label: "Join the Community", href: "/volunteer" },
     image: images.gallery[1],
     alt: "A diverse group of people celebrating success",
   }
@@ -178,7 +178,7 @@ function FullWidthHeroCarousel() {
                 <div className="mt-8 flex items-center gap-2 text-sm text-muted-foreground">
                   <Calendar className="h-4 w-4 text-primary" />
                   <span>
-                    <strong className="font-semibold text-foreground">Established in 2017</strong> — Connecting people to create impact.
+                    <strong className="font-semibold text-foreground">Established in 2017</strong> — Empowering volunteers to create real-world impact.
                   </span>
                 </div>
               </div>
@@ -287,9 +287,9 @@ function Home() {
         <section className="py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
-              eyebrow="Our Initiatives"
-              title="Pathways to success and impact"
-              description="From career mentorship to community service, we offer structured programs designed to empower."
+              eyebrow="Volunteer Opportunities"
+              title="Where your time creates real impact"
+              description="From hands-on community service to specialized support, explore structured volunteering programs designed to empower individuals and uplift communities."
             />
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {PROGRAMS.slice(0, 3).map((p, i) => (
@@ -300,7 +300,7 @@ function Home() {
             </div>
             <div className="mt-12 text-center">
               <Button asChild variant="outline" size="lg">
-                <Link to="/programs">View All Programs</Link>
+                <Link to="/programs">Browse Volunteer Programs</Link>
               </Button>
             </div>
           </div>
@@ -313,13 +313,13 @@ function Home() {
               <SectionHeading
                 eyebrow="Get Involved"
                 title="Your skills can change a life"
-                description="We rely on passionate individuals to mentor, teach, and guide our youth. Become a Disha volunteer today."
+                description="We rely on passionate individuals to support our communities. You don't need a background in social work—just a willingness to help."
               />
               <ul className="mt-8 space-y-4">
                 {[
-                  { icon: Gift, text: "Share your professional expertise" },
-                  { icon: Heart, text: "Mentor students in need of guidance" },
-                  { icon: Sparkles, text: "Lead community outreach programs" },
+                  { icon: Gift, text: "Use your professional skills for good" },
+                  { icon: Heart, text: "Participate in local community initiatives" },
+                  { icon: Sparkles, text: "Lead and support outreach programs" },
                 ].map((item, i) => (
                   <Reveal key={i} delay={i * 0.05} as="li" className="flex items-center gap-4">
                     <span className="grid h-10 w-10 place-items-center rounded-full bg-primary-soft text-primary">
@@ -331,7 +331,7 @@ function Home() {
               </ul>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Button asChild size="lg">
-                  <Link to="/volunteer">Browse Roles</Link>
+                  <Link to="/volunteer">Become a Volunteer</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/about">Learn More</Link>
@@ -360,9 +360,9 @@ function Home() {
         <section className="border-y border-border bg-card py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
-              eyebrow="Impact"
+              eyebrow="Community Impact"
               title="Stories of transformation"
-              description="Real stories from the youth and communities we've had the privilege to serve."
+              description="Real stories from the volunteers, NGOs, and communities who make our movement possible. See the difference a single connection can make."
             />
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {STORIES.slice(0, 3).map((s, i) => (
@@ -373,7 +373,7 @@ function Home() {
             </div>
             <div className="mt-12 text-center">
               <Button asChild variant="outline" size="lg">
-                <Link to="/success-stories">Read More Stories</Link>
+                <Link to="/success-stories">Read Community Stories</Link>
               </Button>
             </div>
           </div>
@@ -385,7 +385,7 @@ function Home() {
             <SectionHeading
               eyebrow="Knowledge Base"
               title="Insights, news & resources"
-              description="Stay updated with our latest thoughts on education, skilling, and youth empowerment."
+              description="Stay updated with our latest thoughts on community development, volunteering, and youth empowerment."
             />
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {featuredBlogs.map((b, i) => (
@@ -407,7 +407,7 @@ function Home() {
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
               title="Community Voices"
-              description="Hear from the volunteers, learners, mentors, and partners who make our movement possible."
+              description="Hear from the volunteers, partners, and community leaders who make our movement possible."
               align="center"
             />
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -454,15 +454,14 @@ function Home() {
                 <div className="relative mx-auto max-w-2xl">
                   <Compass className="mx-auto h-10 w-10 text-primary" />
                   <h2 className="mt-5 text-2xl md:text-3xl font-bold text-ink">
-                    Become Part of The Movement
+                    Ready to Make Your Mark?
                   </h2>
                   <p className="mt-5 text-muted-foreground">
-                    Join a growing community making a powerful contribution to society.
-                    Whether you want to mentor, learn, or collaborate—there's a place for you.
+                    Join thousands of changemakers who are already using their time, skills, and passion to build a stronger India. There is a place for you here.
                   </p>
                   <div className="mt-8 flex justify-center gap-4">
                     <Button asChild size="lg" className="rounded-full px-8">
-                      <a href="https://app-disha-for-indiaa.vercel.app/signup">Join The Movement</a>
+                      <a href="https://app-disha-for-indiaa.vercel.app/signup">Join as a Volunteer</a>
                     </Button>
                   </div>
                 </div>
