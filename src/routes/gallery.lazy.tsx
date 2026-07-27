@@ -36,8 +36,8 @@ function Gallery() {
         <div className="mx-auto max-w-7xl px-5">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 auto-rows-[250px] md:auto-rows-[300px]">
             {GALLERY.map((item, i) => (
-              <Reveal 
-                key={item.src} 
+              <Reveal
+                key={item.src}
                 delay={(i % 6) * 0.1}
                 className={cn(
                   "group relative overflow-hidden rounded-2xl bg-muted shadow-soft transition-all duration-300 hover:shadow-card cursor-pointer",
@@ -50,13 +50,13 @@ function Gallery() {
                   className="block w-full h-full text-left"
                   aria-label={`View ${item.caption}`}
                 >
-                  <OptimizedImage 
-                    src={item.src} 
-                    alt={item.caption} 
+                  <OptimizedImage
+                    src={item.src}
+                    alt={item.caption}
                     width={1200}
                     height={800}
-                    loading="lazy" 
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" 
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                   {/* Desktop Hover Caption */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 hidden md:flex flex-col justify-end p-6">
@@ -64,7 +64,7 @@ function Gallery() {
                       {item.caption}
                     </p>
                   </div>
-                  
+
                   {/* Mobile Caption (Always visible at bottom) */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4 md:hidden">
                     <p className="text-white text-sm font-medium line-clamp-2">

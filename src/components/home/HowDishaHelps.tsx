@@ -44,7 +44,7 @@ export function HowDishaHelps() {
           description="Helping people discover opportunities, build skills, collaborate, and create meaningful impact in their communities."
           align="center"
         />
-        
+
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon;

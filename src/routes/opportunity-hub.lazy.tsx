@@ -173,7 +173,7 @@ function OpportunityHub() {
           </p>
 
           {OPPORTUNITY_HUB.length === 0 ? (
-            <div 
+            <div
               className="rounded-[20px] border border-border px-6 py-10 lg:py-16 text-center"
               style={{
                 background: "linear-gradient(120deg, rgba(11, 76, 163, 0.18), rgba(255, 255, 255, 1))",

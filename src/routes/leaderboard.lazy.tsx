@@ -286,7 +286,7 @@ function LeaderboardPage() {
           ) : listResult?.data && listResult.data.length > 0 ? (
             <div className="mb-12">
               <h2 className="mb-6 font-display font-bold text-foreground">Top Contributors</h2>
-              
+
               {/* Desktop and Tablet grid */}
               <div className="hidden sm:grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {topThree.map((v, i) => (
@@ -567,7 +567,7 @@ function LeaderboardPage() {
                       <Button className="flex-1" variant="outline" onClick={handleResetFilters}>
                         Reset All
                       </Button>
-                      <Button className="flex-1" onClick={() => {}}>
+                      <Button className="flex-1" onClick={() => { }}>
                         Apply Filters
                       </Button>
                     </div>
@@ -583,7 +583,7 @@ function LeaderboardPage() {
             <div className="rounded-3xl border border-border bg-card p-6 shadow-soft overflow-hidden">
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="font-display font-bold text-lg text-foreground font-semibold">Leaderboard Ranking</h3>
-                
+
                 {/* Ranking Transparency Tooltip */}
                 <TooltipProvider>
                   <Tooltip>

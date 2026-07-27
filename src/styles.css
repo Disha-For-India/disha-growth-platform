@@ -44,6 +44,12 @@
 
   --color-ink: var(--ink);
 
+  --color-nav: #1E3A5F;
+  --color-nav-hover: #0056D6;
+  --color-dash-btn: #F4B400;
+  --color-dash-hover: #E69A00;
+  --color-nav-border: #E5E7EB;
+
   --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
@@ -62,12 +68,12 @@
   --background: #FFFFFF;
   --background-soft: #F8FAFC;
 
-  --foreground: #475569;
-  --heading: #0B1F3A;
+  --foreground: #5B6475;
+  --heading: #1E2F50;
 
 
   --card: #FFFFFF;
-  --card-foreground: #475569;
+  --card-foreground: #5B6475;
 
 
   --primary: #063B8C;
