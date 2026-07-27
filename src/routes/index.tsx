@@ -108,19 +108,19 @@ function FullWidthHeroCarousel() {
       <div className="absolute inset-0 bg-grid pointer-events-none opacity-50" />
 
       {/* Main Layout Container */}
-      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-12 pb-20 lg:pt-20 lg:pb-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-10 pb-16 lg:pt-16 lg:pb-24">
 
         {/* Invisible Placeholder to maintain Grid Height properly */}
-        <div className="grid items-center gap-12 lg:grid-cols-2 invisible pointer-events-none">
+        <div className="grid items-center gap-10 lg:grid-cols-2 invisible pointer-events-none">
           <div className="flex flex-col justify-center">
-            <div className="text-[38px] md:text-[52px] lg:text-[68px] font-bold leading-[1.1] tracking-tight text-[#1E2F50] mb-6 line-clamp-3">
+            <div className="text-[36px] md:text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-[#1E2F50] mb-5 line-clamp-3">
               {HERO_SLIDES[0].headline}
             </div>
-            <p className="text-[18px] lg:text-[22px] leading-[1.7] text-[#5B6475] mb-8 max-w-xl">
+            <p className="text-[17px] lg:text-[20px] leading-[1.7] text-[#5B6475] mb-7 max-w-xl">
               {HERO_SLIDES[0].description}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="h-14 px-8 text-base rounded-[14px]">Placeholder</Button>
+              <Button size="lg" className="h-12 px-7 text-base rounded-[14px]">Placeholder</Button>
             </div>
             <div className="mt-8 flex items-center gap-2 text-sm">
               <Calendar className="h-4 w-4" />
@@ -129,7 +129,7 @@ function FullWidthHeroCarousel() {
               </span>
             </div>
           </div>
-          <div className="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[450px]" />
+          <div className="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[380px]" />
         </div>
 
         {/* Absolute Slides with AnimatePresence */}
@@ -140,35 +140,35 @@ function FullWidthHeroCarousel() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="absolute inset-0 z-20 flex items-center pt-12 pb-20 lg:pt-20 lg:pb-32 px-5"
+            className="absolute inset-0 z-20 flex items-center pt-10 pb-16 lg:pt-16 lg:pb-24 px-5"
           >
-            <div className="mx-auto w-full max-w-7xl grid items-center gap-12 lg:grid-cols-2">
+            <div className="mx-auto w-full max-w-7xl grid items-center gap-10 lg:grid-cols-2">
 
               {/* Dynamic Heading Column */}
               <div className="flex flex-col justify-center pointer-events-auto">
-                <h1 className="text-[38px] md:text-[52px] lg:text-[68px] font-bold leading-[1.1] tracking-tight text-[#1E2F50] mb-6 line-clamp-3">
+                <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-[#1E2F50] mb-5 line-clamp-3">
                   {HERO_SLIDES[currentSlide].headline}
                 </h1>
-                <p className="text-[18px] lg:text-[22px] leading-[1.7] text-[#5B6475] mb-8 max-w-xl">
+                <p className="text-[17px] lg:text-[20px] leading-[1.7] text-[#5B6475] mb-7 max-w-xl">
                   {HERO_SLIDES[currentSlide].description}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   {HERO_SLIDES[currentSlide].primaryCta.href.startsWith("#") ? (
                     <Button
                       size="lg"
-                      className="w-full sm:w-auto h-14 px-8 text-base shadow-md rounded-[14px] bg-[#0B4DA2] text-white hover:bg-[#083C84] transition-colors border-none"
+                      className="w-full sm:w-auto h-12 px-7 text-base shadow-md rounded-[14px] bg-[#0B4DA2] text-white hover:bg-[#083C84] transition-colors border-none"
                       onClick={() => scrollToSection(HERO_SLIDES[currentSlide].primaryCta.href.substring(1))}
                     >
                       {HERO_SLIDES[currentSlide].primaryCta.label} <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   ) : HERO_SLIDES[currentSlide].primaryCta.href.startsWith("/") ? (
-                    <Button asChild size="lg" className="w-full sm:w-auto h-14 px-8 text-base shadow-md rounded-[14px] bg-[#0B4DA2] text-white hover:bg-[#083C84] transition-colors border-none">
+                    <Button asChild size="lg" className="w-full sm:w-auto h-12 px-7 text-base shadow-md rounded-[14px] bg-[#0B4DA2] text-white hover:bg-[#083C84] transition-colors border-none">
                       <Link to={HERO_SLIDES[currentSlide].primaryCta.href}>
                         {HERO_SLIDES[currentSlide].primaryCta.label} <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   ) : (
-                    <Button asChild size="lg" className="w-full sm:w-auto h-14 px-8 text-base shadow-md rounded-[14px] bg-[#0B4DA2] text-white hover:bg-[#083C84] transition-colors border-none">
+                    <Button asChild size="lg" className="w-full sm:w-auto h-12 px-7 text-base shadow-md rounded-[14px] bg-[#0B4DA2] text-white hover:bg-[#083C84] transition-colors border-none">
                       <a href={HERO_SLIDES[currentSlide].primaryCta.href}>
                         {HERO_SLIDES[currentSlide].primaryCta.label} <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
@@ -184,7 +184,7 @@ function FullWidthHeroCarousel() {
               </div>
 
               {/* Dynamic Image Column */}
-              <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[450px] overflow-hidden rounded-[2rem] border border-border shadow-card bg-muted/20 pointer-events-auto">
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[380px] overflow-hidden rounded-[2rem] border border-border shadow-card bg-muted/20 pointer-events-auto">
                 <OptimizedImage
                   src={HERO_SLIDES[currentSlide].image}
                   alt={HERO_SLIDES[currentSlide].alt}
