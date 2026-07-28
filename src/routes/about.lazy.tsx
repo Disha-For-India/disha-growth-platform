@@ -43,15 +43,15 @@ function About() {
               description="Empowering and steering the next generation."
             />
             <Reveal delay={0.1}>
-              <p className="mt-5 leading-relaxed text-muted-foreground">
+              <p className="mt-5 ">
                 In a fast-changing world, many young minds find themselves at a crossroads, feeling diverted or uncertain about their future path. At Disha For India, our purpose is to reach out to these young individuals, guide them with clarity, and help them align their skills with their life goals.
               </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
+              <p className="mt-4 ">
                 Through our structured student programs and emotional wellness coaching, we provide the direction and tools they need to live purposeful, successful, and impactful lives.
               </p>
               <div className="mt-6 rounded-2xl border border-border bg-secondary/40 p-5">
                 <Quote className="h-6 w-6 text-primary" />
-                <p className="mt-2 font-display text-lg font-semibold text-foreground">
+                <p className="mt-2 ">
                   "Guiding youth to discover their direction and unlock their true potential is our greatest commitment."
                 </p>
               </div>
@@ -73,8 +73,8 @@ function About() {
                   <span className={`grid h-12 w-12 place-items-center rounded-2xl ${c.accent}`}>
                     <c.icon className="h-6 w-6" />
                   </span>
-                  <h3 className="mt-4 text-xl font-bold text-foreground">{c.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+                  <h4 className="mt-4 text-xl font-bold text-heading">{c.title}</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">{c.text}</p>
                 </div>
               </Reveal>
             ))}
@@ -94,8 +94,8 @@ function About() {
             ].map((s, i) => (
               <Reveal key={s.label} delay={i * 0.06} className="flex flex-col items-center justify-center rounded-2xl border border-border bg-card p-5 text-center shadow-soft">
                 <s.icon className="mb-3 h-8 w-8 text-primary" />
-                <p className="text-sm font-bold text-foreground">{s.label}</p>
-                <p className="mt-1 text-xs text-muted-foreground">{s.text}</p>
+                <p >{s.label}</p>
+                <p className="mt-1 ">{s.text}</p>
               </Reveal>
             ))}
           </div>

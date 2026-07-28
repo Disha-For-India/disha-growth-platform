@@ -60,8 +60,8 @@ function Volunteer() {
                     <HandHeart className="h-5 w-5" />
                   </span>
                   <span className="mt-4 w-fit rounded-full bg-primary-soft px-2.5 py-0.5 text-xs font-semibold text-primary">{v.category}</span>
-                  <h3 className="mt-2 text-lg font-semibold text-foreground">{v.title}</h3>
-                  <p className="mt-2 flex-1 text-sm text-muted-foreground">{v.description}</p>
+                  <h4 className="mt-2 text-xl font-bold text-heading">{v.title}</h4>
+                  <p className="mt-2 flex-1 ">{v.description}</p>
                   <div className="mt-4 flex flex-wrap gap-3 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {v.commitment}</span>
                     <span className="flex items-center gap-1"><MapPin className="h-3.5 w-3.5" /> {v.location}</span>
@@ -80,8 +80,8 @@ function Volunteer() {
           </div>
 
           <Reveal className="mt-14 overflow-hidden rounded-3xl bg-gradient-hero p-8 text-center text-foreground">
-            <h3 className="font-bold text-ink">Make your powerful contribution</h3>
-            <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">Can't find the right role? Learn more about our mission and other ways to get involved.</p>
+            <h3 className="text-ink">Make your powerful contribution</h3>
+            <p className="mx-auto mt-2 max-w-md">Can't find the right role? Learn more about our mission and other ways to get involved.</p>
             <Button asChild className="mt-5"><a href="/about">Learn more about us</a></Button>
           </Reveal>
         </div>

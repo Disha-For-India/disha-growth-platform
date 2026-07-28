@@ -143,11 +143,11 @@ export function FaqSection() {
                       aria-expanded={isOpen}
                     >
                       <h3
-                        className={cn(
-                          "text-base font-semibold transition-colors",
-                          isOpen ? "text-primary" : "text-foreground"
-                        )}
-                      >
+ className={cn(
+ " transition-colors",
+ isOpen ? "text-primary" : ""
+ )}
+ >
                         {faq.question}
                       </h3>
                       <ChevronDown
@@ -167,7 +167,7 @@ export function FaqSection() {
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                         >
                           <div className="px-6 pb-5 pt-1">
-                            <p className="text-sm leading-relaxed text-muted-foreground">
+                            <p >
                               {faq.answer}
                             </p>
                           </div>
@@ -185,8 +185,8 @@ export function FaqSection() {
         <Reveal delay={0.2}>
           <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-3xl border border-border bg-card p-8 shadow-sm sm:flex-row sm:px-10">
             <div>
-              <h4 className="text-xl font-bold text-foreground">Want to know more?</h4>
-              <p className="mt-1 text-base text-muted-foreground">Reach out to our team any time</p>
+              <h4 >Want to know more?</h4>
+              <p className="mt-1 ">Reach out to our team any time</p>
             </div>
             <Button asChild size="lg" className="rounded-full px-8 shadow-md">
               <a href="mailto:inaggarwal76@gmail.com">Connect with us</a>

@@ -168,12 +168,10 @@
   h3,
   h4,
   h5 {
-
-
+    font-family: var(--font-display);
+    font-weight: 700;
     color: var(--color-heading);
-
     letter-spacing: -0.02em;
-
   }
 
 
@@ -181,7 +179,7 @@
   /* Responsive typography */
 
   h1 {
-    font-size: clamp(2.25rem, 5vw + 1rem, 4rem);
+    font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
     line-height: 1.1;
   }
 
@@ -208,7 +206,8 @@
   /* Body typography ONLY */
   p {
     font-size: clamp(0.9375rem, 1vw + 0.4rem, 1.125rem);
-    line-height: 1.6;
+    line-height: 1.7;
+    color: var(--color-foreground);
   }
 
 

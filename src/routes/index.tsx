@@ -116,7 +116,7 @@ function FullWidthHeroCarousel() {
             <div className="text-[36px] md:text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-[#1E2F50] mb-5 line-clamp-3">
               {HERO_SLIDES[0].headline}
             </div>
-            <p className="text-[17px] lg:text-[20px] leading-[1.7] text-[#5B6475] mb-7 max-w-xl">
+            <p className=" mb-7 max-w-xl">
               {HERO_SLIDES[0].description}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -146,10 +146,10 @@ function FullWidthHeroCarousel() {
 
               {/* Dynamic Heading Column */}
               <div className="flex flex-col justify-center pointer-events-auto">
-                <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-[#1E2F50] mb-5 line-clamp-3">
+                <h1 className=" mb-5 line-clamp-3">
                   {HERO_SLIDES[currentSlide].headline}
                 </h1>
-                <p className="text-[17px] lg:text-[20px] leading-[1.7] text-[#5B6475] mb-7 max-w-xl">
+                <p className=" mb-7 max-w-xl">
                   {HERO_SLIDES[currentSlide].description}
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -432,8 +432,8 @@ function Home() {
                         className="h-11 w-11 rounded-full object-cover"
                       />
                       <div>
-                        <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                        <p className="text-xs text-muted-foreground">{t.role}</p>
+                        <p >{t.name}</p>
+                        <p >{t.role}</p>
                       </div>
                     </figcaption>
                   </figure>
@@ -453,10 +453,10 @@ function Home() {
               <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-hero px-6 py-10 lg:py-16 text-center text-foreground sm:px-12 border border-border">
                 <div className="relative mx-auto max-w-2xl">
                   <Compass className="mx-auto h-10 w-10 text-primary" />
-                  <h2 className="mt-5 text-2xl md:text-3xl font-bold text-ink">
+                  <h2 className="mt-5 text-ink">
                     Ready to Make Your Mark?
                   </h2>
-                  <p className="mt-5 text-muted-foreground">
+                  <p className="mt-5 ">
                     Join thousands of changemakers who are already using their time, skills, and passion to build a stronger India. There is a place for you here.
                   </p>
                   <div className="mt-8 flex justify-center gap-4">

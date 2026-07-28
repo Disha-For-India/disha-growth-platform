@@ -15,13 +15,13 @@ export const Route = createFileRoute("/blogs/$slug")({
   },
   notFoundComponent: () => (
     <div className="mx-auto max-w-md px-5 py-32 text-center">
-      <h1 className="text-2xl font-bold">Article not found</h1>
+      <h1 >Article not found</h1>
       <Button asChild className="mt-6"><Link to="/blogs">Back to blog</Link></Button>
     </div>
   ),
   errorComponent: () => (
     <div className="mx-auto max-w-md px-5 py-32 text-center">
-      <h1 className="text-2xl font-bold">Something went wrong</h1>
+      <h1 >Something went wrong</h1>
       <Button asChild className="mt-6"><Link to="/blogs">Back to blog</Link></Button>
     </div>
   ),
@@ -82,7 +82,7 @@ function BlogPost() {
             <Link to="/blogs"><ArrowLeft className="mr-1 h-4 w-4" /> All articles</Link>
           </Button>
           <span className="rounded-full bg-primary-soft px-2.5 py-0.5 text-xs font-semibold text-primary">{blog.category}</span>
-          <h1 className="mt-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl">{blog.title}</h1>
+          <h1 className="mt-4 sm:">{blog.title}</h1>
           <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
             <span className="font-medium text-foreground">{blog.author}</span>
             <span>·</span>
@@ -101,7 +101,7 @@ function BlogPost() {
 
       <section className="py-10 lg:py-16">
         <div className="mx-auto max-w-7xl px-5">
-          <h2 className="mb-8 text-2xl font-bold text-foreground">Related reading</h2>
+          <h2 className="mb-8">Related reading</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((b: Blog, i: number) => (
               <Reveal key={b.slug} delay={i * 0.05}>

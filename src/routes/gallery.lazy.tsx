@@ -60,14 +60,14 @@ function Gallery() {
                   />
                   {/* Desktop Hover Caption */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 hidden md:flex flex-col justify-end p-6">
-                    <p className="text-white font-medium text-lg translate-y-4 transform transition-transform duration-300 group-hover:translate-y-0">
+                    <p className="text-white translate-y-4 transform transition-transform duration-300 group-hover:translate-y-0">
                       {item.caption}
                     </p>
                   </div>
 
                   {/* Mobile Caption (Always visible at bottom) */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4 md:hidden">
-                    <p className="text-white text-sm font-medium line-clamp-2">
+                    <p className="text-white line-clamp-2">
                       {item.caption}
                     </p>
                   </div>
@@ -84,7 +84,7 @@ function Gallery() {
             <div className="relative rounded-2xl overflow-hidden bg-black shadow-2xl">
               <OptimizedImage src={active.src} alt={active.caption} width={1200} height={800} className="max-h-[75vh] w-full object-contain" />
               <div className="bg-black/90 p-5 text-center border-t border-white/10">
-                <p className="text-white font-medium text-lg">{active.caption}</p>
+                <p className="text-white text-base md:text-lg">{active.caption}</p>
               </div>
               <button onClick={() => setActive(null)} aria-label="Close modal" className="absolute top-3 right-3 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white backdrop-blur hover:bg-white/20 transition-colors">
                 <X className="h-5 w-5" />

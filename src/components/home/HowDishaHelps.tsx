@@ -54,8 +54,8 @@ export function HowDishaHelps() {
                   <span className={`grid h-12 w-12 place-items-center rounded-2xl ${feature.accent}`}>
                     <Icon className="h-6 w-6" />
                   </span>
-                  <h3 className="mt-5 text-xl font-semibold text-foreground">{feature.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
+                  <h3 className="mt-5 ">{feature.title}</h3>
+                  <p className="mt-3 flex-1 ">{feature.description}</p>
                 </div>
               </Reveal>
             );

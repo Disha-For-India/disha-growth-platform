@@ -22,13 +22,13 @@ export const Route = createFileRoute("/programs/$slug")({
   },
   notFoundComponent: () => (
     <div className="mx-auto max-w-md px-5 py-32 text-center">
-      <h1 className="text-2xl font-bold">Program not found</h1>
+      <h1 >Program not found</h1>
       <Button asChild className="mt-6"><Link to="/programs">Back to programs</Link></Button>
     </div>
   ),
   errorComponent: () => (
     <div className="mx-auto max-w-md px-5 py-32 text-center">
-      <h1 className="text-2xl font-bold">Something went wrong</h1>
+      <h1 >Something went wrong</h1>
       <Button asChild className="mt-6"><Link to="/programs">Back to programs</Link></Button>
     </div>
   ),
@@ -75,7 +75,7 @@ function ProgramDetail() {
             <span className={`grid h-14 w-14 place-items-center rounded-2xl ${isGreen ? "bg-success-soft text-success" : "bg-primary-soft text-primary"}`}>
               <Icon className="h-7 w-7" />
             </span>
-            <h2 className="mt-5 text-2xl font-bold text-foreground">What we do</h2>
+            <h2 className="mt-5">What we do</h2>
             <ul className="mt-5 space-y-3">
               {program.highlights.map((h: string) => (
                 <li key={h} className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4 shadow-soft">
@@ -90,12 +90,12 @@ function ProgramDetail() {
 
           <Reveal delay={0.1}>
             <div className="rounded-3xl border border-border bg-secondary/40 p-6">
-              <h3 className="font-semibold text-foreground">Impact so far</h3>
+              <h4 className="text-xl font-bold text-heading">Impact so far</h4>
               <div className="mt-4 space-y-4">
                 {program.impact.map((text: string) => (
                   <div key={text} className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4 shadow-sm">
                     <span className="mt-2 flex h-2 w-2 shrink-0 rounded-full bg-primary" />
-                    <p className="text-sm font-medium leading-relaxed text-foreground">{text}</p>
+                    <p className="text-sm">{text}</p>
                   </div>
                 ))}
               </div>

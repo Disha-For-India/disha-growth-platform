@@ -58,7 +58,7 @@ function BlogIndex() {
                 </div>
                 <div className="flex flex-col justify-center p-8">
                   <span className="w-fit rounded-full bg-green-soft px-2.5 py-0.5 text-xs font-semibold text-green">{featured.category}</span>
-                  <h2 className="mt-3 text-2xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary sm:text-3xl">{featured.title}</h2>
+                  <h3 className="mt-3 text-2xl font-bold transition-colors group-hover:text-primary text-heading">{featured.title}</h3>
                   <p className="mt-3 text-muted-foreground">{featured.excerpt}</p>
                   <div className="mt-5 flex items-center gap-3 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {featured.readingTime} min read</span>

@@ -49,8 +49,8 @@ function VisionMission() {
                   <c.icon className="h-8 w-8" />
                 </span>
                 <div>
-                  <h2 className="text-2xl font-bold text-foreground">{c.label}</h2>
-                  <p className="mt-2 leading-relaxed text-muted-foreground">{c.text}</p>
+                  <h3 className="text-2xl font-bold text-heading">{c.label}</h3>
+                  <p className="mt-2 text-muted-foreground">{c.text}</p>
                 </div>
               </div>
             </Reveal>
@@ -68,7 +68,7 @@ function VisionMission() {
                   <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-primary-soft text-primary">
                     <v.icon className="h-6 w-6" />
                   </span>
-                  <h3 className="mt-4 font-semibold text-foreground">{v.title}</h3>
+                  <h4 className="mt-4 text-xl font-bold text-heading">{v.title}</h4>
                   <p className="mt-2 text-sm text-muted-foreground">{v.text}</p>
                 </div>
               </Reveal>

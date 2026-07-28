@@ -81,8 +81,8 @@ export function CareerChatbot() {
                 <Bot className="h-5 w-5 text-primary-foreground" />
               </span>
               <div>
-                <p className="text-sm font-semibold">Disha Assistant</p>
-                <p className="text-[11px] text-background/60">Career & growth guide</p>
+                <p >Disha Assistant</p>
+                <p className=" text-background/60">Career & growth guide</p>
               </div>
             </div>
 

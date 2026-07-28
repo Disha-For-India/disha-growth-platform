@@ -39,13 +39,13 @@ export function MarketplaceShowcase() {
 
 
             <Reveal delay={0.1}>
-              <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground mb-4">
+              <h2 className=" mb-4">
                 Recognizing <span className="text-primary">Every Contribution</span>
               </h2>
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="text-lg leading-relaxed text-muted-foreground mb-10 max-w-xl">
+              <p className=" mb-10 max-w-xl">
                 Your efforts, skills, and participation deserve recognition. Disha provides opportunities to learn, contribute, and celebrate meaningful achievements through <strong className="text-foreground">Community Impact Credits (Disha Coins)</strong>.
               </p>
             </Reveal>

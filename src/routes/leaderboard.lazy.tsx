@@ -199,10 +199,10 @@ function LeaderboardPage() {
             <span className="inline-flex items-center rounded-full bg-[#EAF3FF] px-3 py-1 text-xs font-semibold text-[#0056D6] mb-6">
               Volunteer Recognition
             </span>
-            <h1 className="mb-6 font-display text-4xl font-extrabold tracking-tight text-[#1E2F50] sm:text-5xl lg:text-6xl">
+            <h1 className="mb-6">
               Community <span className="text-[#0056D6]">Leaderboard</span>
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-[#5B6475] sm:text-xl">
+            <p className="mx-auto max-w-2xl">
               Celebrate the volunteers making a meaningful difference across our community.
             </p>
           </Reveal>
@@ -223,37 +223,37 @@ function LeaderboardPage() {
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0056D6]">
                     <Users className="h-5 w-5" />
                   </div>
-                  <p className="text-2xl font-bold text-[#1E2F50]">
+                  <p className="text-3xl font-bold text-heading">
                     <AnimatedCounter value={stats?.activeVolunteers || 0} suffix="+" />
                   </p>
-                  <p className="text-xs font-medium text-[#5B6475]">Volunteers</p>
+                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Volunteers</p>
                 </div>
                 <div className="flex flex-col items-center justify-center p-4 text-center border-l border-[#E5E7EB]/50">
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
                     <Clock className="h-5 w-5" />
                   </div>
-                  <p className="text-2xl font-bold text-[#1E2F50]">
+                  <p className="text-3xl font-bold text-heading">
                     <AnimatedCounter value={stats?.totalHours || 0} suffix="+" />
                   </p>
-                  <p className="text-xs font-medium text-[#5B6475]">Volunteer Hours</p>
+                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Volunteer Hours</p>
                 </div>
                 <div className="flex flex-col items-center justify-center p-4 text-center border-t md:border-t-0 md:border-l border-[#E5E7EB]/50">
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0056D6]">
                     <CheckCircle2 className="h-5 w-5" />
                   </div>
-                  <p className="text-2xl font-bold text-[#1E2F50]">
+                  <p className="text-3xl font-bold text-heading">
                     <AnimatedCounter value={stats?.programsCompleted || 0} suffix="+" />
                   </p>
-                  <p className="text-xs font-medium text-[#5B6475]">Opportunities Completed</p>
+                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Opportunities Completed</p>
                 </div>
                 <div className="flex flex-col items-center justify-center p-4 text-center border-t md:border-t-0 border-l border-[#E5E7EB]/50">
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
                     <Compass className="h-5 w-5" />
                   </div>
-                  <p className="text-2xl font-bold text-[#1E2F50]">
+                  <p className="text-3xl font-bold text-heading">
                     <AnimatedCounter value={stats?.livesImpacted || 0} suffix="+" />
                   </p>
-                  <p className="text-xs font-medium text-[#5B6475]">Communities Supported</p>
+                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Communities Supported</p>
                 </div>
               </>
             )}
@@ -274,7 +274,7 @@ function LeaderboardPage() {
             </div>
           ) : topThree.length >= 3 ? (
             <div className="mb-16">
-              <h2 className="mb-10 text-center font-display text-3xl font-bold text-[#1E2F50]">
+              <h2 className="mb-10 text-center">
                 Top Volunteers
               </h2>
 
@@ -370,8 +370,8 @@ function LeaderboardPage() {
             ) : !listResult?.data || listResult.data.length === 0 ? (
               <div className="py-16 text-center max-w-sm mx-auto">
                 <Compass className="mx-auto h-12 w-12 text-[#5B6475] mb-4 opacity-50" />
-                <h4 className="font-display font-bold text-lg text-[#1E2F50]">No volunteers found</h4>
-                <p className="mt-2 text-sm text-[#5B6475]">
+                <h4 className="text-xl font-bold text-heading">No volunteers found</h4>
+                <p className="mt-2 text-muted-foreground">
                   Try refining your search query or filters.
                 </p>
                 <Button variant="outline" className="mt-5 border-[#E5E7EB] text-[#0056D6] hover:bg-[#EAF3FF] hover:text-[#0056D6]" onClick={handleResetFilters}>
@@ -454,7 +454,7 @@ function LeaderboardPage() {
 
                 {listResult.totalPages > 1 && (
                   <div className="flex items-center justify-between border-t border-[#E5E7EB] bg-white px-6 py-4">
-                    <p className="text-sm text-[#5B6475]">
+                    <p className="text-sm text-muted-foreground">
                       Showing page <span className="font-medium text-[#1E2F50]">{listResult.currentPage}</span> of <span className="font-medium text-[#1E2F50]">{listResult.totalPages}</span>
                     </p>
                     <div className="flex gap-2">
@@ -492,10 +492,10 @@ function LeaderboardPage() {
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
               <Heart className="h-8 w-8" />
             </div>
-            <h2 className="mb-4 font-display text-3xl font-bold text-[#1E2F50]">
+            <h2 className="mb-4">
               Every Contribution Matters
             </h2>
-            <p className="mb-8 text-lg text-[#5B6475]">
+            <p className="mb-8 text-lg text-muted-foreground">
               Whether you've volunteered for one hour or one hundred, every act of service creates positive change. Thank you for helping build a stronger community.
             </p>
             <Button size="lg" className="bg-[#0056D6] hover:bg-[#0047B3] text-white rounded-full px-8 font-semibold shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all">
@@ -531,9 +531,9 @@ function TopVolunteerCard({ volunteer, rank, isFirst = false }: { volunteer: any
         isTop={true} 
       />
 
-      <h3 className={cn("font-display font-bold text-[#1E2F50] text-center", isFirst ? "text-xl" : "text-lg")}>
+      <h4 className={cn("text-xl font-bold text-heading text-center", isFirst ? "text-2xl" : "")}>
         {volunteer.name}
-      </h3>
+      </h4>
 
       <span className="mt-2 inline-flex items-center rounded-full bg-[#EAF3FF] px-2.5 py-1 text-[11px] font-semibold text-[#0056D6]">
         {getBadgeIcon(volunteer.badge)} <span className="ml-1.5">{volunteer.badge}</span>
@@ -541,12 +541,12 @@ function TopVolunteerCard({ volunteer, rank, isFirst = false }: { volunteer: any
 
       <div className="mt-6 w-full grid grid-cols-2 gap-4 border-t border-[#E5E7EB] pt-4">
         <div className="text-center">
-          <p className="text-[10px] uppercase tracking-wider text-[#5B6475] font-medium">Points</p>
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Points</p>
           <p className="mt-1 text-lg font-bold text-[#0056D6]">{volunteer.allTimeScore}</p>
         </div>
         <div className="text-center">
-          <p className="text-[10px] uppercase tracking-wider text-[#5B6475] font-medium">Hours</p>
-          <p className="mt-1 text-lg font-bold text-[#1E2F50]">{volunteer.hours}h</p>
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Hours</p>
+          <p className="mt-1 text-lg font-bold text-heading">{volunteer.hours}h</p>
         </div>
       </div>
     </motion.div>

@@ -113,8 +113,8 @@ function OpportunityHub() {
                     >
                       <Icon className="h-5 w-5" />
                     </span>
-                    <p className="mt-2 text-xl font-bold text-foreground">{counts[t]}</p>
-                    <p className="text-xs text-muted-foreground">{t}s</p>
+                    <p className="mt-2 text-2xl font-bold text-heading">{counts[t]}</p>
+                    <p className="text-sm font-medium text-muted-foreground">{t}s</p>
                   </div>
                 </Reveal>
               );
@@ -180,13 +180,13 @@ function OpportunityHub() {
                 boxShadow: "0 10px 30px rgba(11,76,163,0.12)"
               }}
             >
-              <p className="text-lg font-semibold text-foreground">No opportunities available at the moment.</p>
-              <p className="mt-2 text-sm text-muted-foreground">New opportunities will appear here soon.</p>
+              <p className="text-xl font-bold text-heading">No opportunities available at the moment.</p>
+              <p className="mt-2 text-muted-foreground">New opportunities will appear here soon.</p>
             </div>
           ) : filtered.length === 0 ? (
             <div className="rounded-3xl border border-dashed border-border bg-secondary/40 px-6 py-10 lg:py-16 text-center">
-              <p className="text-lg font-semibold text-foreground">No opportunities match your filters</p>
-              <p className="mt-2 text-sm text-muted-foreground">Try a different search term or reset your filters.</p>
+              <p className="text-xl font-bold text-heading">No opportunities match your filters</p>
+              <p className="mt-2 text-muted-foreground">Try a different search term or reset your filters.</p>
               <Button
                 variant="outline"
                 className="mt-5"
@@ -234,15 +234,14 @@ function OpportunityCard({ opportunity: o }: { opportunity: HubOpportunity }) {
         </span>
       </div>
 
-      <h3 className="mt-4 text-lg font-semibold leading-snug text-foreground">{o.title}</h3>
-      <p className="mt-1 text-sm font-medium text-muted-foreground">{o.org}</p>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{o.description}</p>
+      <h4 className="mt-4 text-xl font-bold text-heading">{o.title}</h4>
+      <p className="mt-1 text-sm font-medium text-primary">{o.org}</p>
+      <p className="mt-3 flex-1">{o.description}</p>
 
       {o.perk && (
-        <p
-          className="mt-4 rounded-xl px-4 py-2.5 text-xs font-semibold"
-          style={{ background: "linear-gradient(135deg, #DBEAFE, #BFDBFE)", color: "#063B8C" }}
-        >
+        <p className="mt-4 rounded-xl px-4 py-2.5 text-sm font-medium"
+ style={{ background: "linear-gradient(135deg, #DBEAFE, #BFDBFE)", color: "#063B8C" }}
+ >
           {o.perk}
         </p>
       )}

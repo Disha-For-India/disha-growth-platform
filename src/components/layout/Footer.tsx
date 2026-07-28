@@ -42,7 +42,7 @@ export function Footer() {
             <div className="[&_*]:!text-background">
               <Logo />
             </div>
-            <p className="mt-4 max-w-xs text-sm md:text-base leading-relaxed text-background/70">
+            <p className="mt-4 max-w-xs text-background/70">
               {ORG.tagline}. Education is the most powerful weapon which can be
               used to change the world.
             </p>
@@ -73,7 +73,7 @@ export function Footer() {
 
           {COLS.map((col) => (
             <div key={col.title}>
-              <h4 className="text-base md:text-lg font-semibold uppercase tracking-wider text-background">
+              <h4 className="text-lg font-bold uppercase text-background">
                 {col.title}
               </h4>
               <ul className="mt-4 space-y-3.5">

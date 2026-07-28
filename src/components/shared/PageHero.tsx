@@ -21,11 +21,11 @@ export function PageHero({
               {eyebrow}
             </span>
           )}
-          <h1 className="mt-4 max-w-3xl font-bold leading-[1.05] text-foreground">
+          <h1 className="mt-4 max-w-3xl">
             {title}
           </h1>
           {description && (
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-5 max-w-2xl">
               {description}
             </p>
           )}
