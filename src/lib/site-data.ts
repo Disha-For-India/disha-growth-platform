@@ -1,0 +1,642 @@
+import { images } from "@/lib/images";
+// Centralized content for the Disha For India platform.
+// Reuses real organizational identity, founder, gallery & event imagery
+// from dishaforindia.org, with professionally rewritten copy.
+
+export const ORG = {
+  name: "Disha For India",
+  legalName: "Disha For India Foundation & Educational Trust",
+  tagline: "WE EMPOWER | WE MAKE THE DIFFERENCE",
+  email: "inaggarwal76@gmail.com",
+  phone: "+91-9888877722",
+  mapUrl: "https://goo.gl/maps/MbtzonMSbep3VnDH8",
+  mission:
+    "Skill youth for employability and entrepreneurship — coaching young Indians to become job-ready and to build ventures of their own.",
+  vision:
+    "Improve the employability quotient and skill quotient of India's youth to build a healthy, happy and wealthy society.",
+  passion:
+    "Live by our thoughts and values every day, and ignite a spark in people to lead a beautiful, purposeful life.",
+};
+
+
+
+export type Program = {
+  slug: string;
+  title: string;
+  tagline: string;
+  description: string;
+  accent: "blue" | "green";
+  icon: string;
+  highlights: string[];
+  impact: string[];
+};
+
+export const PROGRAMS: Program[] = [
+  {
+    slug: "financial-literacy",
+    title: "Financial Literacy",
+    tagline: "Smart Money Skills",
+    accent: "green",
+    icon: "PiggyBank",
+    description:
+      "Learn budgeting, saving, investing, and responsible financial habits for a secure future.",
+    highlights: [
+      "Budgeting, saving and smart spending workshops",
+      "Banking, UPI and digital payment safety",
+      "Introduction to investing and compounding",
+      "Avoiding scams, loans and debt traps",
+    ],
+    impact: [
+      "Widespread community outreach",
+      "Consistent student engagement",
+      "Expanding educational partnerships",
+    ],
+  },
+  {
+    slug: "entrepreneurship",
+    title: "Entrepreneurship",
+    tagline: "Ideas Into Action",
+    accent: "blue",
+    icon: "Rocket",
+    description:
+      "Develop innovation, leadership, and entrepreneurial thinking to solve real-world challenges.",
+    highlights: [
+      "Idea validation and business model canvas",
+      "Pitching, storytelling and fundraising basics",
+      "Bootcamps with practising founders",
+      "Mentorship and incubation support",
+    ],
+    impact: [
+      "Frequent innovation bootcamps",
+      "New student ventures launched",
+      "Growing mentor network",
+    ],
+  },
+  {
+    slug: "wellness",
+    title: "Emotional Wellness",
+    tagline: "Healthy Mind Matters",
+    accent: "green",
+    icon: "HeartPulse",
+    description:
+      "Build confidence, resilience, and emotional well-being to thrive in academics and everyday life.",
+    highlights: [
+      "Stress and exam-anxiety management",
+      "Mindfulness and emotional regulation",
+      "Preventive health awareness camps",
+      "Confidence and self-belief coaching",
+    ],
+    impact: [
+      "Regular wellness camps",
+      "Large-scale participation",
+      "Expanding city presence",
+    ],
+  },
+  {
+    slug: "clean-green-india",
+    title: "Clean & Green India",
+    tagline: "Protect Our Planet",
+    accent: "green",
+    icon: "Leaf",
+    description:
+      "Take part in sustainability initiatives and create cleaner, greener communities through meaningful action.",
+    highlights: [
+      "Tree plantation and green-campus drives",
+      "Waste segregation and recycling awareness",
+      "Plastic-free and sustainability campaigns",
+      "Community clean-up volunteer programs",
+    ],
+    impact: [
+      "Extensive tree plantation drives",
+      "Continuous environmental campaigns",
+      "Dedicated volunteer force",
+    ],
+  },
+  {
+    slug: "ignite",
+    title: "Ignite — Education",
+    tagline: "Transforming learning",
+    accent: "blue",
+    icon: "Flame",
+    description:
+      "Igniting fire among academicians and students to transform education — empowering teachers, modernising classrooms and inspiring a love for learning.",
+    highlights: [
+      "Teacher transformation workshops",
+      "Career-awareness sessions in schools",
+      "Life-skills and 21st-century learning",
+      "Mentor-led student development",
+    ],
+    impact: [
+      "Empowered educators",
+      "Transformed learning environments",
+      "Massive student outreach",
+    ],
+  },
+  {
+    slug: "community-development",
+    title: "Community Development",
+    tagline: "Lifting communities together",
+    accent: "blue",
+    icon: "Users",
+    description:
+      "Grassroots initiatives that uplift under-served communities through skilling, awareness drives and access to opportunities and resources.",
+    highlights: [
+      "Skill development for livelihoods",
+      "Women empowerment programs",
+      "Digital literacy for all ages",
+      "Access to mentoring and resources",
+    ],
+    impact: [
+      "Supported local communities",
+      "Uplifted families",
+      "Diverse grassroots programs",
+    ],
+  },
+];
+
+
+
+
+
+
+
+export type GalleryItem = {
+  src: string;
+  caption: string;
+};
+
+export const GALLERY: GalleryItem[] = [
+  { src: "/optimized/gallery/award-ceremony.webp", caption: "Recognising excellence and impact in our community" },
+  { src: "/optimized/gallery/public-speaking.webp", caption: "Empowering youth through inspirational talks and events" },
+  { src: "/optimized/gallery/team-certificates.webp", caption: "Celebrating the hard work of our educators and volunteers" },
+  { src: "/optimized/gallery/youth-address.webp", caption: "Engaging thousands of students in national programs" },
+  { src: "/optimized/gallery/volunteer-group.webp", caption: "Our passionate volunteer team that drives change on the ground" },
+  { src: "/optimized/gallery/gallery-2-1.webp", caption: "Community outreach and volunteer activities" },
+  { src: "/optimized/gallery/gallery-2-2.webp", caption: "Disha For India foundation events" },
+  { src: "/optimized/gallery/gallery-2-3.webp", caption: "Empowering students through education and mentorship" },
+  { src: "/optimized/gallery/gallery-2-4.webp", caption: "Building strong communities across the region" },
+  { src: "/optimized/gallery/gallery-2-5.webp", caption: "Creating a positive impact on the ground" },
+  { src: "/optimized/gallery/disha-1.webp", caption: "Engaging with students and future leaders" },
+  { src: "/optimized/gallery/disha-2.webp", caption: "Hands-on workshops and skill development" },
+  { src: "/optimized/gallery/disha-3.webp", caption: "Guiding the youth towards a brighter future" },
+  { src: "/optimized/gallery/activity-1-2.webp", caption: "Transformational activities and group sessions" },
+  { src: "/optimized/gallery/activity-2-1.webp", caption: "Fostering teamwork and collaboration" },
+  { src: "/optimized/gallery/activity-3-1.webp", caption: "Disha For India program highlights" },
+];
+
+export type Testimonial = {
+  name: string;
+  role: string;
+  quote: string;
+  photo: string;
+};
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    name: "Jaswinder Singh",
+    role: "Community Volunteer",
+    quote:
+      "I've been associated with Disha for years. They are doing great work uplifting the lives of youth across the region.",
+    photo: images.placeholders.avatar("Jaswinder Singh"),
+  },
+  {
+    name: "Neeru Garg",
+    role: "Educator",
+    quote:
+      "I have worked with the team at Disha For India for many years. They are a passionate group whose energy genuinely transforms the youth they work with.",
+    photo: images.placeholders.avatar("Neha Sharma"),
+  },
+  {
+    name: "Mandeep Singh",
+    role: "Workshop Participant",
+    quote:
+      "I attended the 'Break the Limits' event and it completely changed my perception about life, work and what success really means.",
+    photo: images.placeholders.avatar("Mandeep Singh"),
+  },
+];
+
+export type StoryType = "Student" | "Volunteer" | "Community";
+export type Story = {
+  id: string;
+  name: string;
+  type: StoryType;
+  headline: string;
+  summary: string;
+  photo: string;
+};
+
+export const STORIES: Story[] = [
+  {
+    id: "priya",
+    name: "Priya Sharma",
+    type: "Student",
+    headline: "Finding Confidence Through Mentorship",
+    summary:
+      "With a Disha mentor, Priya discovered her strengths and built confidence to pursue her dreams.",
+    photo: images.stories[0],
+  },
+  {
+    id: "arjun",
+    name: "Arjun Mehta",
+    type: "Student",
+    headline: "Turning an Idea Into Opportunity",
+    summary:
+      "Through Disha's entrepreneurship program, Arjun transformed an idea into a thriving campus venture.",
+    photo: images.stories[1],
+  },
+  {
+    id: "kavita",
+    name: "Kavita Rao",
+    type: "Volunteer",
+    headline: "Sharing Knowledge, Changing Lives",
+    summary:
+      "Kavita volunteered her expertise to teach financial literacy, empowering students with practical life skills.",
+    photo: images.stories[2],
+  },
+  {
+    id: "rahul",
+    name: "Rahul Verma",
+    type: "Volunteer",
+    headline: "Guided first-generation founders",
+    summary:
+      "A seasoned product leader, Rahul volunteers with our entrepreneurship programs, guiding aspiring student founders from idea to launch.",
+    photo: images.stories[2],
+  },
+  {
+    id: "village",
+    name: "Rampur Village",
+    type: "Community",
+    headline: "A village goes plastic-free",
+    summary:
+      "Through the Clean & Green India drive, Rampur achieved waste segregation across households and planted trees.",
+    photo: images.stories[1],
+  },
+  {
+    id: "sana",
+    name: "Sana Khan",
+    type: "Student",
+    headline: "Secured a tech internship",
+    summary:
+      "Through our skill development bootcamps, Sana built her coding preparation and successfully landed her first software engineering internship.",
+    photo: images.stories[0],
+  },
+];
+
+export type DishaEvent = {
+  id: string;
+  title: string;
+  date: string;
+  status: "upcoming" | "completed";
+  location: string;
+  category: string;
+  description: string;
+  image: string;
+};
+
+export const EVENTS: DishaEvent[] = [
+  {
+    id: "career-guidance-workshop",
+    title: "Career Guidance Workshop",
+    date: "Coming Soon",
+    status: "upcoming",
+    location: "Online / In-person",
+    category: "Student Development",
+    description: "An interactive session helping students explore career opportunities, skills, and future pathways.",
+    image: images.events.workshop,
+  },
+  {
+    id: "volunteer-orientation",
+    title: "Volunteer Orientation Program",
+    date: "Coming Soon",
+    status: "upcoming",
+    location: "Various Locations",
+    category: "Volunteer Community",
+    description: "A training session for new volunteers to understand Disha For India's mission and impact.",
+    image: images.events.volunteer,
+  },
+  {
+    id: "scholarship-awareness",
+    title: "Scholarship Awareness Drive",
+    date: "Coming Soon",
+    status: "upcoming",
+    location: "Schools / Online",
+    category: "Education Support",
+    description: "A session guiding students about available scholarships and application processes.",
+    image: images.events.scholarship,
+  },
+  {
+    id: "break-the-limits",
+    title: "Break The Limits",
+    date: "2024-03-18",
+    status: "completed",
+    location: "Ludhiana, Punjab",
+    category: "Wellness",
+    description:
+      "A transformational event that helped participants shift their perception of success, life and personal potential.",
+    image: images.events.completed[0],
+  },
+  {
+    id: "green-drive-2024",
+    title: "Clean & Green Community Drive",
+    date: "2024-06-05",
+    status: "completed",
+    location: "Rampur",
+    category: "Environment",
+    description:
+      "A community plantation and waste-segregation drive that planted trees on World Environment Day.",
+    image: images.events.completed[1],
+  },
+  {
+    id: "wellness-camp-2024",
+    title: "Emotional Wellness Camp",
+    date: "2024-11-12",
+    status: "completed",
+    location: "Jalandhar",
+    category: "Wellness",
+    description:
+      "A preventive-healthcare and emotional-wellness camp serving students with stress-management and mindfulness sessions.",
+    image: images.events.completed[2],
+  },
+];
+
+export type BlogCategory =
+  | "Financial Literacy"
+  | "Entrepreneurship"
+  | "Education"
+  | "Wellness"
+  | "Career Growth"
+  | "Environment";
+
+export type Blog = {
+  slug: string;
+  title: string;
+  category: BlogCategory;
+  excerpt: string;
+  readingTime: number;
+  date: string;
+  author: string;
+  cover: string;
+  content: string[];
+  featured?: boolean;
+};
+
+export const BLOGS: Blog[] = [
+  {
+    slug: "money-skills-every-student-needs",
+    title: "Building Financial Confidence for a Better Future",
+    category: "Financial Literacy",
+    excerpt:
+      "Budgeting, saving, and understanding compounding early can change your entire financial future. Here's where to start.",
+    readingTime: 6,
+    date: "2025-05-18",
+    author: "Disha Editorial",
+    cover: images.blogs[0],
+    featured: true,
+    content: [
+      "Money is a skill, not a mystery. The earlier you learn to manage it, the more freedom you build for your future. Yet most students leave school without ever learning how to budget, save or invest.",
+      "Start with budgeting. Track where your money goes for a single month. You'll be surprised how small daily expenses add up. A simple split of needs, wants and savings — needs, wants and savings — is enough to begin.",
+      "Next, understand compounding. Even small amounts saved consistently grow dramatically over time. The student who starts young always beats the one who starts later.",
+      "Learn digital-payment safety, avoid debt traps, and build an emergency cushion. These habits, started young, compound into lifelong financial confidence.",
+    ],
+  },
+  {
+    slug: "validate-your-startup-idea",
+    title: "How Small Ideas Can Create Big Change",
+    category: "Entrepreneurship",
+    excerpt:
+      "You don't need funding to start — you need a real problem and real customers. A practical validation playbook.",
+    readingTime: 7,
+    date: "2025-04-29",
+    author: "Disha Editorial",
+    cover: images.blogs[1],
+    featured: true,
+    content: [
+      "Every great venture begins with a problem worth solving. Before writing a single line of code or spending a rupee, talk to the people who actually face the problem.",
+      "Use the business model canvas to map who your customer is, what value you offer and how you'll reach them. Keep it on one page.",
+      "Build the smallest possible version of your idea — an MVP — and put it in front of real users. Their feedback is worth more than any plan.",
+      "Validation isn't about being right. It's about learning fast and cheap. The students in our bootcamps who embrace this mindset move from idea to launch in months.",
+    ],
+  },
+  {
+    slug: "choosing-the-right-career-path",
+    title: "Finding Purpose Beyond Your Career Choice",
+    category: "Career Growth",
+    excerpt:
+      "There's no single 'right' career — there's the right next step. Use interests, strengths and exposure to decide.",
+    readingTime: 5,
+    date: "2025-04-10",
+    author: "Disha Editorial",
+    cover: images.blogs[2],
+    featured: true,
+    content: [
+      "The pressure after Class school is real, but choosing a career isn't a life sentence — it's a direction you can refine.",
+      "Start with your interests and natural strengths. Then get exposure: talk to people in fields you're curious about and try short projects.",
+      "Building a visual roadmap for your goals makes the path forward feel concrete instead of overwhelming.",
+      "Remember: clarity comes from action, not endless thinking. Take one small step toward a field that excites you.",
+    ],
+  },
+  {
+    slug: "managing-exam-stress",
+    title: "Managing Exam Stress: A Wellness Toolkit for Students",
+    category: "Wellness",
+    excerpt:
+      "Stress is normal, but it shouldn't run your life. Simple, science-backed techniques to stay calm and focused.",
+    readingTime: 4,
+    date: "2025-03-22",
+    author: "Disha Editorial",
+    cover: images.blogs[3],
+    content: [
+      "A little stress sharpens focus, but chronic stress drains your energy and clouds your thinking. The goal is balance, not zero pressure.",
+      "Breathe before you study. Two minutes of slow breathing calms the nervous system and improves concentration.",
+      "Break work into small, finishable chunks. Progress builds confidence, and confidence reduces anxiety.",
+      "Sleep, movement and connection are not luxuries — they are performance tools. Protect them, especially during exams.",
+    ],
+  },
+  {
+    slug: "why-teachers-are-changemakers",
+    title: "Why Teachers Are India's Most Underrated Changemakers",
+    category: "Education",
+    excerpt:
+      "Empowering educators multiplies impact across thousands of students. Inside our Ignite teacher-transformation work.",
+    readingTime: 6,
+    date: "2025-02-15",
+    author: "Disha Editorial",
+    cover: images.blogs[4],
+    content: [
+      "One inspired teacher touches hundreds of students every year. Invest in teachers, and you multiply impact across an entire generation.",
+      "Our Ignite program equips academicians with modern, student-centred methods and the wellbeing tools to sustain their energy.",
+      "When teachers feel seen and supported, classrooms transform — curiosity replaces fear, and learning becomes joyful.",
+      "Education is the most powerful weapon to change the world, and teachers are the ones who wield it daily.",
+    ],
+  },
+  {
+    slug: "youth-led-climate-action",
+    title: "Youth-Led Climate Action: Small Drives, Big Change",
+    category: "Environment",
+    excerpt:
+      "From tree plantation to plastic-free campaigns, young Indians are leading the way to a greener future.",
+    readingTime: 5,
+    date: "2025-01-28",
+    author: "Disha Editorial",
+    cover: images.blogs[5],
+    content: [
+      "Climate action doesn't always start with policy — often it starts with a group of students deciding to act in their own community.",
+      "Through Clean & Green India, youth volunteers have planted over 15,000 trees and brought waste segregation to dozens of communities.",
+      "Small, consistent drives create visible change and, more importantly, a culture of responsibility.",
+      "The planet doesn't need a few perfect environmentalists — it needs millions of people doing imperfect, consistent good.",
+    ],
+  },
+];
+
+
+
+export type Volunteer = {
+  id: string;
+  title: string;
+  category: "Teaching" | "Design" | "Technology" | "Marketing" | "Community Outreach";
+  commitment: string;
+  location: string;
+  description: string;
+};
+
+export const VOLUNTEER_ROLES: Volunteer[] = [
+  {
+    id: "v1",
+    title: "Financial Literacy Facilitator",
+    category: "Teaching",
+    commitment: "Part-time",
+    location: "Punjab · On-site",
+    description: "Lead money-skills workshops in partner schools and community centres.",
+  },
+  {
+    id: "v2",
+    title: "Career Mentor (Online)",
+    category: "Teaching",
+    commitment: "Part-time",
+    location: "Remote",
+    description: "Guide students one-on-one through career decisions and applications.",
+  },
+  {
+    id: "v3",
+    title: "Brand & Graphic Designer",
+    category: "Design",
+    commitment: "Flexible",
+    location: "Remote",
+    description: "Design posters, social media and program collateral for campaigns.",
+  },
+  {
+    id: "v4",
+    title: "Web & App Volunteer",
+    category: "Technology",
+    commitment: "Flexible",
+    location: "Remote",
+    description: "Help build and maintain the Disha digital platform and tools.",
+  },
+  {
+    id: "v5",
+    title: "Social Media Coordinator",
+    category: "Marketing",
+    commitment: "Part-time",
+    location: "Remote",
+    description: "Plan content, grow reach and tell our impact stories online.",
+  },
+  {
+    id: "v6",
+    title: "Community Drive Volunteer",
+    category: "Community Outreach",
+    commitment: "Event-based",
+    location: "Punjab · On-site",
+    description: "Support plantation drives, wellness camps and community events.",
+  },
+  {
+    id: "v7",
+    title: "Entrepreneurship Bootcamp Coach",
+    category: "Teaching",
+    commitment: "Event-based",
+    location: "Hybrid",
+    description: "Coach young founders through validation, MVPs and pitching.",
+  },
+  {
+    id: "v8",
+    title: "Content Writer",
+    category: "Marketing",
+    commitment: "Flexible",
+    location: "Remote",
+    description: "Write blogs, newsletters and resource guides for students.",
+  },
+];
+
+
+
+export type Opportunity = {
+  id: string;
+  title: string;
+  type: "Internship" | "Workshop" | "Competition" | "Hackathon" | "Bootcamp";
+  org: string;
+  mode: string;
+  deadline: string;
+};
+
+export const OPPORTUNITIES: Opportunity[] = [
+  { id: "o1", title: "Summer Data Science Internship", type: "Internship", org: "TechBridge", mode: "Remote", deadline: "2025-08-30" },
+  { id: "o2", title: "Young Founders Bootcamp", type: "Bootcamp", org: "Disha For India", mode: "Chandigarh", deadline: "2025-09-14" },
+  { id: "o3", title: "National Coding Hackathon", type: "Hackathon", org: "CodeIndia", mode: "Online", deadline: "2025-09-05" },
+  { id: "o4", title: "Financial Literacy Workshop", type: "Workshop", org: "Disha For India", mode: "Amritsar", deadline: "2025-10-05" },
+  { id: "o5", title: "Design Thinking Challenge", type: "Competition", org: "DesignForGood", mode: "Online", deadline: "2025-09-20" },
+  { id: "o6", title: "Social Impact Internship", type: "Internship", org: "Disha For India", mode: "Hybrid", deadline: "2025-08-25" },
+  { id: "o7", title: "Climate Action Hackathon", type: "Hackathon", org: "GreenFuture", mode: "Online", deadline: "2025-10-12" },
+  { id: "o8", title: "Communication Skills Workshop", type: "Workshop", org: "SpeakUp", mode: "Online", deadline: "2025-09-28" },
+];
+
+export type OpportunityHubType =
+  | "Internship"
+  | "Workshop"
+  | "Competition"
+  | "Hackathon";
+
+export type HubOpportunity = {
+  id: string;
+  title: string;
+  type: OpportunityHubType;
+  org: string;
+  description: string;
+  mode: "Remote" | "Online" | "Hybrid" | "In-person";
+  location: string;
+  deadline: string;
+  perk?: string;
+};
+
+export const OPPORTUNITY_HUB: HubOpportunity[] = [];
+
+
+export type Mentor = {
+  name: string;
+  photo: string;
+  expertise: string;
+  experience: string;
+  tags: string[];
+};
+
+export const MENTORS: Mentor[] = [
+  {
+    name: "Aman Gupta",
+    photo: images.placeholders.avatar("Jaswinder Singh"),
+    expertise: "Product Management & Startups",
+    experience: "Extensive experience",
+    tags: ["Entrepreneurship", "Technology"],
+  },
+  {
+    name: "Neha Sharma",
+    photo: images.placeholders.avatar("Neha Sharma"),
+    expertise: "Financial Planning & Wealth",
+    experience: "Solid experience",
+    tags: ["Financial Literacy"],
+  },
+  {
+    name: "Vikram Singh",
+    photo: images.placeholders.avatar("Mandeep Singh"),
+    expertise: "UI/UX & Brand Identity",
+    experience: "Deep expertise",
+    tags: ["Design", "Career Growth"],
+  },
+];
