@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
 import { Reveal } from "@/components/shared/Reveal";
-import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
+
 import { OptimizedImage } from "@/components/shared/OptimizedImage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -207,60 +207,8 @@ function LeaderboardPage() {
         </div>
       </section>
 
-      {/* 5. COMMUNITY IMPACT */}
-      <section className="relative z-10 -mt-10 lg:-mt-12 px-5">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-4 rounded-2xl bg-white p-3 lg:p-4 shadow-card border border-[#E5E7EB]">
-            {statsLoading ? (
-              Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="h-24 animate-pulse rounded-xl bg-slate-50" />
-              ))
-            ) : (
-              <>
-                <div className="flex flex-col items-center justify-center py-3 px-2 lg:p-4 text-center">
-                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0056D6]">
-                    <Users className="h-5 w-5" />
-                  </div>
-                  <p className="text-3xl font-bold text-heading">
-                    <AnimatedCounter value={stats?.activeVolunteers || 0} suffix="+" />
-                  </p>
-                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Volunteers</p>
-                </div>
-                <div className="flex flex-col items-center justify-center py-3 px-2 lg:p-4 text-center border-l border-[#E5E7EB]/50">
-                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
-                    <Clock className="h-5 w-5" />
-                  </div>
-                  <p className="text-3xl font-bold text-heading">
-                    <AnimatedCounter value={stats?.totalHours || 0} suffix="+" />
-                  </p>
-                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Volunteer Hours</p>
-                </div>
-                <div className="flex flex-col items-center justify-center py-3 px-2 lg:p-4 text-center border-t md:border-t-0 md:border-l border-[#E5E7EB]/50">
-                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0056D6]">
-                    <CheckCircle2 className="h-5 w-5" />
-                  </div>
-                  <p className="text-3xl font-bold text-heading">
-                    <AnimatedCounter value={stats?.programsCompleted || 0} suffix="+" />
-                  </p>
-                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Opportunities Completed</p>
-                </div>
-                <div className="flex flex-col items-center justify-center py-3 px-2 lg:p-4 text-center border-t md:border-t-0 border-l border-[#E5E7EB]/50">
-                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
-                    <Compass className="h-5 w-5" />
-                  </div>
-                  <p className="text-3xl font-bold text-heading">
-                    <AnimatedCounter value={stats?.livesImpacted || 0} suffix="+" />
-                  </p>
-                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Communities Supported</p>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* MAIN CONTENT SECTION */}
-      <section className="pt-8 pb-12 lg:pt-12 lg:pb-20">
+      <section className="pt-12 pb-12 lg:pt-16 lg:pb-20">
         <div className="mx-auto max-w-7xl px-5">
 
           {/* 2. TOP 3 VOLUNTEERS */}
