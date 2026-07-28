@@ -94,7 +94,6 @@ function OpportunityHub() {
         <meta property="og:url" content="https://dishaforindia.org/opportunity-hub" />
       </Helmet>
       <PageHero
-        eyebrow="Opportunity Hub"
         title="Your next big break starts here"
         description="Internships, workshops, competitions and hackathons — curated for India's students. Search, filter and apply."
       />

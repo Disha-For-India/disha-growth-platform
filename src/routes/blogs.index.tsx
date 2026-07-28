@@ -42,7 +42,6 @@ function BlogIndex() {
         <meta property="og:url" content="https://dishaforindia.org/blogs" />
       </Helmet>
       <PageHero
-        eyebrow="The Disha Blog"
         title="Ideas to help you grow"
         description="Practical, honest writing on money, careers, entrepreneurship, wellness and building a better India."
       />

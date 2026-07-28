@@ -68,7 +68,7 @@ function ProgramDetail() {
           `}
         </script>
       </Helmet>
-      <PageHero eyebrow={program.tagline} title={program.title} description={program.description} />
+      <PageHero title={program.title} description={program.description} />
       <section className="py-10 lg:py-16">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-[1.4fr_1fr]">
           <Reveal>

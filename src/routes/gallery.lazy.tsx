@@ -28,7 +28,6 @@ function Gallery() {
         <meta property="og:url" content="https://dishaforindia.org/gallery" />
       </Helmet>
       <PageHero
-        eyebrow="Media Gallery"
         title="Moments from our journey"
         description="A glimpse into the workshops, drives, events and smiles that make up the Disha For India story."
       />

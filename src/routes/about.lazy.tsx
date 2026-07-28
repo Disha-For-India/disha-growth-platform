@@ -26,7 +26,6 @@ function About() {
         <meta property="og:url" content="https://dishaforindia.org/about" />
       </Helmet>
       <PageHero
-        eyebrow="About Us"
         title="We empower. We make the difference."
         description="Disha For India Foundation & Educational Trust is a youth-first movement skilling India's next generation for employability, entrepreneurship and a life of purpose."
       />
@@ -38,7 +37,6 @@ function About() {
           </Reveal>
           <div>
             <SectionHeading
-              eyebrow="Our Focus"
               title="Guiding India's youth towards their true path"
               description="Empowering and steering the next generation."
             />

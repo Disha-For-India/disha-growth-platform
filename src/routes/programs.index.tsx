@@ -51,7 +51,6 @@ function Programs() {
         <meta property="og:url" content="https://dishaforindia.org/programs" />
       </Helmet>
       <PageHero
-        eyebrow="Our Programs"
         title="Programs that build employable, conscious citizens"
         description="Each program is designed to raise the employability and skill quotient of India's youth — turning potential into opportunity."
       />

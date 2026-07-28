@@ -35,7 +35,6 @@ function Events() {
         <meta property="og:url" content="https://dishaforindia.org/events" />
       </Helmet>
       <PageHero
-        eyebrow="Events"
         title="Where learning meets community"
         description="Discover what's coming up and revisit the moments that shaped our journey."
       />

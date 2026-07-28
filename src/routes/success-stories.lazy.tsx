@@ -29,7 +29,6 @@ function SuccessStories() {
         <meta property="og:url" content="https://dishaforindia.org/success-stories" />
       </Helmet>
       <PageHero
-        eyebrow="Success Stories"
         title="Every life we touch tells a story"
         description="Filter by the people at the heart of our work — students, volunteers and entire communities."
       />

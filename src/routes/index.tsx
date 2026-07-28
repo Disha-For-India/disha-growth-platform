@@ -287,7 +287,6 @@ function Home() {
         <section className="py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
-              eyebrow="Volunteer Opportunities"
               title="Where your time creates real impact"
               description="From hands-on community service to specialized support, explore structured volunteering programs designed to empower individuals and uplift communities."
             />
@@ -311,7 +310,6 @@ function Home() {
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2">
             <div>
               <SectionHeading
-                eyebrow="Get Involved"
                 title="Your skills can change a life"
                 description="We rely on passionate individuals to support our communities. You don't need a background in social work—just a willingness to help."
               />
@@ -360,7 +358,6 @@ function Home() {
         <section className="border-y border-border bg-card py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
-              eyebrow="Community Impact"
               title="Stories of transformation"
               description="Real stories from the volunteers, NGOs, and communities who make our movement possible. See the difference a single connection can make."
             />
@@ -383,7 +380,6 @@ function Home() {
         <section className="py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
-              eyebrow="Knowledge Base"
               title="Insights, news & resources"
               description="Stay updated with our latest thoughts on community development, volunteering, and youth empowerment."
             />

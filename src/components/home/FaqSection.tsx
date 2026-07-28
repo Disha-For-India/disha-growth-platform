@@ -142,14 +142,14 @@ export function FaqSection() {
                       className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                       aria-expanded={isOpen}
                     >
-                      <h3
- className={cn(
- " transition-colors",
- isOpen ? "text-primary" : ""
- )}
- >
+                      <h4
+                        className={cn(
+                          "text-base md:text-lg font-semibold transition-colors",
+                          isOpen ? "text-primary" : "text-heading"
+                        )}
+                      >
                         {faq.question}
-                      </h3>
+                      </h4>
                       <ChevronDown
                         className={cn(
                           "h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300",
@@ -167,7 +167,7 @@ export function FaqSection() {
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                         >
                           <div className="px-6 pb-5 pt-1">
-                            <p >
+                            <p className="text-sm md:text-base text-muted-foreground">
                               {faq.answer}
                             </p>
                           </div>
@@ -185,8 +185,8 @@ export function FaqSection() {
         <Reveal delay={0.2}>
           <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-3xl border border-border bg-card p-8 shadow-sm sm:flex-row sm:px-10">
             <div>
-              <h4 >Want to know more?</h4>
-              <p className="mt-1 ">Reach out to our team any time</p>
+              <h4 className="text-xl font-bold text-heading">Want to know more?</h4>
+              <p className="mt-1 text-sm md:text-base text-muted-foreground">Reach out to our team any time</p>
             </div>
             <Button asChild size="lg" className="rounded-full px-8 shadow-md">
               <a href="mailto:inaggarwal76@gmail.com">Connect with us</a>

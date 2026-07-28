@@ -31,7 +31,6 @@ function VisionMission() {
         <meta property="og:url" content="https://dishaforindia.org/vision-mission" />
       </Helmet>
       <PageHero
-        eyebrow="Vision · Mission · Passion"
         title="Our vision, mission & passion"
         description="The compass that guides everything we do at Disha For India Foundation & Educational Trust."
       />
@@ -60,7 +59,7 @@ function VisionMission() {
 
       <section className="border-y border-border bg-gradient-section py-12 lg:py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <SectionHeading eyebrow="Core Values" title="The principles we stand on" align="center" />
+          <SectionHeading title="The principles we stand on" align="center" />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {VALUES.map((v, i) => (
               <Reveal key={v.title} delay={i * 0.06}>

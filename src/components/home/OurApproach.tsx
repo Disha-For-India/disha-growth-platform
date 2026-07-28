@@ -48,8 +48,8 @@ export function OurApproach() {
                     <div className="flex h-24 w-24 items-center justify-center rounded-full bg-background border-4 border-muted/50 shadow-sm mb-6 z-10">
                       <Icon className="h-10 w-10 text-primary" />
                     </div>
-                    <h3 className=" mb-3">{step.title}</h3>
-                    <p >{step.description}</p>
+                    <h4 className="text-xl font-bold mb-3">{step.title}</h4>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
                   </div>
                 </Reveal>
               );

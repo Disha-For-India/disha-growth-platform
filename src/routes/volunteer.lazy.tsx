@@ -31,7 +31,6 @@ function Volunteer() {
         <meta property="og:url" content="https://dishaforindia.org/volunteer" />
       </Helmet>
       <PageHero
-        eyebrow="Volunteer Hub"
         title="Invest your time. Uplift a life."
         description="Whether you can give two hours a week or a full day at an event, there's a meaningful way for you to contribute to India's youth."
       />

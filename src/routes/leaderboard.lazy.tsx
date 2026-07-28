@@ -196,11 +196,9 @@ function LeaderboardPage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,#F8FAFC,rgba(0,86,214,0.03))] pointer-events-none" />
         <div className="relative mx-auto max-w-4xl px-5 text-center">
           <Reveal>
-            <span className="inline-flex items-center rounded-full bg-[#EAF3FF] px-3 py-1 text-xs font-semibold text-[#0056D6] mb-6">
-              Volunteer Recognition
-            </span>
+
             <h1 className="mb-6">
-              Community <span className="text-[#0056D6]">Leaderboard</span>
+              Community Leaderboard
             </h1>
             <p className="mx-auto max-w-2xl">
               Celebrate the volunteers making a meaningful difference across our community.
