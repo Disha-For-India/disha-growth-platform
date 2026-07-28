@@ -24,6 +24,7 @@ import {
   ChevronRight,
   Sparkles,
   BookOpen,
+  Heart,
 } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
 import { Reveal } from "@/components/shared/Reveal";
@@ -182,90 +183,78 @@ function LeaderboardPage() {
   };
 
   return (
-    <main>
+    <main className="min-h-screen bg-background">
       <Helmet>
-        <title>Contributor Leaderboard</title>
+        <title>Community Leaderboard | Disha For India</title>
         <meta name="description" content="Recognizing the top volunteers and contributors making meaningful changes across communities with Disha For India." />
         <link rel="canonical" href="https://dishaforindia.org/leaderboard" />
-        <meta property="og:title" content="Leaderboard | Disha For India" />
-        <meta property="og:description" content="Recognizing the top volunteers and contributors making meaningful changes across communities with Disha For India." />
-        <meta property="og:url" content="https://dishaforindia.org/leaderboard" />
       </Helmet>
-      <PageHero
-        eyebrow="Contributor Board"
-        title="Contribution Leaderboard"
-        description="Recognizing volunteers making meaningful contributions across communities."
-      />
 
-      {/* STATS OVERVIEW */}
-      <section className="py-12 border-b border-border bg-muted/10">
-        <div className="mx-auto max-w-7xl px-5">
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
+      {/* 1. PAGE HEADER */}
+      <section className="relative overflow-hidden bg-white pt-20 pb-16 lg:pt-28 lg:pb-24 border-b border-[#E5E7EB]">
+        {/* Subtle decorative background gradient */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,#F8FAFC,rgba(0,86,214,0.03))] pointer-events-none" />
+        <div className="relative mx-auto max-w-4xl px-5 text-center">
+          <Reveal>
+            <span className="inline-flex items-center rounded-full bg-[#EAF3FF] px-3 py-1 text-xs font-semibold text-[#0056D6] mb-6">
+              Volunteer Recognition
+            </span>
+            <h1 className="mb-6 font-display text-4xl font-extrabold tracking-tight text-[#1E2F50] sm:text-5xl lg:text-6xl">
+              Community <span className="text-[#0056D6]">Leaderboard</span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg text-[#5B6475] sm:text-xl">
+              Celebrate the volunteers making a meaningful difference across our community.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 5. COMMUNITY IMPACT */}
+      <section className="relative z-10 -mt-8 px-5">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 rounded-2xl bg-white p-4 shadow-card border border-[#E5E7EB]">
             {statsLoading ? (
-              Array.from({ length: 5 }).map((_, i) => (
-                <div key={i} className="h-28 animate-pulse rounded-3xl border border-border bg-card p-5" />
+              Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="h-24 animate-pulse rounded-xl bg-slate-50" />
               ))
-            ) : statsError || !stats ? (
-              <div className="col-span-5 rounded-2xl border border-destructive bg-destructive/5 p-4 text-center text-sm text-destructive">
-                Error loading contributor metrics. Please try again.
-              </div>
             ) : (
               <>
-                <Reveal>
-                  <div className="rounded-3xl border border-border bg-card p-5 shadow-soft">
-                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-orange-soft text-primary">
-                      <Users className="h-5 w-5" />
-                    </span>
-                    <p className="mt-3 text-2xl font-extrabold text-foreground">
-                      <AnimatedCounter value={stats.activeVolunteers} suffix="+" />
-                    </p>
-                    <p className="text-xs text-muted-foreground">Active Contributors</p>
+                <div className="flex flex-col items-center justify-center p-4 text-center">
+                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0056D6]">
+                    <Users className="h-5 w-5" />
                   </div>
-                </Reveal>
-                <Reveal delay={0.05}>
-                  <div className="rounded-3xl border border-border bg-card p-5 shadow-soft">
-                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-green-soft text-green">
-                      <Clock className="h-5 w-5" />
-                    </span>
-                    <p className="mt-3 text-2xl font-extrabold text-foreground">
-                      <AnimatedCounter value={stats.totalHours} suffix="+" />
-                    </p>
-                    <p className="text-xs text-muted-foreground">Total Hours Contributed</p>
+                  <p className="text-2xl font-bold text-[#1E2F50]">
+                    <AnimatedCounter value={stats?.activeVolunteers || 0} suffix="+" />
+                  </p>
+                  <p className="text-xs font-medium text-[#5B6475]">Volunteers</p>
+                </div>
+                <div className="flex flex-col items-center justify-center p-4 text-center border-l border-[#E5E7EB]/50">
+                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
+                    <Clock className="h-5 w-5" />
                   </div>
-                </Reveal>
-                <Reveal delay={0.1}>
-                  <div className="rounded-3xl border border-border bg-card p-5 shadow-soft">
-                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-orange-soft text-primary">
-                      <CheckCircle2 className="h-5 w-5" />
-                    </span>
-                    <p className="mt-3 text-2xl font-extrabold text-foreground">
-                      <AnimatedCounter value={stats.programsCompleted} suffix="+" />
-                    </p>
-                    <p className="text-xs text-muted-foreground">Contributions Made</p>
+                  <p className="text-2xl font-bold text-[#1E2F50]">
+                    <AnimatedCounter value={stats?.totalHours || 0} suffix="+" />
+                  </p>
+                  <p className="text-xs font-medium text-[#5B6475]">Volunteer Hours</p>
+                </div>
+                <div className="flex flex-col items-center justify-center p-4 text-center border-t md:border-t-0 md:border-l border-[#E5E7EB]/50">
+                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0056D6]">
+                    <CheckCircle2 className="h-5 w-5" />
                   </div>
-                </Reveal>
-                <Reveal delay={0.15}>
-                  <div className="rounded-3xl border border-border bg-card p-5 shadow-soft">
-                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-green-soft text-green">
-                      <Compass className="h-5 w-5" />
-                    </span>
-                    <p className="mt-3 text-2xl font-extrabold text-foreground">
-                      <AnimatedCounter value={stats.communityImpactScore} suffix="%" />
-                    </p>
-                    <p className="text-xs text-muted-foreground">Engagement Rate</p>
+                  <p className="text-2xl font-bold text-[#1E2F50]">
+                    <AnimatedCounter value={stats?.programsCompleted || 0} suffix="+" />
+                  </p>
+                  <p className="text-xs font-medium text-[#5B6475]">Opportunities Completed</p>
+                </div>
+                <div className="flex flex-col items-center justify-center p-4 text-center border-t md:border-t-0 border-l border-[#E5E7EB]/50">
+                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
+                    <Compass className="h-5 w-5" />
                   </div>
-                </Reveal>
-                <Reveal delay={0.2}>
-                  <div className="rounded-3xl border border-border bg-card p-5 shadow-soft">
-                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-orange-soft text-primary">
-                      <Sparkles className="h-5 w-5" />
-                    </span>
-                    <p className="mt-3 text-2xl font-extrabold text-foreground">
-                      <AnimatedCounter value={stats.livesImpacted} suffix="+" />
-                    </p>
-                    <p className="text-xs text-muted-foreground">Lives Positively Impacted</p>
-                  </div>
-                </Reveal>
+                  <p className="text-2xl font-bold text-[#1E2F50]">
+                    <AnimatedCounter value={stats?.livesImpacted || 0} suffix="+" />
+                  </p>
+                  <p className="text-xs font-medium text-[#5B6475]">Communities Supported</p>
+                </div>
               </>
             )}
           </div>
@@ -273,513 +262,300 @@ function LeaderboardPage() {
       </section>
 
       {/* MAIN CONTENT SECTION */}
-      <section className="py-10 lg:py-16">
+      <section className="py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5">
 
-          {/* TOP CONTRIBUTORS CARDS */}
+          {/* 2. TOP 3 VOLUNTEERS */}
           {listLoading ? (
-            <div className="mb-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="h-80 animate-pulse rounded-3xl border border-border bg-card" />
-              ))}
+            <div className="mb-16 grid gap-6 sm:grid-cols-3 items-end">
+              <div className="h-64 animate-pulse rounded-xl bg-slate-50 order-2 sm:order-1" />
+              <div className="h-80 animate-pulse rounded-xl bg-slate-50 order-1 sm:order-2" />
+              <div className="h-64 animate-pulse rounded-xl bg-slate-50 order-3 sm:order-3" />
             </div>
-          ) : listResult?.data && listResult.data.length > 0 ? (
-            <div className="mb-12">
-              <h2 className="mb-6 font-display font-bold text-foreground">Top Contributors</h2>
+          ) : topThree.length >= 3 ? (
+            <div className="mb-16">
+              <h2 className="mb-10 text-center font-display text-3xl font-bold text-[#1E2F50]">
+                Top Volunteers
+              </h2>
 
-              {/* Desktop and Tablet grid */}
-              <div className="hidden sm:grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {topThree.map((v, i) => (
-                  <Reveal key={v.id} delay={i * 0.08}>
-                    <motion.div
-                      whileHover={{ y: -5, scale: 1.01 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      className="relative flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-soft hover:shadow-card"
-                    >
-                      <div className="absolute right-6 top-6 rounded-full bg-orange-soft px-3 py-1 text-xs font-bold text-primary">
-                        Rank #{v.rank}
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <OptimizedImage src={v.photo} alt={v.name} width={56} height={56} className="h-14 w-14 rounded-full object-cover border border-border" />
-                        <div>
-                          <h3 className="font-display font-bold text-foreground">{v.name}</h3>
-                          <span className="rounded-full bg-green-soft px-2 py-0.5 text-[10px] font-semibold text-green">
-                            {v.badge}
-                          </span>
-                        </div>
-                      </div>
-
-                      <p className="mt-4 text-sm font-medium text-foreground italic">"{v.tagline}"</p>
-
-                      <div className="mt-6 grid grid-cols-3 gap-2 border-t border-border pt-4 text-center">
-                        <div>
-                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Score</p>
-                          <p className="mt-0.5 text-base font-bold text-foreground">
-                            {timeframe === "monthly" ? v.monthlyScore : timeframe === "yearly" ? v.yearlyScore : v.allTimeScore}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Programs</p>
-                          <p className="mt-0.5 text-base font-bold text-foreground">{v.programsCompleted}</p>
-                        </div>
-                        <div>
-                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Hours</p>
-                          <p className="mt-0.5 text-base font-bold text-foreground">{v.hours}h</p>
-                        </div>
-                      </div>
-
-                      <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
-                        <span>Streak: <span className="font-semibold text-primary">{v.streak} months</span></span>
-                        <span className="flex items-center gap-1">
-                          {v.trend === "rising" && <span className="flex items-center text-green"><TrendingUp className="mr-0.5 h-3.5 w-3.5" /> Rising</span>}
-                          {v.trend === "stable" && <span className="flex items-center text-foreground/50"><Minus className="mr-0.5 h-3.5 w-3.5" /> Stable</span>}
-                          {v.trend === "falling" && <span className="flex items-center text-red-500"><TrendingDown className="mr-0.5 h-3.5 w-3.5" /> Slow</span>}
-                        </span>
-                      </div>
-                    </motion.div>
-                  </Reveal>
-                ))}
-              </div>
-
-              {/* Mobile swipeable carousel */}
-              <div className="flex sm:hidden overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-none">
-                {topThree.map((v) => (
-                  <div key={v.id} className="min-w-[85vw] snap-center rounded-3xl border border-border bg-card p-6 shadow-soft flex flex-col">
-                    <div className="flex justify-between items-start">
-                      <div className="flex items-center gap-3">
-                        <OptimizedImage src={v.photo} alt={v.name} width={48} height={48} className="h-12 w-12 rounded-full object-cover border border-border" />
-                        <div>
-                          <h3 className="font-display font-bold text-foreground">{v.name}</h3>
-                          <span className="rounded-full bg-green-soft px-2 py-0.5 text-[9px] font-semibold text-green">
-                            {v.badge}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="rounded-full bg-orange-soft px-2.5 py-0.5 text-xs font-bold text-primary">
-                        Rank #{v.rank}
-                      </div>
-                    </div>
-                    <p className="mt-4 text-xs font-medium text-foreground italic">"{v.tagline}"</p>
-                    <div className="mt-6 grid grid-cols-3 gap-2 border-t border-border pt-4 text-center">
-                      <div>
-                        <p className="text-[9px] uppercase tracking-wider text-muted-foreground">Score</p>
-                        <p className="mt-0.5 text-sm font-bold text-foreground">
-                          {timeframe === "monthly" ? v.monthlyScore : timeframe === "yearly" ? v.yearlyScore : v.allTimeScore}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-[9px] uppercase tracking-wider text-muted-foreground">Programs</p>
-                        <p className="mt-0.5 text-sm font-bold text-foreground">{v.programsCompleted}</p>
-                      </div>
-                      <div>
-                        <p className="text-[9px] uppercase tracking-wider text-muted-foreground">Hours</p>
-                        <p className="mt-0.5 text-sm font-bold text-foreground">{v.hours}h</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div className="flex flex-col sm:flex-row items-center sm:items-end justify-center gap-6 sm:gap-4 lg:gap-8">
+                {/* 2nd Place */}
+                <TopVolunteerCard volunteer={topThree[1]} rank={2} />
+                {/* 1st Place */}
+                <TopVolunteerCard volunteer={topThree[0]} rank={1} isFirst />
+                {/* 3rd Place */}
+                <TopVolunteerCard volunteer={topThree[2]} rank={3} />
               </div>
             </div>
           ) : null}
 
-          {/* FILTER BAR - Desktop: inline, Mobile: bottom sheet trigger */}
-          <div className="mb-6 flex flex-col gap-4 border-b border-border pb-6 lg:flex-row lg:items-center lg:justify-between">
-            {/* Timeframe Toggles */}
-            <div className="flex gap-1.5 rounded-full border border-border bg-card p-1 self-start">
-              {[
-                { id: "monthly", label: "Monthly" },
-                { id: "yearly", label: "Yearly" },
-                { id: "alltime", label: "All Time" },
-              ].map((tf) => (
-                <button
-                  key={tf.id}
-                  onClick={() => {
-                    setTimeframe(tf.id as any);
-                    setPage(1);
-                  }}
-                  className={cn(
-                    "rounded-full px-4 py-1.5 text-xs font-medium transition-all cursor-pointer",
-                    timeframe === tf.id ? "bg-primary text-primary-foreground shadow-soft" : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  {tf.label}
-                </button>
-              ))}
-            </div>
+          {/* 4. FILTERS */}
+          <div className="mb-8 rounded-xl bg-white p-4 shadow-soft border border-[#E5E7EB]">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
 
-            {/* Desktop Filters (Horizontal bar) */}
-            <div className="hidden lg:flex flex-wrap items-center gap-3">
-              <div className="relative w-64">
-                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <Input
-                  placeholder="Search contributor..."
-                  value={search}
-                  onChange={(e) => {
-                    setSearch(e.target.value);
-                    setPage(1);
-                  }}
-                  className="pl-9 h-9"
-                />
+              {/* Timeframe Toggles */}
+              <div className="flex w-full lg:w-auto gap-2 rounded-lg bg-slate-50 p-1 border border-[#E5E7EB]">
+                {[
+                  { id: "alltime", label: "All Time" },
+                  { id: "monthly", label: "This Month" },
+                  { id: "yearly", label: "This Year" },
+                ].map((tf) => (
+                  <button
+                    key={tf.id}
+                    onClick={() => {
+                      setTimeframe(tf.id as any);
+                      setPage(1);
+                    }}
+                    className={cn(
+                      "flex-1 lg:flex-none rounded-md px-4 py-2 text-sm font-medium transition-all",
+                      timeframe === tf.id
+                        ? "bg-white text-[#0056D6] shadow-sm ring-1 ring-black/5"
+                        : "text-[#5B6475] hover:text-[#1E2F50]"
+                    )}
+                  >
+                    {tf.label}
+                  </button>
+                ))}
               </div>
 
-              {/* State Filter */}
-              <Select value={selectedState} onValueChange={(val) => { setSelectedState(val); setPage(1); }}>
-                <SelectTrigger className="w-[140px] h-9">
-                  <SelectValue placeholder="State" />
-                </SelectTrigger>
-                <SelectContent>
-                  {states.map((st) => (
-                    <SelectItem key={st} value={st}>{st === "All" ? "All States" : st}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              {/* Advanced Filters */}
+              <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
+                <div className="relative flex-1 lg:w-56">
+                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#5B6475]" />
+                  <Input
+                    placeholder="Search Volunteer..."
+                    value={search}
+                    onChange={(e) => {
+                      setSearch(e.target.value);
+                      setPage(1);
+                    }}
+                    className="pl-9 h-10 rounded-lg border-[#E5E7EB] bg-white text-[#1E2F50] placeholder:text-[#5B6475]/60 focus-visible:ring-[#0056D6]"
+                  />
+                </div>
 
-              {/* City Filter */}
-              <Select value={selectedCity} onValueChange={(val) => { setSelectedCity(val); setPage(1); }}>
-                <SelectTrigger className="w-[140px] h-9">
-                  <SelectValue placeholder="City" />
-                </SelectTrigger>
-                <SelectContent>
-                  {cities.map((ct) => (
-                    <SelectItem key={ct} value={ct}>{ct === "All" ? "All Cities" : ct}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+                <Select value={selectedCategory} onValueChange={(val) => { setSelectedCategory(val); setPage(1); }}>
+                  <SelectTrigger className="flex-1 lg:w-[160px] h-10 rounded-lg border-[#E5E7EB] bg-white text-[#1E2F50] focus:ring-[#0056D6]">
+                    <SelectValue placeholder="Program Filter" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {categories.map((cat) => (
+                      <SelectItem key={cat} value={cat}>{cat === "All" ? "All Programs" : cat}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
 
-              {/* College Filter */}
-              <Select value={selectedCollege} onValueChange={(val) => { setSelectedCollege(val); setPage(1); }}>
-                <SelectTrigger className="w-[160px] h-9">
-                  <SelectValue placeholder="College" />
-                </SelectTrigger>
-                <SelectContent>
-                  {colleges.map((col) => (
-                    <SelectItem key={col} value={col}>{col === "All" ? "All Colleges" : col.substring(0, 16) + "..."}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              {/* Category Filter */}
-              <Select value={selectedCategory} onValueChange={(val) => { setSelectedCategory(val); setPage(1); }}>
-                <SelectTrigger className="w-[160px] h-9">
-                  <SelectValue placeholder="Program" />
-                </SelectTrigger>
-                <SelectContent>
-                  {categories.map((cat) => (
-                    <SelectItem key={cat} value={cat}>{cat === "All" ? "All Programs" : cat}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              {/* Reset Trigger */}
-              {(search || selectedState !== "All" || selectedCity !== "All" || selectedCollege !== "All" || selectedCategory !== "All") && (
-                <Button variant="ghost" size="sm" onClick={handleResetFilters} className="text-muted-foreground hover:text-foreground">
-                  Reset
-                </Button>
-              )}
-            </div>
-
-            {/* Mobile Filters Drawer trigger */}
-            <div className="flex gap-2 lg:hidden">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <Input
-                  placeholder="Search..."
-                  value={search}
-                  onChange={(e) => {
-                    setSearch(e.target.value);
-                    setPage(1);
-                  }}
-                  className="pl-9 h-10 w-full"
-                />
-              </div>
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="outline" size="icon" className="h-10 w-10">
-                    <SlidersHorizontal className="h-5 w-5" />
+                {/* Reset Trigger */}
+                {(search || selectedState !== "All" || selectedCity !== "All" || selectedCollege !== "All" || selectedCategory !== "All") && (
+                  <Button variant="ghost" size="sm" onClick={handleResetFilters} className="h-10 text-[#5B6475] hover:text-[#1E2F50]">
+                    Reset
                   </Button>
-                </SheetTrigger>
-                <SheetContent side="bottom" className="rounded-t-[2rem] p-6 max-h-[85vh] overflow-y-auto">
-                  <SheetHeader className="pb-4 border-b border-border">
-                    <SheetTitle>Filter Contributors</SheetTitle>
-                  </SheetHeader>
-                  <div className="mt-5 space-y-4">
-                    {/* State selector */}
-                    <div className="space-y-1.5">
-                      <Label>State</Label>
-                      <Select value={selectedState} onValueChange={(val) => { setSelectedState(val); setPage(1); }}>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="State" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {states.map((st) => (
-                            <SelectItem key={st} value={st}>{st === "All" ? "All States" : st}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
+                )}
+              </div>
+            </div>
+          </div>
 
-                    {/* City selector */}
-                    <div className="space-y-1.5">
-                      <Label>City</Label>
-                      <Select value={selectedCity} onValueChange={(val) => { setSelectedCity(val); setPage(1); }}>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="City" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {cities.map((ct) => (
-                            <SelectItem key={ct} value={ct}>{ct === "All" ? "All Cities" : ct}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
+          {/* 3. LEADERBOARD TABLE */}
+          <div className="overflow-hidden rounded-xl bg-white shadow-soft border border-[#E5E7EB]">
+            {listLoading ? (
+              <div className="space-y-4 p-8">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <div key={i} className="h-12 w-full animate-pulse rounded-lg bg-slate-50" />
+                ))}
+              </div>
+            ) : listError ? (
+              <div className="py-12 text-center text-sm text-red-500">
+                <AlertTriangle className="mx-auto h-8 w-8 mb-2" />
+                Failed to fetch leaderboard data.
+              </div>
+            ) : !listResult?.data || listResult.data.length === 0 ? (
+              <div className="py-16 text-center max-w-sm mx-auto">
+                <Compass className="mx-auto h-12 w-12 text-[#5B6475] mb-4 opacity-50" />
+                <h4 className="font-display font-bold text-lg text-[#1E2F50]">No volunteers found</h4>
+                <p className="mt-2 text-sm text-[#5B6475]">
+                  Try refining your search query or filters.
+                </p>
+                <Button variant="outline" className="mt-5 border-[#E5E7EB] text-[#0056D6] hover:bg-[#EAF3FF] hover:text-[#0056D6]" onClick={handleResetFilters}>
+                  Clear all filters
+                </Button>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <Table>
+                  <TableHeader className="bg-slate-50/50">
+                    <TableRow className="border-[#E5E7EB] hover:bg-transparent">
+                      <TableHead className="w-20 text-[#5B6475] font-semibold text-center">Rank</TableHead>
+                      <TableHead className="text-[#5B6475] font-semibold">Volunteer</TableHead>
+                      <TableHead className="text-right text-[#5B6475] font-semibold">Points</TableHead>
+                      <TableHead className="text-center text-[#5B6475] font-semibold">Hours</TableHead>
+                      <TableHead className="text-center text-[#5B6475] font-semibold">Programs</TableHead>
+                      <TableHead className="text-center text-[#5B6475] font-semibold">Impact Badge</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <AnimatePresence mode="popLayout">
+                      {listResult.data.map((v) => (
+                        <motion.tr
+                          key={v.id}
+                          layoutId={`row-${v.id}`}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          className="border-[#E5E7EB] transition-colors hover:bg-slate-50/80 group"
+                        >
+                          <TableCell className="text-center font-bold text-[#1E2F50]">
+                            {v.rank <= 3 ? (
+                              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#FFF8E6] text-sm font-bold text-[#F4B400]">
+                                {v.rank}
+                              </span>
+                            ) : (
+                              <span>#{v.rank}</span>
+                            )}
+                          </TableCell>
+                          <TableCell>
+                            <div className="flex items-center gap-3">
+                              <OptimizedImage src={v.photo} alt={v.name} width={40} height={40} className="h-10 w-10 rounded-full object-cover border border-[#E5E7EB]" />
+                              <div>
+                                <span className="block font-medium text-[#1E2F50]">{v.name}</span>
+                                <span className="block text-xs text-[#5B6475]">{v.city}</span>
+                              </div>
+                            </div>
+                          </TableCell>
+                          <TableCell className="text-right font-semibold text-[#0056D6]">
+                            {timeframe === "monthly" ? v.monthlyScore : timeframe === "yearly" ? v.yearlyScore : v.allTimeScore}
+                          </TableCell>
+                          <TableCell className="text-center font-medium text-[#5B6475]">
+                            {v.hours}
+                          </TableCell>
+                          <TableCell className="text-center font-medium text-[#5B6475]">
+                            {v.programsCompleted}
+                          </TableCell>
+                          <TableCell className="text-center">
+                            <span className={cn(
+                              "inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold whitespace-nowrap",
+                              v.badge === "National Inspiration" && "bg-[#FFF8E6] text-[#F4B400]",
+                              v.badge === "State Leader" && "bg-[#EAF3FF] text-[#0056D6]",
+                              v.badge === "Mentor" && "bg-slate-100 text-slate-600",
+                              v.badge === "Local Impact Maker" && "bg-[#FFF8E6] text-[#F4B400]",
+                              v.badge === "Community Contributor" && "bg-[#EAF3FF] text-[#0056D6]"
+                            )}>
+                              {getBadgeIcon(v.badge)} <span className="ml-1.5">{v.badge}</span>
+                            </span>
+                          </TableCell>
+                        </motion.tr>
+                      ))}
+                    </AnimatePresence>
+                  </TableBody>
+                </Table>
 
-                    {/* College selector */}
-                    <div className="space-y-1.5">
-                      <Label>College</Label>
-                      <Select value={selectedCollege} onValueChange={(val) => { setSelectedCollege(val); setPage(1); }}>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="College" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {colleges.map((col) => (
-                            <SelectItem key={col} value={col}>{col === "All" ? "All Colleges" : col}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    {/* Category selector */}
-                    <div className="space-y-1.5">
-                      <Label>Program Category</Label>
-                      <Select value={selectedCategory} onValueChange={(val) => { setSelectedCategory(val); setPage(1); }}>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Category" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {categories.map((cat) => (
-                            <SelectItem key={cat} value={cat}>{cat === "All" ? "All Programs" : cat}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="flex gap-3 pt-4 border-t border-border">
-                      <Button className="flex-1" variant="outline" onClick={handleResetFilters}>
-                        Reset All
+                {listResult.totalPages > 1 && (
+                  <div className="flex items-center justify-between border-t border-[#E5E7EB] bg-white px-6 py-4">
+                    <p className="text-sm text-[#5B6475]">
+                      Showing page <span className="font-medium text-[#1E2F50]">{listResult.currentPage}</span> of <span className="font-medium text-[#1E2F50]">{listResult.totalPages}</span>
+                    </p>
+                    <div className="flex gap-2">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        disabled={page === 1}
+                        onClick={() => setPage((p) => p - 1)}
+                        className="border-[#E5E7EB] text-[#5B6475] hover:bg-slate-50 hover:text-[#1E2F50]"
+                      >
+                        <ChevronLeft className="h-4 w-4 mr-1" /> Previous
                       </Button>
-                      <Button className="flex-1" onClick={() => { }}>
-                        Apply Filters
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        disabled={page === listResult.totalPages}
+                        onClick={() => setPage((p) => p + 1)}
+                        className="border-[#E5E7EB] text-[#5B6475] hover:bg-slate-50 hover:text-[#1E2F50]"
+                      >
+                        Next <ChevronRight className="h-4 w-4 ml-1" />
                       </Button>
                     </div>
                   </div>
-                </SheetContent>
-              </Sheet>
-            </div>
-          </div>
-
-          {/* TABLE AND RESULTS SECTION */}
-          <div className="grid gap-8 lg:grid-cols-[1fr_300px]">
-            {/* LEADERBOARD TABLE */}
-            <div className="rounded-3xl border border-border bg-card p-6 shadow-soft overflow-hidden">
-              <div className="mb-4 flex items-center justify-between">
-                <h3 className="font-display font-bold text-lg text-foreground font-semibold">Leaderboard Ranking</h3>
-
-                {/* Ranking Transparency Tooltip */}
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <button className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground cursor-pointer">
-                        <Info className="h-4 w-4" /> Score Calculation
-                      </button>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-[280px] p-3 text-xs leading-relaxed">
-                      <p className="font-semibold mb-1">How is the score calculated?</p>
-                      <p>Our scoring algorithm reflects real service contribution, rather than points-chasing. It incorporates:</p>
-                      <ul className="list-disc pl-4 mt-1 space-y-0.5">
-                        <li>Volunteer Hours (weight: 40%)</li>
-                        <li>Programs completed (weight: 30%)</li>
-                        <li>Service consistency (weight: 20%)</li>
-                        <li>Community feedback & quality (weight: 10%)</li>
-                      </ul>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                )}
               </div>
-
-              {listLoading ? (
-                <div className="space-y-4 py-8">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <div key={i} className="h-12 w-full animate-pulse rounded-xl bg-muted/30" />
-                  ))}
-                </div>
-              ) : listError ? (
-                <div className="py-12 text-center text-sm text-destructive">
-                  <AlertTriangle className="mx-auto h-8 w-8 mb-2" />
-                  Failed to fetch leaderboard data. Please check your connection.
-                </div>
-              ) : !listResult?.data || listResult.data.length === 0 ? (
-                /* EMPTY STATE (Positive encouragement) */
-                <div className="py-10 lg:py-16 text-center max-w-sm mx-auto">
-                  <Compass className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-                  <h4 className="font-display font-bold text-lg text-foreground">No matches found</h4>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    "Every meaningful journey begins with one act of service."
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    Try refining your search queries or filter categories to discover more volunteers.
-                  </p>
-                  <Button variant="outline" className="mt-5" onClick={handleResetFilters}>
-                    Clear all filters
-                  </Button>
-                </div>
-              ) : (
-                <div className="overflow-x-auto">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead className="w-12">Rank</TableHead>
-                        <TableHead>Contributor</TableHead>
-                        <TableHead className="text-right">Score</TableHead>
-                        <TableHead className="text-center">Programs</TableHead>
-                        <TableHead className="text-center">Hours</TableHead>
-                        <TableHead>City</TableHead>
-                        <TableHead>Badge</TableHead>
-                        <TableHead className="text-center">Trend</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody className="relative">
-                      <AnimatePresence mode="popLayout">
-                        {listResult.data.map((v) => (
-                          <motion.tr
-                            key={v.id}
-                            layoutId={`row-${v.id}`}
-                            initial={{ opacity: 0, y: 8 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -8 }}
-                            transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                            className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted transition-all hover:bg-secondary/30"
-                          >
-                            <TableCell className="font-bold text-foreground">
-                              {v.rank <= 3 ? (
-                                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-soft text-xs font-extrabold text-primary">
-                                  {v.rank}
-                                </span>
-                              ) : (
-                                <span>#{v.rank}</span>
-                              )}
-                            </TableCell>
-                            <TableCell>
-                              <div className="flex items-center gap-3">
-                                <OptimizedImage src={v.photo} alt={v.name} width={32} height={32} className="h-8 w-8 rounded-full object-cover border border-border" />
-                                <span className="font-medium text-foreground">{v.name}</span>
-                              </div>
-                            </TableCell>
-                            <TableCell className="text-right font-semibold text-foreground">
-                              {timeframe === "monthly" ? v.monthlyScore : timeframe === "yearly" ? v.yearlyScore : v.allTimeScore}
-                            </TableCell>
-                            <TableCell className="text-center font-medium text-muted-foreground">
-                              {v.programsCompleted}
-                            </TableCell>
-                            <TableCell className="text-center font-medium text-muted-foreground">
-                              {v.hours}h
-                            </TableCell>
-                            <TableCell className="text-muted-foreground text-sm">
-                              {v.city}
-                            </TableCell>
-                            <TableCell>
-                              <span className={cn(
-                                "rounded-full px-2.5 py-0.5 text-[10px] font-semibold",
-                                v.badge === "National Inspiration" && "bg-orange-soft text-primary",
-                                v.badge === "State Leader" && "bg-green-soft text-green",
-                                v.badge === "Mentor" && "bg-muted text-muted-foreground",
-                                v.badge === "Local Impact Maker" && "bg-orange-soft text-primary",
-                                v.badge === "Community Contributor" && "bg-green-soft text-green"
-                              )}>
-                                {v.badge}
-                              </span>
-                            </TableCell>
-                            <TableCell className="text-center">
-                              <span className="inline-flex justify-center">
-                                {v.trend === "rising" && <TrendingUp className="h-4 w-4 text-green" aria-label="Rising" />}
-                                {v.trend === "stable" && <Minus className="h-4 w-4 text-muted-foreground" aria-label="Stable" />}
-                                {v.trend === "falling" && <TrendingDown className="h-4 w-4 text-red-500" aria-label="Slow" />}
-                              </span>
-                            </TableCell>
-                          </motion.tr>
-                        ))}
-                      </AnimatePresence>
-                    </TableBody>
-                  </Table>
-
-                  {/* Table Pagination */}
-                  {listResult.totalPages > 1 && (
-                    <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
-                      <p className="text-xs text-muted-foreground">
-                        Showing page {listResult.currentPage} of {listResult.totalPages}
-                      </p>
-                      <div className="flex gap-2">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          disabled={page === 1}
-                          onClick={() => setPage((p) => p - 1)}
-                        >
-                          <ChevronLeft className="h-4 w-4 mr-0.5" /> Previous
-                        </Button>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          disabled={page === listResult.totalPages}
-                          onClick={() => setPage((p) => p + 1)}
-                        >
-                          Next <ChevronRight className="h-4 w-4 ml-0.5" />
-                        </Button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-
-            {/* ACHIEVEMENT MILESTONES (SIDEBAR ONLY) */}
-            <div className="space-y-6">
-              {/* ACHIEVEMENT MILESTONES */}
-              <div className="rounded-3xl border border-border bg-card p-6 shadow-soft">
-                <h3 className="font-display font-bold text-base text-foreground mb-4">Milestones & Badges</h3>
-                <div className="space-y-4">
-                  {MILESTONES.map((ms) => {
-                    const isUnlocked = unlockedMilestoneIds.includes(ms.id);
-                    const Icon = ms.icon;
-                    return (
-                      <div key={ms.id} className="flex gap-3.5 p-3 rounded-2xl border border-border bg-secondary/20 items-start">
-                        <span className={cn(
-                          "grid h-10 w-10 shrink-0 place-items-center rounded-xl transition-all",
-                          isUnlocked ? "bg-orange-soft text-primary animate-pulse" : "bg-muted text-muted-foreground/40"
-                        )}>
-                          {isUnlocked ? <Icon className="h-5 w-5 animate-bounce-slow" /> : <Lock className="h-4 w-4" />}
-                        </span>
-                        <div>
-                          <div className="flex items-center gap-1.5">
-                            <h4 className="text-xs font-bold text-foreground">{ms.title}</h4>
-                            <span className="text-[9px] uppercase tracking-wider bg-card px-1.5 py-0.5 border border-border rounded font-semibold text-muted-foreground">
-                              {ms.rank}
-                            </span>
-                          </div>
-                          <p className="text-[11px] text-muted-foreground mt-0.5 leading-normal">{ms.desc}</p>
-                          <span className={cn("text-[9px] font-semibold block mt-1.5 uppercase tracking-wide", isUnlocked ? "text-green font-bold" : "text-muted-foreground/50")}>
-                            {isUnlocked ? "✓ Unlocked" : "Locked"}
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
+            )}
           </div>
+        </div>
+      </section>
 
+      {/* 6. MOTIVATIONAL SECTION */}
+      <section className="bg-[#F8FAFC] py-16 lg:py-24 border-t border-[#E5E7EB]">
+        <div className="mx-auto max-w-3xl px-5 text-center">
+          <Reveal>
+            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
+              <Heart className="h-8 w-8" />
+            </div>
+            <h2 className="mb-4 font-display text-3xl font-bold text-[#1E2F50]">
+              Every Contribution Matters
+            </h2>
+            <p className="mb-8 text-lg text-[#5B6475]">
+              Whether you've volunteered for one hour or one hundred, every act of service creates positive change. Thank you for helping build a stronger community.
+            </p>
+            <Button size="lg" className="bg-[#0056D6] hover:bg-[#0047B3] text-white rounded-full px-8 font-semibold shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all">
+              Become a Volunteer
+            </Button>
+          </Reveal>
         </div>
       </section>
     </main>
   );
+}
+
+// Helper for top volunteer cards
+function TopVolunteerCard({ volunteer, rank, isFirst = false }: { volunteer: any, rank: number, isFirst?: boolean }) {
+  if (!volunteer) return null;
+  return (
+    <motion.div
+      whileHover={{ y: -6 }}
+      className={cn(
+        "relative flex w-full max-w-sm flex-col items-center rounded-2xl bg-white p-6 shadow-soft border border-[#E5E7EB] transition-shadow hover:shadow-card order-2 sm:order-none",
+        isFirst ? "sm:-translate-y-4 sm:scale-105 z-10 border-[#F4B400]/30 shadow-[0_8px_30px_rgb(0,0,0,0.08)] order-1 sm:order-none" : "z-0",
+        rank === 3 && "order-3 sm:order-none"
+      )}
+    >
+      <div className="absolute -top-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] font-bold text-[#F4B400] shadow-sm border border-[#F4B400]/20">
+        #{rank}
+      </div>
+
+      <OptimizedImage
+        src={volunteer.photo}
+        alt={volunteer.name}
+        width={96} height={96}
+        className={cn(
+          "mb-4 rounded-full object-cover border-4 border-white shadow-sm",
+          isFirst ? "h-28 w-28" : "h-20 w-20"
+        )}
+      />
+
+      <h3 className={cn("font-display font-bold text-[#1E2F50] text-center", isFirst ? "text-xl" : "text-lg")}>
+        {volunteer.name}
+      </h3>
+
+      <span className="mt-2 inline-flex items-center rounded-full bg-[#EAF3FF] px-2.5 py-1 text-[11px] font-semibold text-[#0056D6]">
+        {getBadgeIcon(volunteer.badge)} <span className="ml-1.5">{volunteer.badge}</span>
+      </span>
+
+      <div className="mt-6 w-full grid grid-cols-2 gap-4 border-t border-[#E5E7EB] pt-4">
+        <div className="text-center">
+          <p className="text-[10px] uppercase tracking-wider text-[#5B6475] font-medium">Points</p>
+          <p className="mt-1 text-lg font-bold text-[#0056D6]">{volunteer.allTimeScore}</p>
+        </div>
+        <div className="text-center">
+          <p className="text-[10px] uppercase tracking-wider text-[#5B6475] font-medium">Hours</p>
+          <p className="mt-1 text-lg font-bold text-[#1E2F50]">{volunteer.hours}h</p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+// Helper to get an icon based on badge text
+function getBadgeIcon(badge: string) {
+  if (badge.includes("Inspiration") || badge.includes("Champion")) return "🌟";
+  if (badge.includes("Leader")) return "🔥";
+  if (badge.includes("Mentor")) return "💡";
+  if (badge.includes("Impact")) return "🚀";
+  return "💙";
 }
