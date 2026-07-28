@@ -413,7 +413,12 @@ function LeaderboardPage() {
                           </TableCell>
                           <TableCell>
                             <div className="flex items-center gap-3">
-                              <OptimizedImage src={v.photo} alt={v.name} width={40} height={40} className="h-10 w-10 rounded-full object-cover border border-[#E5E7EB]" />
+                              <LeaderboardAvatar 
+                                src={v.photo} 
+                                name={v.name} 
+                                sizeClass="h-14 w-14" 
+                                isTop={false} 
+                              />
                               <div>
                                 <span className="block font-medium text-[#1E2F50]">{v.name}</span>
                                 <span className="block text-xs text-[#5B6475]">{v.city}</span>
@@ -519,14 +524,11 @@ function TopVolunteerCard({ volunteer, rank, isFirst = false }: { volunteer: any
         #{rank}
       </div>
 
-      <OptimizedImage
-        src={volunteer.photo}
-        alt={volunteer.name}
-        width={96} height={96}
-        className={cn(
-          "mb-4 rounded-full object-cover border-4 border-white shadow-sm",
-          isFirst ? "h-28 w-28" : "h-20 w-20"
-        )}
+      <LeaderboardAvatar 
+        src={volunteer.photo} 
+        name={volunteer.name} 
+        sizeClass="h-24 w-24 mb-4" 
+        isTop={true} 
       />
 
       <h3 className={cn("font-display font-bold text-[#1E2F50] text-center", isFirst ? "text-xl" : "text-lg")}>
@@ -558,4 +560,69 @@ function getBadgeIcon(badge: string) {
   if (badge.includes("Mentor")) return "💡";
   if (badge.includes("Impact")) return "🚀";
   return "💙";
+}
+
+
+// Helper to render modern avatars with initials fallback
+function LeaderboardAvatar({ 
+  src, 
+  name, 
+  sizeClass = "h-14 w-14", 
+  isTop = false 
+}: { 
+  src: string; 
+  name: string; 
+  sizeClass?: string;
+  isTop?: boolean;
+}) {
+  const isDefault = !src || src.includes('dicebear.com');
+  const size = isTop ? 96 : 56;
+  
+  const getInitials = (n: string) => {
+    const parts = n.trim().split(' ').filter(Boolean);
+    if (parts.length === 0) return 'V';
+    if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  };
+
+  const getBgColor = (n: string) => {
+    const colors = [
+      'bg-blue-500', 'bg-teal-500', 'bg-purple-500', 'bg-indigo-500', 
+      'bg-rose-500', 'bg-amber-500', 'bg-emerald-500'
+    ];
+    let hash = 0;
+    for (let i = 0; i < n.length; i++) {
+      hash = n.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return colors[Math.abs(hash) % colors.length];
+  };
+
+  const initials = getInitials(name);
+  const bgColor = getBgColor(name);
+
+  const containerClasses = cn(
+    "rounded-full flex items-center justify-center font-bold text-white shadow-md border-[3px] border-white transition-transform duration-200 hover:scale-[1.03] overflow-hidden flex-shrink-0",
+    sizeClass,
+    isDefault ? bgColor : "bg-slate-100"
+  );
+
+  if (isDefault) {
+    return (
+      <div className={containerClasses} title={name}>
+        <span className={isTop ? "text-3xl" : "text-lg font-semibold tracking-wide"}>{initials}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className={containerClasses}>
+      <OptimizedImage 
+        src={src} 
+        alt={name} 
+        width={size} 
+        height={size} 
+        className="h-full w-full object-cover" 
+      />
+    </div>
+  );
 }
