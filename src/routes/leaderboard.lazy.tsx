@@ -191,13 +191,13 @@ function LeaderboardPage() {
       </Helmet>
 
       {/* 1. PAGE HEADER */}
-      <section className="relative overflow-hidden bg-white pt-20 pb-16 lg:pt-28 lg:pb-24 border-b border-[#E5E7EB]">
+      <section className="relative overflow-hidden bg-white pt-12 pb-10 lg:pt-16 lg:pb-14 border-b border-[#E5E7EB]">
         {/* Subtle decorative background gradient */}
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,#F8FAFC,rgba(0,86,214,0.03))] pointer-events-none" />
         <div className="relative mx-auto max-w-4xl px-5 text-center">
           <Reveal>
 
-            <h1 className="mb-6">
+            <h1 className="mb-3 lg:mb-4">
               Community Leaderboard
             </h1>
             <p className="mx-auto max-w-2xl">
@@ -208,16 +208,16 @@ function LeaderboardPage() {
       </section>
 
       {/* 5. COMMUNITY IMPACT */}
-      <section className="relative z-10 -mt-8 px-5">
+      <section className="relative z-10 -mt-10 lg:-mt-12 px-5">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 rounded-2xl bg-white p-4 shadow-card border border-[#E5E7EB]">
+          <div className="grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-4 rounded-2xl bg-white p-3 lg:p-4 shadow-card border border-[#E5E7EB]">
             {statsLoading ? (
               Array.from({ length: 4 }).map((_, i) => (
                 <div key={i} className="h-24 animate-pulse rounded-xl bg-slate-50" />
               ))
             ) : (
               <>
-                <div className="flex flex-col items-center justify-center p-4 text-center">
+                <div className="flex flex-col items-center justify-center py-3 px-2 lg:p-4 text-center">
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0056D6]">
                     <Users className="h-5 w-5" />
                   </div>
@@ -226,7 +226,7 @@ function LeaderboardPage() {
                   </p>
                   <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Volunteers</p>
                 </div>
-                <div className="flex flex-col items-center justify-center p-4 text-center border-l border-[#E5E7EB]/50">
+                <div className="flex flex-col items-center justify-center py-3 px-2 lg:p-4 text-center border-l border-[#E5E7EB]/50">
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
                     <Clock className="h-5 w-5" />
                   </div>
@@ -235,7 +235,7 @@ function LeaderboardPage() {
                   </p>
                   <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Volunteer Hours</p>
                 </div>
-                <div className="flex flex-col items-center justify-center p-4 text-center border-t md:border-t-0 md:border-l border-[#E5E7EB]/50">
+                <div className="flex flex-col items-center justify-center py-3 px-2 lg:p-4 text-center border-t md:border-t-0 md:border-l border-[#E5E7EB]/50">
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0056D6]">
                     <CheckCircle2 className="h-5 w-5" />
                   </div>
@@ -244,7 +244,7 @@ function LeaderboardPage() {
                   </p>
                   <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1">Opportunities Completed</p>
                 </div>
-                <div className="flex flex-col items-center justify-center p-4 text-center border-t md:border-t-0 border-l border-[#E5E7EB]/50">
+                <div className="flex flex-col items-center justify-center py-3 px-2 lg:p-4 text-center border-t md:border-t-0 border-l border-[#E5E7EB]/50">
                   <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">
                     <Compass className="h-5 w-5" />
                   </div>
@@ -260,7 +260,7 @@ function LeaderboardPage() {
       </section>
 
       {/* MAIN CONTENT SECTION */}
-      <section className="py-12 lg:py-20">
+      <section className="pt-8 pb-12 lg:pt-12 lg:pb-20">
         <div className="mx-auto max-w-7xl px-5">
 
           {/* 2. TOP 3 VOLUNTEERS */}
@@ -271,8 +271,8 @@ function LeaderboardPage() {
               <div className="h-64 animate-pulse rounded-xl bg-slate-50 order-3 sm:order-3" />
             </div>
           ) : topThree.length >= 3 ? (
-            <div className="mb-16">
-              <h2 className="mb-10 text-center">
+            <div className="mb-10 lg:mb-16">
+              <h2 className="mb-6 lg:mb-8 text-center">
                 Top Volunteers
               </h2>
 
