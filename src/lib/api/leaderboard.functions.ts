@@ -45,7 +45,7 @@ export interface VolunteerImpact {
 // API function to get leaderboard analytics/stats
 export const getLeaderboardStats = async () => {
   try {
-    const res: any = await publicApi.getImpactAnalytics();
+    const res: any = await (publicApi as any).getImpactAnalytics();
     const data = res?.data || {};
     return {
       activeVolunteers: data.volunteers || 0,

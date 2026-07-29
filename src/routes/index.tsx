@@ -57,7 +57,7 @@ function FullWidthHeroCarousel() {
   const [isHovered, setIsHovered] = useState(false);
   const [touchStart, setTouchStart] = useState(null);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({
@@ -78,8 +78,8 @@ function FullWidthHeroCarousel() {
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? HERO_SLIDES.length - 1 : prev - 1));
 
-  const handleTouchStart = (e) => setTouchStart(e.targetTouches[0].clientX);
-  const handleTouchEnd = (e) => {
+  const handleTouchStart = (e: any) => setTouchStart(e.targetTouches[0].clientX);
+  const handleTouchEnd = (e: any) => {
     if (touchStart === null) return;
     const touchEnd = e.changedTouches[0].clientX;
     const diff = touchStart - touchEnd;
@@ -88,7 +88,7 @@ function FullWidthHeroCarousel() {
     setTouchStart(null);
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: any) => {
     if (e.key === 'ArrowRight') nextSlide();
     if (e.key === 'ArrowLeft') prevSlide();
   };
@@ -319,12 +319,14 @@ function Home() {
                   { icon: Heart, text: "Participate in local community initiatives" },
                   { icon: Sparkles, text: "Lead and support outreach programs" },
                 ].map((item, i) => (
-                  <Reveal key={i} delay={i * 0.05} as="li" className="flex items-center gap-4">
-                    <span className="grid h-10 w-10 place-items-center rounded-full bg-primary-soft text-primary">
-                      <item.icon className="h-5 w-5" />
-                    </span>
-                    <span className="font-medium text-foreground">{item.text}</span>
-                  </Reveal>
+                  <li key={i} className="flex items-center gap-4">
+                    <Reveal delay={i * 0.05} className="flex items-center gap-4">
+                      <span className="grid h-10 w-10 place-items-center rounded-full bg-primary-soft text-primary">
+                        <item.icon className="h-5 w-5" />
+                      </span>
+                      <span className="font-medium text-foreground">{item.text}</span>
+                    </Reveal>
+                  </li>
                 ))}
               </ul>
               <div className="mt-10 flex flex-wrap gap-4">
