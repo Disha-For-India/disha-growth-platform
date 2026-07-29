@@ -13,6 +13,7 @@ import { useAuth } from "@/hooks/use-auth";
 
 const TOOLS = [
   { to: "/opportunity-hub", label: "Opportunity Hub" },
+  { to: "/internship-program", label: "Internship Program" },
   { to: "/volunteer", label: "Volunteer Hub" },
   { to: "/leaderboard", label: "Leaderboard" },
 ] as const;
