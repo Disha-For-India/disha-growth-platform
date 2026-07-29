@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type {} from "@tanstack/react-start";
 import { PROGRAMS, BLOGS } from "@/lib/site-data";
 
 const BASE_URL = "https://dishaforindia.org";
@@ -70,4 +69,4 @@ export const Route = createFileRoute("/sitemap.xml")({
       },
     },
   },
-});
+} as any);
