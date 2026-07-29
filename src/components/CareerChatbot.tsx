@@ -23,7 +23,7 @@ function reply(input: string): string {
   if (q.includes("stress") || q.includes("anxiety") || q.includes("exam"))
     return "Breathe slowly for 2 minutes before studying, break work into small chunks, and protect your sleep. Check the 'Managing Exam Stress' toolkit in our Wellness blog.";
   if (q.includes("volunteer"))
-    return "Wonderful! Visit the Volunteer Hub to browse roles in Teaching, Design, Technology, Marketing and Community Outreach — remote and on-site options available.";
+    return "Wonderful! Visit the Opportunity Hub to browse roles in Teaching, Design, Technology, Marketing and Community Outreach — remote and on-site options available.";
   if (q.includes("mentor"))
     return "We don't have a formal Mentor Network on our platform, but you can participate in our student programs and bootcamps to get guidance from our team and volunteers.";
   if (q.includes("hello") || q.includes("hi") || q.includes("hey"))

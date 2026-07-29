@@ -9,7 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as VolunteerRouteImport } from './routes/volunteer'
 import { Route as VisionMissionRouteImport } from './routes/vision-mission'
 import { Route as SuccessStoriesRouteImport } from './routes/success-stories'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -26,11 +25,6 @@ import { Route as BlogsIndexRouteImport } from './routes/blogs.index'
 import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as BlogsSlugRouteImport } from './routes/blogs.$slug'
 
-const VolunteerRoute = VolunteerRouteImport.update({
-  id: '/volunteer',
-  path: '/volunteer',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import('./routes/volunteer.lazy').then((d) => d.Route))
 const VisionMissionRoute = VisionMissionRouteImport.update({
   id: '/vision-mission',
   path: '/vision-mission',
@@ -125,7 +119,6 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/success-stories': typeof SuccessStoriesRoute
   '/vision-mission': typeof VisionMissionRoute
-  '/volunteer': typeof VolunteerRoute
   '/blogs/$slug': typeof BlogsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/blogs/': typeof BlogsIndexRoute
@@ -141,7 +134,6 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/success-stories': typeof SuccessStoriesRoute
   '/vision-mission': typeof VisionMissionRoute
-  '/volunteer': typeof VolunteerRoute
   '/blogs/$slug': typeof BlogsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/blogs': typeof BlogsIndexRoute
@@ -160,7 +152,6 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/success-stories': typeof SuccessStoriesRoute
   '/vision-mission': typeof VisionMissionRoute
-  '/volunteer': typeof VolunteerRoute
   '/blogs/$slug': typeof BlogsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/blogs/': typeof BlogsIndexRoute
@@ -180,7 +171,6 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/success-stories'
     | '/vision-mission'
-    | '/volunteer'
     | '/blogs/$slug'
     | '/programs/$slug'
     | '/blogs/'
@@ -196,7 +186,6 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/success-stories'
     | '/vision-mission'
-    | '/volunteer'
     | '/blogs/$slug'
     | '/programs/$slug'
     | '/blogs'
@@ -214,7 +203,6 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/success-stories'
     | '/vision-mission'
-    | '/volunteer'
     | '/blogs/$slug'
     | '/programs/$slug'
     | '/blogs/'
@@ -233,18 +221,10 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SuccessStoriesRoute: typeof SuccessStoriesRoute
   VisionMissionRoute: typeof VisionMissionRoute
-  VolunteerRoute: typeof VolunteerRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/volunteer': {
-      id: '/volunteer'
-      path: '/volunteer'
-      fullPath: '/volunteer'
-      preLoaderRoute: typeof VolunteerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/vision-mission': {
       id: '/vision-mission'
       path: '/vision-mission'
@@ -391,7 +371,6 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SuccessStoriesRoute: SuccessStoriesRoute,
   VisionMissionRoute: VisionMissionRoute,
-  VolunteerRoute: VolunteerRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

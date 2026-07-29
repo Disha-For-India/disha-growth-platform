@@ -11,11 +11,11 @@ export const ORG = {
   phone: "+91-9888877722",
   mapUrl: "https://goo.gl/maps/MbtzonMSbep3VnDH8",
   mission:
-    "Skill youth for employability and entrepreneurship — coaching young Indians to become job-ready and to build ventures of their own.",
+    "To empower individuals with the skills, opportunities, and platform to learn, lead, serve, and create meaningful change in their communities.",
   vision:
-    "Improve the employability quotient and skill quotient of India's youth to build a healthy, happy and wealthy society.",
+    "To build a nation where every individual is empowered to learn, lead, serve, and create lasting social impact.",
   passion:
-    "Live by our thoughts and values every day, and ignite a spark in people to lead a beautiful, purposeful life.",
+    "We believe meaningful change begins with passionate people who choose to serve, inspire, and uplift others every day.",
 };
 
 

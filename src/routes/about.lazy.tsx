@@ -19,7 +19,7 @@ function About() {
     <main>
       <Helmet>
         <title>About Us</title>
-        <meta name="description" content="Disha For India Foundation & Educational Trust is a youth-first movement skilling India's next generation for employability, entrepreneurship and a life of purpose." />
+        <meta name="description" content="Disha For India Foundation & Educational Trust is a youth-driven movement empowering people to learn, serve, lead, and create lasting social impact." />
         <link rel="canonical" href="https://dishaforindia.org/about" />
         <meta property="og:title" content="About Us | Disha For India" />
         <meta property="og:description" content="Learn about our mission to empower youth through skills and education." />
@@ -27,8 +27,14 @@ function About() {
       </Helmet>
       <PageHero
         eyebrow="About Us"
-        title="We empower. We make the difference."
-        description="Disha For India Foundation & Educational Trust is a youth-first movement skilling India's next generation for employability, entrepreneurship and a life of purpose."
+        title={
+          <>
+            More Than an Organization.
+            <br />
+            A Movement.
+          </>
+        }
+        description="A movement driven by people who believe meaningful change begins with action."
       />
 
       <section className="py-12 lg:py-20">
@@ -39,20 +45,16 @@ function About() {
           <div>
             <SectionHeading
               eyebrow="Our Focus"
-              title="Guiding India's youth towards their true path"
-              description="Empowering and steering the next generation."
+              title="Building a Generation That Creates Change"
             />
             <Reveal delay={0.1}>
               <p className="mt-5 leading-relaxed text-muted-foreground">
-                In a fast-changing world, many young minds find themselves at a crossroads, feeling diverted or uncertain about their future path. At Disha For India, our purpose is to reach out to these young individuals, guide them with clarity, and help them align their skills with their life goals.
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                Through our structured student programs and emotional wellness coaching, we provide the direction and tools they need to live purposeful, successful, and impactful lives.
+                Disha For India Foundation & Educational Trust is a movement that empowers people to learn, serve, and lead. Through volunteering, mentorship, and community-driven initiatives, we create opportunities that strengthen individuals and transform communities.
               </p>
               <div className="mt-6 rounded-2xl border border-border bg-secondary/40 p-5">
                 <Quote className="h-6 w-6 text-primary" />
                 <p className="mt-2 font-display text-lg font-semibold text-foreground">
-                  "Guiding youth to discover their direction and unlock their true potential is our greatest commitment."
+                  "Every meaningful change begins with someone who chooses to care, contribute, and take action."
                 </p>
               </div>
             </Reveal>

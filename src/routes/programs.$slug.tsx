@@ -99,7 +99,7 @@ function ProgramDetail() {
                   </div>
                 ))}
               </div>
-              <Button asChild className="mt-6 w-full"><Link to="/volunteer">Support this program <ArrowRight className="ml-1 h-4 w-4" /></Link></Button>
+              <Button asChild className="mt-6 w-full"><Link to="/opportunity-hub">Support this program <ArrowRight className="ml-1 h-4 w-4" /></Link></Button>
             </div>
           </Reveal>
         </div>

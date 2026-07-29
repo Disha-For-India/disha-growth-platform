@@ -46,7 +46,7 @@ const HERO_SLIDES = [
   {
     headline: "Building a Stronger, More Connected India.",
     description: "A stronger nation is built by people who care enough to act. Join thousands of volunteers working together to create meaningful change through service and collaboration.",
-    primaryCta: { label: "Join the Community", href: "/volunteer" },
+    primaryCta: { label: "Join the Community", href: "/opportunity-hub" },
     image: images.gallery[1],
     alt: "A diverse group of people celebrating success",
   }
@@ -331,7 +331,7 @@ function Home() {
               </ul>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Button asChild size="lg">
-                  <Link to="/volunteer">Become a Volunteer</Link>
+                  <Link to="/opportunity-hub">Become a Volunteer</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/about">Learn More</Link>
