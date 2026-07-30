@@ -47,7 +47,7 @@ export function CareerChatbot() {
     {
       id: "welcome",
       role: "bot",
-      text: `Namaste! 🙏 I'm **Disha Assistant** 🤖 — powered by a **1,000+ Question Knowledge Base** for careers, internships, volunteering, startup validation, and government schemes.\n\nHow can I help you today?`,
+      text: `Hi there! 👋 Welcome to Disha Assistant.\n\nI'm your guide for internships, volunteer opportunities, student startup advice, and government schemes. How can I help you today?`,
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       suggestions: [
         "Tell me about Disha Internships",
@@ -101,7 +101,7 @@ export function CareerChatbot() {
       {
         id: "welcome-reset",
         role: "bot",
-        text: `Chat reset! I have answers to **${TOTAL_UNIQUE_QUESTIONS}+ unique questions**. How can I assist you now?`,
+        text: `Chat reset! I'm here to help answer your questions. What would you like to know?`,
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         suggestions: [
           "Tell me about Disha Internships",
@@ -134,7 +134,7 @@ export function CareerChatbot() {
             className="fixed bottom-22 right-4 z-50 flex h-[540px] w-[92vw] max-w-md flex-col overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-2xl sm:right-6"
           >
             {/* Header */}
-            <div className="flex items-center justify-between bg-primary px-4 py-3 text-primary-foreground">
+            <div className="flex items-center justify-between bg-primary px-4 py-3.5 text-primary-foreground">
               <div className="flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white shadow-inner">
                   <Bot className="h-5 w-5" />
@@ -148,7 +148,7 @@ export function CareerChatbot() {
                   </h3>
                   <p className="text-xs text-primary-foreground/80 flex items-center gap-1.5 mt-0.5">
                     <span className="h-2 w-2 rounded-full bg-success animate-pulse" />
-                    Knowledge Base Active
+                    Here to help
                   </p>
                 </div>
               </div>
@@ -195,19 +195,19 @@ export function CareerChatbot() {
                 >
                   <div
                     className={cn(
-                      "max-w-[88%] rounded-2xl px-4 py-2.5 text-xs sm:text-sm leading-relaxed whitespace-pre-line shadow-sm",
+                      "max-w-[88%] rounded-2xl px-4 py-3 text-xs sm:text-sm leading-relaxed whitespace-pre-line shadow-sm",
                       m.role === "user"
                         ? "bg-primary text-primary-foreground rounded-br-none font-medium"
                         : "border border-border bg-card text-foreground rounded-bl-none"
                     )}
                   >
                     {m.matchedTitle && (
-                      <span className="mb-1.5 inline-flex items-center gap-1 rounded-md bg-primary-soft px-2 py-0.5 text-[10px] font-bold text-primary">
+                      <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-primary-soft px-2.5 py-0.5 text-[11px] font-bold text-primary">
                         <BookOpen className="h-3 w-3" /> {m.matchedTitle}
                       </span>
                     )}
 
-                    <div>{m.text}</div>
+                    <div className="text-foreground/90 font-normal leading-relaxed">{m.text}</div>
 
                     {/* Interactive Action Buttons */}
                     {m.actions && m.actions.length > 0 && (
@@ -253,7 +253,7 @@ export function CareerChatbot() {
               {isTyping && (
                 <div className="flex items-center gap-2 rounded-2xl border border-border bg-card p-3 text-xs text-muted-foreground w-fit rounded-bl-none">
                   <Bot className="h-4 w-4 text-primary animate-spin" />
-                  <span>Disha Assistant searching 1,000+ Qs…</span>
+                  <span>Disha Assistant is typing…</span>
                 </div>
               )}
 

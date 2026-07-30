@@ -76,15 +76,13 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "Where to follow Disha For India online?",
       "How to join the Disha For India community?"
     ],
-    reply: "🏛️ **Disha For India Foundation & Educational Trust** is a youth-first movement skilling India's next generation for employability, entrepreneurship, and a life of purpose.\n\n" +
-           "• **Legal Name:** Disha For India Foundation & Educational Trust\n" +
-           "• **Tagline:** WE EMPOWER | WE MAKE THE DIFFERENCE\n" +
-           "• **Mission:** Skill youth for employability & entrepreneurship.\n" +
-           "• **Vision:** Boost employability & skill quotients for a healthy, happy, and wealthy society.\n\n" +
-           "📞 **Contact Details:**\n" +
+    reply: "Glad you asked! Disha For India Foundation & Educational Trust is a youth-first movement dedicated to skilling India's next generation.\n\n" +
+           "Our main goal is to guide students, aspiring entrepreneurs, and local communities to become job-ready, start their own ventures, and lead purposeful lives.\n\n" +
+           "Here is how you can reach out to us:\n" +
            "• Phone: +91-9888877722\n" +
            "• Email: inaggarwal76@gmail.com\n" +
-           "• Primary Base: Punjab (Ludhiana, Jalandhar, Amritsar, Chandigarh) with nationwide digital and on-ground outreach.",
+           "• Primary Base: Punjab (Ludhiana, Jalandhar, Amritsar, Chandigarh) with programs running nationwide across India.\n\n" +
+           "Feel free to explore our vision page or reach out directly if you'd like to collaborate with us!",
     actions: [
       { label: "Learn About Us", url: "/about" },
       { label: "Our Vision & Mission", url: "/vision-mission" }
@@ -102,7 +100,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "internship-overview",
     category: "Internships",
-    title: "Disha Internship Program Overview",
+    title: "Disha Internship Program",
     questions: [
       "How to apply for Disha Internship?",
       "Where to apply for internship in Disha?",
@@ -134,7 +132,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "What is the selection process for internship?",
       "How long does internship review take?",
       "Can career switchers apply for Disha internship?",
-      "Can self-taught developers apply for internship?",
+      "Can self-taught developers apply for Disha internship?",
       "What skills do I need for Disha internship?",
       "Will I get leaderboard points during internship?",
       "Can I apply for multiple internship domains?",
@@ -154,15 +152,16 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "What questions are asked in Disha internship interview?",
       "Who to contact regarding internship queries?"
     ],
-    reply: "🎓 **Disha Internship Program**\n\n" +
-           "Work on live impact projects, build real portfolio skills, and receive 1-on-1 industry mentorship!\n\n" +
-           "💡 **Key Highlights:**\n" +
-           "• **Domains:** Frontend, Backend, UI/UX Design, Content & Marketing, Data & Analytics, Operations & Events.\n" +
-           "• **Eligibility:** Open to college students, freshers, career switchers, and self-learners.\n" +
-           "• **Commitment:** 10–15 hours/week (Flexible schedules around college exams).\n" +
-           "• **Perks:** Verified Certificate of Completion, Letter of Recommendation (LOR), Leaderboard Impact Points, and Portfolio Projects.\n\n" +
-           "📋 **Selection Journey:**\n" +
-           "1. Online Application ➔ 2. Profile Review ➔ 3. Shortlist Interaction ➔ 4. Final Selection & Onboarding.",
+    reply: "Welcome! We would love to have you in our Disha Internship Program.\n\n" +
+           "In this internship, you won't just do dummy work—you will get to contribute to live impact projects, build real work for your resume, and receive 1-on-1 guidance from experienced mentors.\n\n" +
+           "Here are the core domains you can apply for:\n" +
+           "• Web Development (Frontend & Backend)\n" +
+           "• UI/UX Design\n" +
+           "• Content Writing & Digital Marketing\n" +
+           "• Data & Impact Analytics\n" +
+           "• Operations & Event Management\n\n" +
+           "It requires around 10 to 15 hours a week with flexible timings so your college exams aren't affected. Upon completion, you earn a Verified Certificate, a Letter of Recommendation (LOR), and points on our national leaderboard.\n\n" +
+           "Would you like to apply now?",
     actions: [
       { label: "Apply to Join Disha", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
       { label: "Explore Internship Page", url: "/internship-program" }
@@ -213,15 +212,13 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "What design tools will Frontend interns interact with?",
       "How to apply for Frontend internship?"
     ],
-    reply: "💻 **Frontend Development Internship at Disha For India**\n\n" +
-           "Build modern, responsive, and accessible web interfaces powering Disha's impact platforms!\n\n" +
-           "🛠️ **Technologies Used:**\n" +
-           "• React.js / Vite / TanStack Router\n" +
-           "• TailwindCSS & Vanilla CSS\n" +
-           "• TypeScript / Modern JavaScript\n" +
-           "• Git & GitHub workflows\n\n" +
-           "🎯 **What You'll Do:**\n" +
-           "Create intuitive landing pages, dashboard components, chatbot interfaces, and interactive student tools with guidance from senior frontend mentors.",
+    reply: "If you love crafting user interfaces, our Frontend Development Internship is a great fit for you!\n\n" +
+           "You will work closely with our tech mentors to build clean, fast, and accessible web experiences for the Disha platform.\n\n" +
+           "Here is what we work with:\n" +
+           "• React.js, Vite, and modern JavaScript/TypeScript\n" +
+           "• TailwindCSS and responsive UI design\n" +
+           "• Git and GitHub collaboration workflows\n\n" +
+           "Don't worry if you are still learning—passion and willingness to build matter most to us!",
     actions: [
       { label: "Apply for Frontend Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
       { label: "Internship Program Details", url: "/internship-program" }
@@ -272,15 +269,13 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "What security best practices will I learn?",
       "How to apply for Backend internship?"
     ],
-    reply: "⚙️ **Backend Development Internship at Disha For India**\n\n" +
-           "Architect robust APIs, manage cloud databases, and build scalable backends for Disha digital tools!\n\n" +
-           "🛠️ **Technologies Used:**\n" +
+    reply: "Great choice! In our Backend Development Internship, you'll be building the brain behind Disha's platforms.\n\n" +
+           "You will get hands-on experience designing REST APIs, managing database schemas, and building authentication flows.\n\n" +
+           "Our primary tech stack includes:\n" +
            "• Node.js & Express.js\n" +
-           "• REST APIs & Microservices\n" +
-           "• MongoDB / PostgreSQL / Relational DBs\n" +
-           "• Authentication (JWT / OAuth)\n\n" +
-           "🎯 **What You'll Do:**\n" +
-           "Design database models, secure endpoint architectures, leaderboard calculation services, and data pipelines with expert mentorship.",
+           "• Relational & NoSQL Databases (PostgreSQL / MongoDB)\n" +
+           "• API Security & JWT Authentication\n\n" +
+           "You will receive regular code reviews and guidance from senior engineers.",
     actions: [
       { label: "Apply for Backend Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
       { label: "Internship Program Details", url: "/internship-program" }
@@ -328,15 +323,12 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "What is Disha's color palette and design system?",
       "How to apply for UI/UX internship?"
     ],
-    reply: "🎨 **UI/UX Design Internship at Disha For India**\n\n" +
-           "Craft intuitive, human-centered, and beautiful digital experiences for Indian youth!\n\n" +
-           "🛠️ **Tools & Skills:**\n" +
-           "• Figma & Design Systems\n" +
-           "• Wireframing & Prototyping\n" +
-           "• User Research & Personas\n" +
-           "• Accessibility & Responsive Design\n\n" +
-           "🎯 **What You'll Do:**\n" +
-           "Design mobile & web layouts, craft user flows, conduct usability testing, and collaborate directly with developer interns.",
+    reply: "If you have an eye for clean design and love creating smooth user experiences, our UI/UX Internship is perfect for you.\n\n" +
+           "You will design mobile and web screens, conduct real user research with students, and craft interactive Figma prototypes.\n\n" +
+           "What you'll gain:\n" +
+           "• Real UI/UX case studies for your Behance/Dribbble portfolio\n" +
+           "• Collaboration experience working directly with web developers\n" +
+           "• Design system creation & accessibility best practices",
     actions: [
       { label: "Apply for UI/UX Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
       { label: "Internship Program Details", url: "/internship-program" }
@@ -385,15 +377,12 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "What topics does Disha blog cover?",
       "How to apply for Content & Marketing internship?"
     ],
-    reply: "📢 **Content & Digital Marketing Internship at Disha For India**\n\n" +
-           "Amplify social impact stories and engage thousands of students across India through powerful storytelling!\n\n" +
-           "✍️ **Key Focus Areas:**\n" +
-           "• Blog writing (Career guides, Financial literacy, Wellness, Startups)\n" +
-           "• Social media campaigns (Instagram, LinkedIn, YouTube scripts)\n" +
-           "• SEO copywriting & Email newsletters\n" +
-           "• Brand outreach & Community storytelling\n\n" +
-           "🎯 **What You'll Do:**\n" +
-           "Create published articles, manage digital campaigns, and build strong growth metrics for your marketing portfolio.",
+    reply: "If you enjoy storytelling, writing, or building social media reach, this internship will give you a real stage to shine!\n\n" +
+           "You will get to write published articles on student growth, create engaging social media campaigns, and craft newsletters reaching thousands of young readers.\n\n" +
+           "You'll learn:\n" +
+           "• SEO copywriting & blog publishing\n" +
+           "• Content strategy for Instagram, LinkedIn, and YouTube\n" +
+           "• Brand storytelling that drives social impact",
     actions: [
       { label: "Apply for Marketing Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
       { label: "Explore Disha Blogs", url: "/blogs" }
@@ -441,15 +430,9 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "How does Disha track volunteer impact data?",
       "How to apply for Data & Analytics internship?"
     ],
-    reply: "📊 **Data & Analytics Internship at Disha For India**\n\n" +
-           "Turn raw social impact metrics into actionable insights powering data-driven decisions!\n\n" +
-           "🛠️ **Tools & Technologies:**\n" +
-           "• Python / Pandas / NumPy\n" +
-           "• SQL & Database Queries\n" +
-           "• Excel & Google Sheets Automation\n" +
-           "• Data Visualization (PowerBI / Tableau / Chart.js)\n\n" +
-           "🎯 **What You'll Do:**\n" +
-           "Analyze volunteer impact scores, track student program reach, build performance dashboards, and optimize campaign performance.",
+    reply: "Love discovering insights from numbers? In our Data Analytics Internship, you'll help turn raw community metrics into clear decisions!\n\n" +
+           "You will work with real volunteer activity data, student reach metrics, and web analytics using tools like Python, SQL, Excel, and visualization dashboards.\n\n" +
+           "It's a fantastic way to build a real-world analytics portfolio while seeing your work make a direct community impact.",
     actions: [
       { label: "Apply for Data Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
       { label: "View Leaderboard Data", url: "/leaderboard" }
@@ -494,14 +477,9 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "How does Disha organize community drives?",
       "How to apply for Operations internship?"
     ],
-    reply: "⚙️ **Operations & Event Management Internship at Disha For India**\n\n" +
-           "Engine of community execution — coordinate workshops, manage volunteer networks, and run smooth operations!\n\n" +
-           "🎯 **Key Responsibilities:**\n" +
-           "• Webinar & workshop event coordination\n" +
-           "• School & college campus outreach logistics\n" +
-           "• Volunteer onboarding & task assignment\n" +
-           "• Community communication & support desks\n\n" +
-           "🌟 **Skills Gained:** Leadership, project management, cross-functional collaboration, and crisis handling.",
+    reply: "Operations is the backbone of everything we do at Disha!\n\n" +
+           "As an Operations & Events intern, you'll gain hands-on experience coordinating workshops, managing volunteer groups, and managing event logistics for school and campus drives.\n\n" +
+           "You will develop strong leadership, communication, and project management skills that employers look for.",
     actions: [
       { label: "Apply for Operations Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
       { label: "Explore Disha Events", url: "/events" }
@@ -519,7 +497,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "volunteer-overview",
     category: "Volunteering",
-    title: "Disha Volunteer Hub Overview",
+    title: "Disha Volunteer Hub",
     questions: [
       "How to volunteer at Disha For India?",
       "Where can I register as a volunteer?",
@@ -557,18 +535,13 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "Can I volunteer for specific events only?",
       "How to contact volunteer support team?"
     ],
-    reply: "🤝 **Disha Volunteer Hub**\n\n" +
-           "Invest your time to uplift a life! We offer flexible remote and on-site volunteer opportunities tailored to your skills:\n\n" +
-           "📚 **Available Volunteer Roles:**\n" +
-           "1. **Financial Literacy Facilitator:** Conduct money workshops in schools (Punjab/On-site).\n" +
-           "2. **Career Mentor:** 1-on-1 career guidance for rural/tier-2 students (Remote).\n" +
-           "3. **Brand & Graphic Designer:** Create social graphics & posters (Remote).\n" +
-           "4. **Web & App Volunteer:** Tech development for Disha digital platform (Remote).\n" +
-           "5. **Social Media Coordinator:** Plan content & share impact stories (Remote).\n" +
-           "6. **Community Drive Volunteer:** Support tree plantations & wellness camps (On-site).\n" +
-           "7. **Entrepreneurship Coach:** Mentor student founders (Hybrid).\n" +
-           "8. **Content Writer:** Write blogs & newsletter guides (Remote).\n\n" +
-           "🏆 **Perks:** Verified Volunteer Impact Certificate, Leaderboard Ranks & Badges.",
+    reply: "Volunteering with Disha is a wonderful way to give back while connecting with an amazing community!\n\n" +
+           "Whether you can give 2 hours a week or join a weekend event, there is a meaningful role for you:\n" +
+           "• Teaching & Financial Literacy Facilitation in local schools\n" +
+           "• 1-on-1 Online Career Mentoring for students\n" +
+           "• Design, Tech, and Social Media volunteering\n" +
+           "• Community drives like tree plantations and wellness camps\n\n" +
+           "Every hour you contribute earns points on our national leaderboard and a verified Volunteer Impact Certificate.",
     actions: [
       { label: "Apply as Volunteer", url: "/volunteer" },
       { label: "View Volunteer Leaderboard", url: "/leaderboard" }
@@ -614,14 +587,13 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "What is SIP systematic investment plan?",
       "How to manage money after getting first job?"
     ],
-    reply: "💰 **Financial Literacy Program — Smart Money Skills**\n\n" +
-           "Empowering young Indians with practical money management habits for lifelong financial independence!\n\n" +
-           "🔑 **Core Topics Taught:**\n" +
-           "• **Budgeting & Savings:** 50/30/20 rule, tracking expenses, emergency funds.\n" +
-           "• **Digital Safety:** UPI PIN protection, spotting phishing links, avoiding fake loan apps.\n" +
-           "• **Investing & Compounding:** Mutual funds, SIPs, long-term wealth creation.\n" +
-           "• **Debt Protection:** Avoiding high-interest credit traps & maintaining a healthy credit score.\n\n" +
-           "📖 Read our popular blog guide: *'Money Skills Every Indian Student Needs'*.",
+    reply: "Managing money is one of the most essential life skills, yet it's rarely taught in school!\n\n" +
+           "Our Financial Literacy workshops teach young Indians practical money skills in plain, easy language:\n" +
+           "• Smart budgeting (like the 50/30/20 rule)\n" +
+           "• Staying safe from UPI scams and fake loan apps\n" +
+           "• How compounding works and how to start investing early\n" +
+           "• Building an emergency savings fund\n\n" +
+           "Check out our free guide 'Money Skills Every Indian Student Needs' on our blog!",
     actions: [
       { label: "Read Financial Literacy Blog", url: "/blogs/money-skills-every-student-needs" },
       { label: "Explore All Programs", url: "/programs" }
@@ -639,7 +611,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "program-entrepreneurship",
     category: "Programs",
-    title: "Entrepreneurship Program & Startup Support",
+    title: "Entrepreneurship & Startup Support",
     questions: [
       "What is Entrepreneurship program at Disha?",
       "Tell me about Ideas Into Action program",
@@ -667,14 +639,13 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "How to register a private limited company in India?",
       "What is DPIIT startup registration?"
     ],
-    reply: "💡 **Entrepreneurship Program — Ideas Into Action**\n\n" +
-           "Turn innovative ideas into sustainable ventures through practical bootcamps and founder mentorship!\n\n" +
-           "🚀 **Validation Playbook:**\n" +
-           "1. **Talk to Customers:** Interview 10+ people who experience the problem before writing code.\n" +
-           "2. **1-Page BMC:** Map your customer segment, value prop, channels, and revenue.\n" +
-           "3. **Build a Micro-MVP:** Launch the simplest version to collect real feedback.\n" +
-           "4. **Pitch & Incubate:** Present at Disha Young Founders Bootcamp for mentor feedback & incubation matching.\n\n" +
-           "📖 Read our guide: *'How to Validate Your Startup Idea as a Student'*.",
+    reply: "Thinking about starting something of your own? We love helping student founders!\n\n" +
+           "You don't need millions in funding to start—you just need a real problem and real customers. Here is our simple startup playbook:\n" +
+           "1. Talk to 10 potential customers to understand their actual problem\n" +
+           "2. Map your 1-page Business Model Canvas\n" +
+           "3. Build a tiny MVP (Minimum Viable Product) to test demand\n" +
+           "4. Join our Young Founders Bootcamp to pitch and get mentor feedback\n\n" +
+           "We have a detailed blog guide on validating your startup idea step-by-step!",
     actions: [
       { label: "Read Startup Validation Guide", url: "/blogs/validate-your-startup-idea" },
       { label: "Opportunity Hub Bootcamps", url: "/opportunity-hub" }
@@ -720,13 +691,12 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "Mudra loan customer care number",
       "Is Mudra loan part of Startup India?"
     ],
-    reply: "🇮🇳 **Pradhan Mantri Mudra Yojana (PMMY)**\n\n" +
-           "Government micro-finance scheme offering collateral-free loans up to ₹10 Lakhs for non-corporate micro/small enterprises!\n\n" +
-           "📊 **3 Loan Categories:**\n" +
-           "• **👶 Shishu:** Loans up to ₹50,000 (Ideal for micro-businesses & starter setups).\n" +
-           "• **👦 Kishor:** Loans from ₹50,000 to ₹5 Lakhs (For equipment & expansion).\n" +
-           "• **👨 Tarun:** Loans from ₹5 Lakhs to ₹10 Lakhs (For business scaling).\n\n" +
-           "📋 **Key Features:** No collateral required, processing through all public/private sector banks & RRBs.",
+    reply: "PM Mudra Yojana is a fantastic government scheme providing collateral-free loans up to 10 Lakhs for micro and small businesses!\n\n" +
+           "It has 3 categories:\n" +
+           "• Shishu: Loans up to 50,000 Rupees (Great for small starters)\n" +
+           "• Kishor: Loans from 50,000 to 5 Lakhs (For equipment and setup)\n" +
+           "• Tarun: Loans from 5 Lakhs to 10 Lakhs (For business scaling)\n\n" +
+           "You can apply through any commercial bank, regional bank, or small finance bank without needing to pledge property or collateral.",
     actions: [
       { label: "Explore Opportunity Hub", url: "/opportunity-hub" },
       { label: "Read Entrepreneurship Blog", url: "/blogs/validate-your-startup-idea" }
@@ -744,7 +714,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "scheme-pmegp",
     category: "Govt Schemes",
-    title: "Prime Minister's Employment Generation Programme (PMEGP)",
+    title: "PMEGP Credit Subsidy Scheme",
     questions: [
       "What is PMEGP scheme?",
       "Tell me about PMEGP loan",
@@ -767,14 +737,11 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "How is PMEGP subsidy disbursed?",
       "PMEGP bank loan process time"
     ],
-    reply: "🇮🇳 **Prime Minister's Employment Generation Programme (PMEGP)**\n\n" +
-           "Credit-linked subsidy programme administered by KVIC to generate self-employment micro-enterprises in rural and urban India!\n\n" +
-           "💰 **Financial Assistance:**\n" +
-           "• **Max Project Cost:** ₹50 Lakhs (Manufacturing) / ₹20 Lakhs (Service Sector).\n" +
-           "• **Subsidy Rates:**\n" +
-           "  - General Category: 15% (Urban) / 25% (Rural)\n" +
-           "  - Special Category (SC/ST/OBC/Women/Ex-Servicemen): 25% (Urban) / 35% (Rural)\n\n" +
-           "🌐 Apply via official KVIC PMEGP e-Portal.",
+    reply: "PMEGP (Prime Minister's Employment Generation Programme) is a government subsidy scheme that helps people start new micro-enterprises!\n\n" +
+           "Here are the key points:\n" +
+           "• Up to 50 Lakhs for manufacturing units and 20 Lakhs for service businesses\n" +
+           "• Government subsidies range from 15% up to 35% depending on location (rural vs urban) and category\n" +
+           "• Applications are processed online via the KVIC e-Portal",
     actions: [
       { label: "Opportunity Hub", url: "/opportunity-hub" }
     ],
@@ -808,12 +775,11 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "Margin money requirement in Stand Up India",
       "Repayment period for Stand Up India loan"
     ],
-    reply: "🇮🇳 **Stand-Up India Scheme**\n\n" +
-           "Facilitates bank loans between ₹10 Lakhs and ₹1 Crore to at least one SC/ST borrower and at least one Woman borrower per bank branch for setting up a greenfield enterprise!\n\n" +
-           "📊 **Key Details:**\n" +
-           "• **Loan Amount:** ₹10 Lakhs to ₹1 Crore.\n" +
-           "• **Target Group:** SC/ST and Women entrepreneurs above 18 years.\n" +
-           "• **Enterprise Type:** Greenfield (First-time venture in manufacturing, services, or trading).",
+    reply: "Stand-Up India is a focused scheme designed to support Women and SC/ST entrepreneurs setting up their first venture.\n\n" +
+           "Key details:\n" +
+           "• Bank loans ranging from 10 Lakhs to 1 Crore\n" +
+           "• Available at every bank branch across India\n" +
+           "• Meant for greenfield (new) projects in manufacturing, services, or trading",
     actions: [
       { label: "Opportunity Hub", url: "/opportunity-hub" }
     ],
@@ -829,7 +795,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "scheme-startup-seed-fund",
     category: "Govt Schemes",
-    title: "Startup India Seed Fund Scheme (SISFS)",
+    title: "Startup India Seed Fund (SISFS)",
     questions: [
       "What is Startup India Seed Fund Scheme?",
       "Tell me about SISFS scheme",
@@ -845,12 +811,11 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "How to find approved incubators under SISFS?",
       "How to apply for SISFS online portal?"
     ],
-    reply: "🚀 **Startup India Seed Fund Scheme (SISFS)**\n\n" +
-           "Financial assistance to early-stage startups for proof of concept, prototype development, product trials, market entry, and commercialization!\n\n" +
-           "💰 **Funding Structure:**\n" +
-           "• **Grants up to ₹20 Lakhs:** For validation of proof of concept, prototype, or product trials.\n" +
-           "• **Debt/Convertible Debentures up to ₹50 Lakhs:** For market entry, commercialization, and scaling.\n\n" +
-           "📋 Requires DPIIT registration & application via selected eligible incubators.",
+    reply: "The Startup India Seed Fund Scheme (SISFS) provides government funding to early-stage startups to help test ideas and build prototypes.\n\n" +
+           "Funding options:\n" +
+           "• Grants up to 20 Lakhs for proof-of-concept and prototype trials\n" +
+           "• Debt/convertible debentures up to 50 Lakhs for market entry and scaling\n\n" +
+           "Startups apply through government-approved incubators.",
     actions: [
       { label: "Validate Your Startup Idea", url: "/blogs/validate-your-startup-idea" },
       { label: "Opportunity Hub", url: "/opportunity-hub" }
@@ -867,7 +832,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "scheme-skilling-scholarships",
     category: "Govt Schemes",
-    title: "Skill India & National Scholarship Portal (NSP)",
+    title: "Skill India & Scholarships",
     questions: [
       "What is PMKVY Skill India?",
       "Pradhan Mantri Kaushal Vikas Yojana details",
@@ -884,12 +849,10 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "When does NSP scholarship portal open?",
       "Documents required for NSP scholarship"
     ],
-    reply: "🎓 **Skill India (PMKVY) & National Scholarship Portal (NSP)**\n\n" +
-           "🇮🇳 **PMKVY:** Government initiative providing free industry-relevant skill training & official certification to Indian youth.\n\n" +
-           "📜 **NSP (National Scholarship Portal):** Centralized platform hosting 50+ central & state scholarship schemes:\n" +
-           "• Pre-Matric & Post-Matric Scholarships\n" +
-           "• Central Sector Scheme for University/College Students\n" +
-           "• Merit-cum-Means Scholarships for technical & professional courses.",
+    reply: "Here is a quick overview of government skilling and scholarship portals:\n\n" +
+           "• Skill India (PMKVY): Free industry skill training courses across technical, manufacturing, and service domains with official certificates.\n" +
+           "• NSP (National Scholarship Portal): Central portal listing 50+ scholarships including pre-matric, post-matric, and central college scholarships.\n\n" +
+           "You can check our Opportunity Hub for curated links!",
     actions: [
       { label: "Opportunity Hub Scholarships", url: "/opportunity-hub" }
     ],
@@ -905,7 +868,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "program-wellness",
     category: "Wellness",
-    title: "Emotional Wellness Program & Stress Management",
+    title: "Emotional Wellness & Exam Stress",
     questions: [
       "What is Emotional Wellness program at Disha?",
       "Tell me about Healthy Mind Matters",
@@ -926,14 +889,13 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "How to manage academic peer pressure?",
       "How to stay motivated in college?"
     ],
-    reply: "🧘 **Emotional Wellness Program — Healthy Mind Matters**\n\n" +
-           "Building resilience, exam confidence, and emotional well-being so youth can thrive without burnout!\n\n" +
-           "🌿 **Stress Relief Toolkit:**\n" +
-           "1. **2-Minute Breathwork:** Slow deep inhalation & prolonged exhalation resets the nervous system.\n" +
-           "2. **Task Chunking (Pomodoro):** Break heavy study topics into 25-minute finishable blocks.\n" +
-           "3. **Sleep Protection:** Protect 7-8 hours of sleep before exams — sleep is memory consolidation!\n" +
-           "4. **Break The Limits:** Transformational group coaching events on perception & success.\n\n" +
-           "📖 Read our toolkit: *'Managing Exam Stress: A Wellness Toolkit for Students'*.",
+    reply: "Exam stress and pressure are completely normal, but they don't have to control your life!\n\n" +
+           "Here are 4 quick, practical habits that help:\n" +
+           "1. 2-Minute Slow Breathing before studying to calm your nervous system\n" +
+           "2. Break study topics into 25-minute finishable chunks (Pomodoro method)\n" +
+           "3. Protect 7-8 hours of sleep—your brain needs sleep to retain what you study\n" +
+           "4. Remember that one exam or result doesn't define your worth\n\n" +
+           "Check out our Wellness Toolkit blog for more helpful techniques!",
     actions: [
       { label: "Read Wellness Toolkit Blog", url: "/blogs/managing-exam-stress" },
       { label: "Explore All Programs", url: "/programs" }
@@ -950,7 +912,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "program-clean-green",
     category: "Environment",
-    title: "Clean & Green India Program",
+    title: "Clean & Green India",
     questions: [
       "What is Clean and Green India program?",
       "Tell me about Protect Our Planet program",
@@ -964,13 +926,12 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "How to make my village or college plastic free?",
       "Environment day event by Disha"
     ],
-    reply: "🌿 **Clean & Green India Program — Protect Our Planet**\n\n" +
-           "Youth-led sustainability initiatives creating cleaner, greener communities through action!\n\n" +
-           "🌱 **Key Milestones:**\n" +
-           "• **15,000+ Trees Planted:** Community plantation drives across Punjab and partner regions.\n" +
-           "• **Plastic-Free Villages:** Waste segregation & plastic elimination campaigns (e.g. Rampur Village transformation).\n" +
-           "• **Green Campus Drives:** Student-led recycling and sustainability awareness clubs.\n\n" +
-           "📖 Read our story: *'Youth-Led Climate Action: Small Drives, Big Change'*.",
+    reply: "Our Clean & Green India initiative brings youth together to protect our environment through real action!\n\n" +
+           "What we've achieved together:\n" +
+           "• 15,000+ trees planted in community drives across Punjab\n" +
+           "• Waste segregation campaigns, such as making Rampur a plastic-free village\n" +
+           "• Student-led green campus drives\n\n" +
+           "Want to take part in our next green drive? You can sign up via our Volunteer Hub!",
     actions: [
       { label: "Read Climate Action Blog", url: "/blogs/youth-led-climate-action" },
       { label: "Volunteer for Green Drives", url: "/volunteer" }
@@ -987,7 +948,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "program-ignite",
     category: "Education",
-    title: "Ignite Education & Teacher Transformation",
+    title: "Ignite Education Program",
     questions: [
       "What is Ignite Education program?",
       "Tell me about Transforming Learning program",
@@ -998,13 +959,11 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "Career awareness sessions in schools by Disha",
       "Why teachers are changemakers blog"
     ],
-    reply: "🔥 **Ignite — Education Program (Transforming Learning)**\n\n" +
-           "Empowering academicians and students to modernize education and inspire a love for lifelong learning!\n\n" +
-           "✨ **Core Features:**\n" +
-           "• **Teacher Transformation:** Equipping educators with 21st-century modern teaching methods & mental wellness tools.\n" +
-           "• **School Career Awareness:** Interactive life-skills and career exploration sessions for high school students.\n" +
-           "• **Classroom Modernization:** Replacing rote learning with curiosity-driven student engagement.\n\n" +
-           "📖 Read our article: *'Why Teachers Are India's Most Underrated Changemakers'*.",
+    reply: "Our Ignite Education program works with school teachers and students to transform classrooms into inspiring spaces.\n\n" +
+           "What it focuses on:\n" +
+           "• Equipping teachers with modern 21st-century teaching tools and wellness practices\n" +
+           "• Interactive career-awareness sessions in high schools\n" +
+           "• Helping curiosity replace fear in everyday learning",
     actions: [
       { label: "Read Teacher Impact Blog", url: "/blogs/why-teachers-are-changemakers" },
       { label: "Explore All Programs", url: "/programs" }
@@ -1021,7 +980,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "program-community-dev",
     category: "Community",
-    title: "Community Development Program",
+    title: "Community Development",
     questions: [
       "What is Community Development program at Disha?",
       "Grassroots community initiatives by Disha",
@@ -1030,12 +989,11 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "Livelihood skill training for under served areas",
       "How Disha supports rural communities?"
     ],
-    reply: "🤝 **Community Development Program**\n\n" +
-           "Grassroots initiatives uplifting under-served communities through skilling, digital literacy, and women empowerment!\n\n" +
-           "🌟 **Focus Areas:**\n" +
-           "• **Livelihood Skilling:** Practical vocational skills for youth employment.\n" +
-           "• **Women Empowerment:** Self-reliance workshops, financial confidence, and local resource access.\n" +
-           "• **Digital Literacy:** Training all age groups in smartphones, UPI, digital safety, and online services.",
+    reply: "Our Community Development work brings skill training and opportunity directly to under-served communities.\n\n" +
+           "We focus on:\n" +
+           "• Vocational skill training to support local livelihoods\n" +
+           "• Women empowerment workshops for financial confidence\n" +
+           "• Digital literacy sessions so everyone can safely use smartphones, UPI, and online services",
     actions: [
       { label: "Explore All Programs", url: "/programs" },
       { label: "Volunteer in Community Drives", url: "/volunteer" }
@@ -1052,7 +1010,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "leaderboard-gamification",
     category: "Leaderboard",
-    title: "Leaderboard, Impact Points & Badges",
+    title: "Leaderboard & Impact Points",
     questions: [
       "How does Disha Leaderboard work?",
       "What are Impact Points?",
@@ -1070,15 +1028,11 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "Where to check my volunteer rank?",
       "How many hours needed for Top 10 rank?"
     ],
-    reply: "🏆 **Disha Leaderboard & Recognition System**\n\n" +
-           "Recognizing volunteer dedication and impact across India through gamified Impact Points!\n\n" +
-           "🌟 **Milestone Ranks & Badges:**\n" +
-           "• 🥇 **National Inspiration:** Top 3 nationwide contributors\n" +
-           "• 🏅 **State Leader:** Top 10 contributors in your state\n" +
-           "• 👥 **Mentor:** Top 20 contributor ranking\n" +
-           "• 🗺️ **Local Impact Maker:** Top 50 local contributor\n" +
-           "• ✅ **Community Contributor:** Top 100 ranking\n\n" +
-           "🔍 Filter rankings live by State, City, College, and Program Category on our Leaderboard page!",
+    reply: "Our Leaderboard celebrates every volunteer who gives their time to make an impact!\n\n" +
+           "How it works:\n" +
+           "• Every hour of volunteering and program completion earns Impact Points\n" +
+           "• You unlock milestone badges like National Inspiration (Top 3), State Leader (Top 10), and Mentor (Top 20)\n" +
+           "• You can filter rankings live by State, City, or College on our Leaderboard page!",
     actions: [
       { label: "View Live Leaderboard", url: "/leaderboard" }
     ],
@@ -1109,13 +1063,12 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "How to network on LinkedIn effectively?",
       "Should I choose placement or higher studies or startup?"
     ],
-    reply: "🧭 **Career Guidance & Job Preparation**\n\n" +
-           "Transform confusion into clarity with structured skill-building and proof-of-work guidance!\n\n" +
-           "💡 **4 Steps to Career Clarity:**\n" +
-           "1. **Explore Interests:** Don't search for a single 'perfect' job — focus on trying short practical projects.\n" +
-           "2. **Build Proof of Work:** Join Disha internships/projects to create real GitHub repositories, Figma files, or published blogs.\n" +
-           "3. **ATS-Friendly Resume:** Highlight quantifiable outcomes (e.g. *'Increased web page speed by 40%'*).\n" +
-           "4. **Get Mentorship:** Connect with industry mentors via Disha's Opportunity Hub.",
+    reply: "Feeling uncertain about your next step? Don't worry, clarity comes from action!\n\n" +
+           "Here is our quick 3-step advice:\n" +
+           "1. Focus on trying short practical projects rather than searching for one 'perfect' job\n" +
+           "2. Build proof of work (like GitHub code, UI designs, or published articles) through internships or open projects\n" +
+           "3. Keep your resume clean, simple, and outcome-focused\n\n" +
+           "Read our guide 'Confused After Class 12? A Calm Guide to Choosing Your Path' on our blog!",
     actions: [
       { label: "Read Class 12 Career Guide", url: "/blogs/choosing-the-right-career-path" },
       { label: "Explore Opportunity Hub", url: "/opportunity-hub" }
@@ -1132,7 +1085,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: "events-competitions",
     category: "Events",
-    title: "Events, Bootcamps & Competitions",
+    title: "Events & Bootcamps",
     questions: [
       "What upcoming events does Disha have?",
       "Where to find hackathons for Indian students?",
@@ -1147,13 +1100,13 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
       "Are Disha workshops free or paid?",
       "How to host a hackathon with Disha?"
     ],
-    reply: "🎉 **Disha Events, Bootcamps & Competitions**\n\n" +
-           "Explore upcoming workshops, orientation sessions, coding hackathons, and design competitions curated for students!\n\n" +
-           "📅 **Upcoming & Featured Sessions:**\n" +
-           "• **Career Guidance Workshop:** Online & in-person skill exploration.\n" +
-           "• **Volunteer Orientation:** Training session for newly joined changemakers.\n" +
-           "• **Scholarship Awareness Drive:** Guidance on applying for government & private aid.\n" +
-           "• **Young Founders Bootcamp:** Idea pitch sessions with practicing founders.",
+    reply: "We regularly host interactive workshops, bootcamps, and community drives!\n\n" +
+           "Some of our popular sessions include:\n" +
+           "• Career Guidance & Skill Exploration Workshops\n" +
+           "• Volunteer Orientation Programs\n" +
+           "• Young Founders Startup Bootcamps\n" +
+           "• Scholarship Awareness Drives\n\n" +
+           "Check out our Events and Opportunity Hub pages to register for upcoming sessions!",
     actions: [
       { label: "View All Events", url: "/events" },
       { label: "Explore Opportunity Hub", url: "/opportunity-hub" }
@@ -1181,12 +1134,25 @@ export function findChatbotResponse(userInput: string): {
   const query = userInput.toLowerCase().trim();
   if (!query) {
     return {
-      reply: "Please type a question or select one of the quick topic chips above!",
+      reply: "Feel free to ask a question or select one of the topics above!",
       suggestions: ["Tell me about Disha Internships", "How to volunteer?", "Government schemes"]
     };
   }
 
-  // 1. Direct exact phrase / synonym match check
+  // 1. Basic greetings
+  if (query.match(/^(hi|hello|hey|greetings|namaste|hlo|helo)$/i)) {
+    return {
+      reply: "Hi there! 👋 Welcome to Disha Assistant. I'm here to help you explore internships, volunteer roles, startup guides, and student programs.\n\nWhat would you like to know today?",
+      suggestions: [
+        "Tell me about Disha Internships",
+        "How can I volunteer?",
+        "What government schemes exist for startups?",
+        "How to manage exam stress?"
+      ]
+    };
+  }
+
+  // 2. Direct exact phrase / synonym match check
   for (const entry of CHATBOT_KNOWLEDGE_BASE) {
     for (const q of entry.questions) {
       if (q.toLowerCase() === query || query.includes(q.toLowerCase())) {
@@ -1200,7 +1166,7 @@ export function findChatbotResponse(userInput: string): {
     }
   }
 
-  // 2. Token intersection & fuzzy score matching
+  // 3. Token intersection & fuzzy score matching
   const queryTokens = query.split(/\s+/).filter((t) => t.length > 2);
   let bestEntry: KnowledgeEntry | null = null;
   let highestScore = 0;
@@ -1238,16 +1204,14 @@ export function findChatbotResponse(userInput: string): {
     };
   }
 
-  // 3. Fallback with helpful options
+  // 4. Fallback with helpful options
   return {
-    reply: `I'm here to guide your journey! 🌟 I currently have knowledge across **${TOTAL_UNIQUE_QUESTIONS}+ unique questions**! \n\n` +
-           "Here are top topics you can explore:\n\n" +
-           "• 🎓 **Disha Internships** (Frontend, Backend, Design, Marketing, Data, Ops)\n" +
-           "• 🤝 **Volunteering & Mentorship Roles**\n" +
-           "• 🇮🇳 **Govt Schemes** (PM Mudra, PMEGP, Stand-Up India, SISFS, NSP)\n" +
-           "• 💡 **Student Startups & Business Validation**\n" +
-           "• 🧘 **Exam Stress Relief & Wellness**\n\n" +
-           "Or call us directly at **+91-9888877722** / email **inaggarwal76@gmail.com**!",
+    reply: `I'm here to help! While I didn't quite catch that, I can answer over ${TOTAL_UNIQUE_QUESTIONS}+ questions about:\n\n` +
+           "• Disha Internships (Tech, Design, Content, Ops)\n" +
+           "• Volunteering & Career Mentoring\n" +
+           "• Government schemes (PM Mudra, PMEGP, Stand-Up India, NSP)\n" +
+           "• Student Startups & Exam Wellness\n\n" +
+           "You can also reach out to our team directly at +91-9888877722 or inaggarwal76@gmail.com!",
     actions: [
       { label: "Explore Internships", url: "/internship-program" },
       { label: "Volunteer Hub", url: "/volunteer" },
