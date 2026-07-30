@@ -8,7 +8,7 @@ import {
   HeartHandshake, BookOpen, Users, Globe, Rocket, ShieldCheck,
   CheckCircle2, ArrowRight, Laptop, Building, Play,
   Target, Lightbulb, PenTool, BarChart, MessageSquare, Code, UserPlus,
-  Quote
+  Quote, Award, Briefcase, GraduationCap, Star
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -64,65 +64,101 @@ function InternshipProgram() {
         <meta name="description" content="Learn through real impact. Join Disha For India's Internship Program to build skills, work on real projects, and contribute to society." />
       </Helmet>
 
-      {/* Hero Section (Split Layout) */}
-      <section className="relative pt-16 lg:pt-28 pb-48 px-5 bg-background-soft">
+      {/* Hero Section */}
+      <section className="relative pt-8 lg:pt-10 pb-16 px-5 bg-background-soft flex items-center overflow-hidden">
+        {/* Soft Background Decorations */}
         <div className="absolute inset-0 bg-grid opacity-50 -z-10" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -z-10 translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[100px] -z-10 -translate-x-1/3 translate-y-1/3" />
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-white to-transparent -z-10" />
         
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-soft text-primary font-medium text-sm mb-6 shadow-soft">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              Applications Open
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold font-display text-heading leading-[1.1] tracking-tight">
-              Ready to create impact with <span className="text-primary block mt-2">Disha for India?</span>
-            </h1>
-            <p className="mt-8 text-xl text-foreground max-w-lg leading-relaxed">
-              Be part of a community that learns, contributes, grows and creates real impact together. Experience not just an internship, but a purpose.
-            </p>
-            <div className="mt-12 flex flex-wrap items-center gap-6">
-              <Button size="lg" className="h-14 px-8 rounded-full text-base font-semibold shadow-card hover:-translate-y-1 transition-all duration-300" asChild>
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-12 items-center w-full z-10">
+          {/* Left Column */}
+          <div className="flex flex-col items-start text-left pt-10 lg:pt-0">
+            <Reveal>
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold font-display text-heading leading-[1.05] tracking-tight">
+                Work on Real Projects.<br/>Build Real Skills.<br/>Create <span className="text-primary relative inline-block">Real Impact.<svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/30" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7C49.5 2 122.5 1 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg></span>
+              </h1>
+              
+              <p className="mt-4 text-base lg:text-lg text-foreground max-w-xl leading-relaxed">
+                Join a purpose-driven community to collaborate with passionate peers, receive mentorship, and apply skills to drive social change.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.1} className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+              {[
+                "Live Project Experience",
+                "Industry Mentorship",
+                "Portfolio Development",
+                "Community Impact"
+              ].map((benefit, idx) => (
+                <div key={idx} className="flex items-center gap-2.5 text-heading font-medium text-sm lg:text-base">
+                  <div className="w-5 h-5 lg:w-6 lg:h-6 rounded-full bg-success-soft flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3 h-3 lg:w-4 lg:h-4 text-success" />
+                  </div>
+                  {benefit}
+                </div>
+              ))}
+            </Reveal>
+
+            <Reveal delay={0.2} className="mt-6 flex flex-wrap items-center gap-4 w-full">
+              <Button size="lg" className="h-12 lg:h-14 px-6 lg:px-8 rounded-full text-sm lg:text-base font-bold shadow-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300" asChild>
                 <a href="https://app-disha-for-indiaa.vercel.app/">
-                  I want to Join Disha <ArrowRight strokeWidth={2.5} className="ml-2 h-5 w-5" />
+                  <Rocket className="mr-2 h-4 w-4 lg:h-5 lg:w-5" /> Apply to Join Disha
                 </a>
               </Button>
-              <button className="flex items-center gap-4 font-semibold text-heading hover:text-primary transition-colors group">
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-card group-hover:scale-105 transition-transform duration-300">
-                  <Play className="h-5 w-5 ml-1 text-primary" fill="currentColor" />
+              <button className="group flex items-center gap-3 font-semibold text-heading text-sm lg:text-base hover:text-primary transition-colors">
+                <span className="flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-white shadow-soft group-hover:scale-110 transition-transform duration-300">
+                  <Play className="h-3 w-3 lg:h-4 lg:w-4 ml-0.5 text-primary" fill="currentColor" />
                 </span>
-                See How<br/>We Make Impact
+                Explore the Journey
               </button>
-            </div>
-          </Reveal>
+            </Reveal>
 
-          <Reveal delay={0.2} className="relative h-[450px] lg:h-[550px] w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto">
+          </div>
+
+          {/* Right Column: Visual Collage */}
+          <Reveal delay={0.2} className="relative h-[320px] lg:h-[400px] w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto mt-10 lg:mt-0">
+            {/* Background Shape */}
+            <div className="absolute inset-4 bg-primary/5 rounded-[3rem] -z-10 rotate-3 transition-transform duration-700 hover:rotate-6" />
+            
             {/* Main Image */}
-            <div className="absolute top-0 right-0 w-[80%] h-[80%] rounded-[2rem] overflow-hidden shadow-2xl z-10 border-[6px] border-white bg-muted">
-              <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80&w=1000" alt="Students collaborating" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-            </div>
-            {/* Secondary Image */}
-            <div className="absolute bottom-0 left-0 w-[55%] h-[55%] rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[6px] border-white bg-muted">
-              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800" alt="Community service" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <div className="absolute top-0 right-0 w-[75%] h-[70%] rounded-[2rem] overflow-hidden shadow-2xl z-10 border-4 border-white bg-muted">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000" alt="Students collaborating and learning" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             
-            {/* Floating badge */}
-            <div className="absolute top-[60%] -right-4 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] z-30 flex items-center gap-4 max-w-[280px] border border-border/50 animate-bounce-slow">
-              <div className="bg-primary-soft p-3 rounded-xl text-primary">
-                <Users strokeWidth={2} className="w-6 h-6" />
+            {/* Secondary Image */}
+            <div className="absolute bottom-4 left-0 w-[60%] h-[55%] rounded-[2rem] overflow-hidden shadow-2xl z-20 border-4 border-white bg-muted">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800" alt="Community service and mentorship" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            
+            {/* Floating Card 1 */}
+            <div className="absolute top-[10%] -left-6 lg:-left-12 bg-white/80 backdrop-blur-md p-3 lg:p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-30 flex items-center gap-3 lg:gap-4 border border-white/50 animate-bounce-slow">
+              <div className="bg-primary/10 p-2 lg:p-3 rounded-xl text-primary shrink-0">
+                <Award strokeWidth={2} className="w-5 h-5 lg:w-6 lg:h-6" />
               </div>
-              <p className="text-sm font-semibold text-heading leading-tight">Thousands of changemakers building India</p>
+              <div>
+                <p className="text-sm font-bold text-heading leading-tight">Certificate of Completion</p>
+                <p className="text-xs text-muted-foreground font-medium mt-0.5 hidden sm:block">Recognizing your contribution</p>
+              </div>
+            </div>
+
+            {/* Floating Card 2 */}
+            <div className="absolute bottom-[15%] -right-6 lg:-right-10 bg-white/80 backdrop-blur-md p-3 lg:p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-30 flex items-center gap-3 lg:gap-4 border border-white/50 animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
+              <div className="bg-accent/10 p-2 lg:p-3 rounded-xl text-accent shrink-0">
+                <Briefcase strokeWidth={2} className="w-5 h-5 lg:w-6 lg:h-6" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-heading leading-tight">Live NGO Projects</p>
+                <p className="text-xs text-muted-foreground font-medium mt-0.5 hidden sm:block">Work on meaningful initiatives</p>
+              </div>
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* Floating Features Bar */}
-      <section className="relative z-20 -mt-24 px-5">
+      <section className="relative z-20 px-5 pt-8 pb-16">
         <div className="max-w-7xl mx-auto bg-card rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-border p-8 lg:p-12">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {FLOATING_FEATURES.map((feat, i) => (
