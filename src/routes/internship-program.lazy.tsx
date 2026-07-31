@@ -8,7 +8,8 @@ import {
   HeartHandshake, BookOpen, Users, Globe, Rocket, ShieldCheck,
   CheckCircle2, ArrowRight, Laptop, Building, Play,
   Target, Lightbulb, PenTool, BarChart, MessageSquare, Code, UserPlus,
-  Quote, Award, Briefcase, GraduationCap, Star
+  Quote, Award, Briefcase, GraduationCap, Star,
+  Folder, TrendingUp, Sparkles
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -39,13 +40,13 @@ const JOURNEY_STEPS = [
   { num: "05", icon: <HeartHandshake strokeWidth={1.5} className="w-8 h-8" />, title: "Welcome to Disha!", desc: "Once selected, you'll be onboarded and start your journey." },
 ];
 
-const DOMAINS = [
-  { name: "Frontend Development", icon: <Code strokeWidth={1.5} className="h-7 w-7" />, desc: "Build responsive, accessible user interfaces using React and modern web technologies." },
-  { name: "Backend Development", icon: <Laptop strokeWidth={1.5} className="h-7 w-7" />, desc: "Develop robust APIs and manage data using scalable architectures." },
-  { name: "UI/UX Design", icon: <PenTool strokeWidth={1.5} className="h-7 w-7" />, desc: "Create intuitive, beautiful experiences that solve real user problems." },
-  { name: "Content & Marketing", icon: <MessageSquare strokeWidth={1.5} className="h-7 w-7" />, desc: "Craft compelling narratives that amplify our message and reach." },
-  { name: "Data & Analytics", icon: <BarChart strokeWidth={1.5} className="h-7 w-7" />, desc: "Analyze impact metrics to help us make data-driven decisions." },
-  { name: "Operations", icon: <Globe strokeWidth={1.5} className="h-7 w-7" />, desc: "Ensure smooth execution of programs and community initiatives." },
+const BENEFITS = [
+  { name: "Real Project Experience", icon: <Briefcase strokeWidth={1.5} className="h-7 w-7" />, desc: "Work on meaningful initiatives that address real community needs while gaining practical experience." },
+  { name: "Learn from Mentors", icon: <GraduationCap strokeWidth={1.5} className="h-7 w-7" />, desc: "Collaborate with experienced mentors who guide you throughout your learning journey." },
+  { name: "Build Your Portfolio", icon: <Folder strokeWidth={1.5} className="h-7 w-7" />, desc: "Create meaningful work and projects that showcase your skills and growth." },
+  { name: "Strengthen Your Skills", icon: <TrendingUp strokeWidth={1.5} className="h-7 w-7" />, desc: "Develop communication, teamwork, leadership, problem-solving, and professional confidence." },
+  { name: "Expand Your Network", icon: <Globe strokeWidth={1.5} className="h-7 w-7" />, desc: "Connect with passionate students, volunteers, mentors, and professionals from different backgrounds." },
+  { name: "Create Real Impact", icon: <Sparkles strokeWidth={1.5} className="h-7 w-7" />, desc: "Contribute your time, ideas, and skills to initiatives that positively impact communities." },
 ];
 
 const FAQS = [
@@ -206,23 +207,31 @@ function InternshipProgram() {
         </div>
       </section>
 
-      {/* What You'll Work On */}
+      {/* What You'll Gain */}
       <section className="py-32 px-5 bg-background-soft border-y border-border">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading 
-            title="Meaningful Projects, Real Experience." 
-            description="Contribute your skills to initiatives that drive our mission forward. This is not a classroom—it's a professional environment."
-            align="center"
-          />
-          <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {DOMAINS.map((domain, i) => (
+          <div className="text-center mb-16">
+            <Reveal>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+                <Sparkles className="w-4 h-4" />
+                Why Students Choose Disha
+              </div>
+            </Reveal>
+            <SectionHeading 
+              title="What You'll Gain at Disha For India" 
+              description="Joining Disha For India is more than participating in projects—it's an opportunity to grow personally, professionally, and socially while creating meaningful impact."
+              align="center"
+            />
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {BENEFITS.map((benefit, i) => (
               <Reveal key={i} delay={i * 0.05} className="group">
                 <div className="h-full flex flex-col rounded-[2rem] border border-border bg-card p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-card hover:-translate-y-2">
                   <div className="w-16 h-16 rounded-2xl bg-background-soft shadow-sm flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                    {domain.icon}
+                    {benefit.icon}
                   </div>
-                  <h4 className="text-xl font-bold font-display text-heading mb-3">{domain.name}</h4>
-                  <p className="text-muted-foreground flex-1 leading-relaxed">{domain.desc}</p>
+                  <h4 className="text-xl font-bold font-display text-heading mb-3">{benefit.name}</h4>
+                  <p className="text-muted-foreground flex-1 leading-relaxed">{benefit.desc}</p>
                 </div>
               </Reveal>
             ))}
