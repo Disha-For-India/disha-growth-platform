@@ -22,9 +22,9 @@ export function ProgramCard({ program }: { program: Program }) {
       >
         <Icon className="h-6 w-6" />
       </span>
-      <h4 className="mt-4 text-xl font-bold capitalize text-heading">{program.title}</h4>
+      <h4 className="mt-3 text-base md:text-lg font-bold capitalize leading-tight text-heading">{program.title}</h4>
       <p className="mt-0.5 ">{program.tagline}</p>
-      <p className="mt-3 flex-1 ">{program.description}</p>
+      <p className="mt-2 flex-1 ">{program.description}</p>
       <span className={cn("mt-4 inline-flex items-center gap-1 text-sm font-semibold", isGreen ? "text-green" : "text-primary")}>
         Learn more <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </span>
@@ -34,8 +34,8 @@ export function ProgramCard({ program }: { program: Program }) {
 
 export function EventCard({ event }: { event: DishaEvent }) {
   return (
-    <article className="group overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
-      <div className="relative aspect-[16/10] overflow-hidden">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
+      <div className="relative aspect-[16/10] shrink-0 overflow-hidden">
         <OptimizedImage src={event.image} alt={event.title} width={800} height={500} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
         <span className={cn(
           "absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold",
@@ -44,11 +44,11 @@ export function EventCard({ event }: { event: DishaEvent }) {
           {event.status === "upcoming" ? "Upcoming" : "Completed"}
         </span>
       </div>
-      <div className="p-5">
-        <span className="rounded-full bg-green-soft px-2.5 py-0.5 text-xs font-semibold text-green">{event.category}</span>
-        <h4 className="mt-3 text-xl font-bold capitalize text-heading">{event.title}</h4>
-        <p className="mt-2 line-clamp-2 ">{event.description}</p>
-        <div className="mt-4 flex flex-wrap gap-3 text-xs text-muted-foreground">
+      <div className="flex flex-1 flex-col p-5">
+        <span className="w-fit rounded-full bg-green-soft px-2.5 py-0.5 text-xs font-semibold text-green">{event.category}</span>
+        <h4 className="mt-2.5 text-base md:text-lg font-bold capitalize leading-tight text-heading">{event.title}</h4>
+        <p className="mt-1.5 flex-1 line-clamp-2">{event.description}</p>
+        <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
           <span className="flex items-center gap-1"><Calendar className="h-3.5 w-3.5" /> {event.date === "Coming Soon" ? "Coming Soon" : new Date(event.date).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}</span>
           <span className="flex items-center gap-1"><MapPin className="h-3.5 w-3.5" /> {event.location}</span>
         </div>
@@ -62,16 +62,16 @@ export function BlogCard({ blog }: { blog: Blog }) {
     <Link
       to="/blogs/$slug"
       params={{ slug: blog.slug }}
-      className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-card"
+      className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-card"
     >
-      <div className="relative aspect-[16/10] overflow-hidden">
+      <div className="relative aspect-[16/10] shrink-0 overflow-hidden">
         <OptimizedImage src={blog.cover} alt={blog.title} width={800} height={500} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="flex flex-1 flex-col p-5">
         <span className="w-fit rounded-full bg-primary-soft px-2.5 py-0.5 text-xs font-semibold text-primary">{blog.category}</span>
-        <h4 className="mt-3 text-xl font-bold capitalize text-heading transition-colors group-hover:text-primary">{blog.title}</h4>
-        <p className="mt-2 line-clamp-2 flex-1 ">{blog.excerpt}</p>
-        <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
+        <h4 className="mt-2.5 text-base md:text-lg font-bold capitalize leading-tight text-heading transition-colors group-hover:text-primary">{blog.title}</h4>
+        <p className="mt-1.5 flex-1 line-clamp-2">{blog.excerpt}</p>
+        <div className="mt-3 flex items-center gap-3 text-xs text-muted-foreground">
           <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {blog.readingTime} min read</span>
           <span>·</span>
           <span>{new Date(blog.date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}</span>
@@ -83,15 +83,15 @@ export function BlogCard({ blog }: { blog: Blog }) {
 
 export function StoryCard({ story }: { story: Story }) {
   return (
-    <article className="group overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
-      <div className="relative aspect-[4/3] overflow-hidden">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
+      <div className="relative aspect-[4/3] shrink-0 overflow-hidden">
         <OptimizedImage src={story.photo} alt={story.name} width={800} height={600} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
         <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold text-primary">{story.type}</span>
       </div>
-      <div className="p-5">
-        <h4 className="text-xl font-bold capitalize text-heading">{story.headline}</h4>
-        <p className="mt-2 ">{story.summary}</p>
-        <p className="mt-3 text-green">— {story.name}</p>
+      <div className="flex flex-1 flex-col p-5">
+        <h4 className="text-base md:text-lg font-bold capitalize leading-tight text-heading">{story.headline}</h4>
+        <p className="mt-1.5 flex-1 ">{story.summary}</p>
+        <p className="mt-3 font-medium text-green">— {story.name}</p>
       </div>
     </article>
   );

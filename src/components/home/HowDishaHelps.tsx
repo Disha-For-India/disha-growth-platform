@@ -50,12 +50,12 @@ export function HowDishaHelps() {
             const Icon = feature.icon;
             return (
               <Reveal key={feature.title} delay={index * 0.08}>
-                <div className="flex h-full flex-col rounded-3xl border border-border bg-card p-7 shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
+                <div className="flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
                   <span className={`grid h-12 w-12 place-items-center rounded-2xl ${feature.accent}`}>
                     <Icon className="h-6 w-6" />
                   </span>
-                  <h3 className="mt-5 ">{feature.title}</h3>
-                  <p className="mt-3 flex-1 ">{feature.description}</p>
+                  <h3 className="mt-3.5 text-base md:text-lg font-bold leading-tight text-heading">{feature.title}</h3>
+                  <p className="mt-1.5 flex-1 ">{feature.description}</p>
                 </div>
               </Reveal>
             );
