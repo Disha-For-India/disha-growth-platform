@@ -184,7 +184,6 @@ function InternshipProgram() {
           </Reveal>
           <div>
             <Reveal>
-              <h3 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">You & Your Impact</h3>
               <h2 className="text-4xl lg:text-5xl font-bold font-display text-heading leading-tight">
                 When you grow, <br/> society grows. <span className="text-accent inline-block animate-pulse">♡</span>
               </h2>
@@ -211,12 +210,6 @@ function InternshipProgram() {
       <section className="py-32 px-5 bg-background-soft border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <Reveal>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-                <Sparkles className="w-4 h-4" />
-                Why Students Choose Disha
-              </div>
-            </Reveal>
             <SectionHeading 
               title="What You'll Gain at Disha For India" 
               description="Joining Disha For India is more than participating in projects—it's an opportunity to grow personally, professionally, and socially while creating meaningful impact."
@@ -240,48 +233,38 @@ function InternshipProgram() {
       </section>
 
       {/* The Journey (Timeline) */}
-      <section className="py-32 px-5 bg-background overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
-            <h3 className="text-sm font-bold tracking-widest text-primary uppercase mb-4 flex items-center justify-center gap-4">
-              <span className="w-12 h-px bg-primary/30" />
-              Your Journey to Become a Member
-              <span className="w-12 h-px bg-primary/30" />
-            </h3>
-            <h2 className="text-4xl lg:text-5xl font-bold font-display text-heading">
+      <section className="py-32 px-5 md:px-10 lg:px-12 bg-background overflow-hidden">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="text-center mb-24 lg:mb-28">
+            <h2 className="text-4xl lg:text-5xl font-bold font-display text-heading mb-4">
               Simple Steps. <span className="text-primary">Meaningful</span> Journey.
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Your journey to become a member and start making an impact.
+            </p>
           </div>
 
-          <div className="relative max-w-6xl mx-auto">
+          <div className="relative w-full">
             {/* Connecting Line for desktop */}
-            <div className="hidden lg:block absolute top-[5.5rem] left-[5%] right-[15%] h-[2px] border-t-2 border-dashed border-border" />
+            <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-[2px] border-t-2 border-dashed border-border" />
             
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6 relative z-10 w-full">
               {JOURNEY_STEPS.map((step, i) => (
-                <Reveal key={i} delay={i * 0.1} className={cn("relative flex flex-col items-center text-center group", i === JOURNEY_STEPS.length - 1 ? "lg:col-span-2" : "col-span-1")}>
+                <Reveal key={i} delay={i * 0.1} className={cn("relative flex flex-col items-center text-center group", i === JOURNEY_STEPS.length - 1 ? "md:col-span-2 lg:col-span-1" : "col-span-1")}>
                   {/* Circle number */}
-                  <div className="w-10 h-10 rounded-full bg-accent text-ink font-bold flex items-center justify-center absolute -top-12 lg:-top-[3.5rem] shadow-sm z-20 group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 rounded-full bg-accent text-ink font-bold flex items-center justify-center absolute -top-12 lg:-top-14 shadow-sm z-20 group-hover:scale-110 transition-transform duration-300">
                     {step.num}
                   </div>
                   {/* Card */}
-                  <div className="bg-card rounded-[2rem] p-6 shadow-soft border border-border flex-1 w-full flex flex-col items-center hover:shadow-card transition-shadow duration-300 pt-8 lg:pt-6">
-                    <div className="w-16 h-16 rounded-full bg-background-soft text-foreground flex items-center justify-center mb-5 group-hover:text-primary transition-colors">
+                  <div className="bg-card rounded-[2rem] px-5 py-6 shadow-soft border border-border flex-1 w-full flex flex-col items-center hover:shadow-card hover:-translate-y-1.5 transition-all duration-300">
+                    <div className="w-14 h-14 rounded-2xl bg-background-soft text-foreground flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                       {step.icon}
                     </div>
-                    <h4 className="font-bold text-heading text-lg mb-3">{step.title}</h4>
+                    <h4 className="font-bold text-heading text-lg mb-2 leading-tight">{step.title}</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                   </div>
                 </Reveal>
               ))}
-              
-              {/* Final circular CTA in timeline */}
-              <Reveal delay={0.6} className="hidden lg:flex relative flex-col items-center justify-center col-span-1 mt-4">
-                <div className="w-32 h-32 rounded-full bg-primary text-white flex flex-col items-center justify-center shadow-card p-4 text-center transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer">
-                  <Users className="w-8 h-8 mb-2 opacity-90" />
-                  <span className="font-bold text-sm leading-tight">Work with<br/>Disha for India</span>
-                </div>
-              </Reveal>
             </div>
           </div>
         </div>
