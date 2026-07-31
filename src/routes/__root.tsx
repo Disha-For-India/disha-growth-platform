@@ -5,7 +5,7 @@ import {
   createRootRouteWithContext,
   useRouter,
 } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import "../styles.css";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -15,14 +15,15 @@ import { CareerChatbot } from "../components/CareerChatbot";
 import { Toaster } from "../components/ui/sonner";
 import { AuthProvider } from "../hooks/use-auth";
 import { HelmetProvider, Helmet } from "react-helmet-async";
+import Loader from "../components/Loader/loader";
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 >404</h1>
-        <h2 className="mt-4 ">Page not found</h2>
-        <p className="mt-2 ">
+        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
@@ -48,10 +49,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 >
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">
           This page didn't load
         </h1>
-        <p className="mt-2 ">
+        <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
@@ -84,6 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const [appLoading, setAppLoading] = useState(true);
 
   return (
     <HelmetProvider>
@@ -111,16 +113,20 @@ function RootComponent() {
       </Helmet>
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
-          <div className="relative flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1">
-              {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-              <Outlet />
-            </main>
-            <Footer />
-            <CareerChatbot />
-            <Toaster position="top-center" richColors />
-          </div>
+          {appLoading ? (
+            <Loader onComplete={() => setAppLoading(false)} />
+          ) : (
+            <div className="relative flex min-h-screen flex-col">
+              <Navbar />
+              <main className="flex-1">
+                {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+                <Outlet />
+              </main>
+              <Footer />
+              <CareerChatbot />
+              <Toaster position="top-center" richColors />
+            </div>
+          )}
         </AuthProvider>
       </QueryClientProvider>
     </HelmetProvider>
