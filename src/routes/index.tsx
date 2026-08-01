@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, BookOpen, Briefcase, Calendar, Compass, Gift, GraduationCap, Heart, Sparkles, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, BookOpen, Briefcase, Calendar, Compass, Gift, GraduationCap, Heart, HeartHandshake, Sparkles, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, lazy, Suspense } from "react";
 import { images } from "@/lib/images";
 import { OptimizedImage } from "@/components/shared/OptimizedImage";
@@ -330,8 +330,11 @@ function Home() {
                 ))}
               </ul>
               <div className="mt-10 flex flex-wrap gap-4">
-                <Button asChild size="lg">
-                  <Link to="/volunteer">Become a Volunteer</Link>
+                <Button asChild size="lg" className="bg-[#F4B400] hover:bg-[#D99B00] text-white rounded-full px-7 h-12 text-base font-semibold shadow-sm transition-all border-none">
+                  <a href="https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard" className="inline-flex items-center gap-2">
+                    <HeartHandshake className="h-5 w-5 text-white" />
+                    <span>Be a Volunteer</span>
+                  </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/about">Learn More</Link>
@@ -459,7 +462,7 @@ function Home() {
                   </p>
                   <div className="mt-8 flex justify-center gap-4">
                     <Button asChild size="lg" className="rounded-full px-8">
-                      <a href="https://app-disha-for-indiaa.vercel.app/signup">Join as a Volunteer</a>
+                      <a href="https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard">Join as a Volunteer</a>
                     </Button>
                   </div>
                 </div>

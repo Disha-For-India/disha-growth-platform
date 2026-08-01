@@ -163,7 +163,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "It requires around 10 to 15 hours a week with flexible timings so your college exams aren't affected. Upon completion, you earn a Verified Certificate, a Letter of Recommendation (LOR), and points on our national leaderboard.\n\n" +
            "Would you like to apply now?",
     actions: [
-      { label: "Apply to Join Disha", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
+      { label: "Apply to Join Disha", url: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard", isExternal: true },
       { label: "Explore Internship Page", url: "/internship-program" }
     ],
     suggestions: [
@@ -220,7 +220,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "• Git and GitHub collaboration workflows\n\n" +
            "Don't worry if you are still learning—passion and willingness to build matter most to us!",
     actions: [
-      { label: "Apply for Frontend Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
+      { label: "Apply for Frontend Internship", url: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard", isExternal: true },
       { label: "Internship Program Details", url: "/internship-program" }
     ],
     suggestions: [
@@ -277,7 +277,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "• API Security & JWT Authentication\n\n" +
            "You will receive regular code reviews and guidance from senior engineers.",
     actions: [
-      { label: "Apply for Backend Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
+      { label: "Apply for Backend Internship", url: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard", isExternal: true },
       { label: "Internship Program Details", url: "/internship-program" }
     ],
     suggestions: [
@@ -330,7 +330,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "• Collaboration experience working directly with web developers\n" +
            "• Design system creation & accessibility best practices",
     actions: [
-      { label: "Apply for UI/UX Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
+      { label: "Apply for UI/UX Internship", url: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard", isExternal: true },
       { label: "Internship Program Details", url: "/internship-program" }
     ],
     suggestions: [
@@ -384,7 +384,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "• Content strategy for Instagram, LinkedIn, and YouTube\n" +
            "• Brand storytelling that drives social impact",
     actions: [
-      { label: "Apply for Marketing Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
+      { label: "Apply for Marketing Internship", url: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard", isExternal: true },
       { label: "Explore Disha Blogs", url: "/blogs" }
     ],
     suggestions: [
@@ -434,7 +434,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "You will work with real volunteer activity data, student reach metrics, and web analytics using tools like Python, SQL, Excel, and visualization dashboards.\n\n" +
            "It's a fantastic way to build a real-world analytics portfolio while seeing your work make a direct community impact.",
     actions: [
-      { label: "Apply for Data Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
+      { label: "Apply for Data Internship", url: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard", isExternal: true },
       { label: "View Leaderboard Data", url: "/leaderboard" }
     ],
     suggestions: [
@@ -481,7 +481,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "As an Operations & Events intern, you'll gain hands-on experience coordinating workshops, managing volunteer groups, and managing event logistics for school and campus drives.\n\n" +
            "You will develop strong leadership, communication, and project management skills that employers look for.",
     actions: [
-      { label: "Apply for Operations Internship", url: "https://app-disha-for-indiaa.vercel.app/", isExternal: true },
+      { label: "Apply for Operations Internship", url: "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard", isExternal: true },
       { label: "Explore Disha Events", url: "/events" }
     ],
     suggestions: [

@@ -128,7 +128,15 @@ function VolunteerAuthLink({ isScrolled }: { isScrolled: boolean }) {
     );
   }
 
-  return null;
+  return (
+    <a
+      href="https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard"
+      className="rounded-full bg-[#F4B400] text-white px-5 py-2.5 text-base font-semibold transition-all duration-200 hover:bg-[#D99B00] hover:scale-[1.02] shadow-sm inline-flex items-center gap-2 border-none"
+    >
+      <HeartHandshake className="h-5 w-5 text-white" />
+      <span>Be a Volunteer</span>
+    </a>
+  );
 }
 
 
@@ -154,7 +162,19 @@ function MobileVolunteerAuthLink() {
     );
   }
 
-  return null;
+  return (
+    <div className="mt-4 border-t border-nav-border pt-4">
+      <SheetClose asChild>
+        <a
+          href="https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard"
+          className="rounded-full bg-[#F4B400] text-white px-5 py-2.5 text-base font-semibold transition-all duration-200 hover:bg-[#D99B00] hover:scale-[1.02] shadow-sm inline-flex items-center justify-center gap-2 w-full border-none"
+        >
+          <HeartHandshake className="h-5 w-5 text-white" />
+          <span>Be a Volunteer</span>
+        </a>
+      </SheetClose>
+    </div>
+  );
 }
 
 export function Navbar() {

@@ -66,12 +66,10 @@ function Volunteer() {
                     <span className="flex items-center gap-1"><MapPin className="h-3.5 w-3.5" /> {v.location}</span>
                   </div>
                   <Button
+                    asChild
                     className="mt-5 w-full rounded-full"
-                    onClick={() => {
-                      window.location.href = "https://app-disha-for-indiaa.vercel.app/";
-                    }}
                   >
-                    Apply Now
+                    <a href="https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard">Apply Now</a>
                   </Button>
                 </div>
               </Reveal>

@@ -104,7 +104,7 @@ function InternshipProgram() {
 
             <Reveal delay={0.2} className="mt-6 flex flex-wrap items-center gap-4 w-full">
               <Button size="lg" className="h-12 lg:h-14 px-6 lg:px-8 rounded-full text-sm lg:text-base font-bold shadow-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300" asChild>
-                <a href="https://app-disha-for-indiaa.vercel.app/">
+                <a href="https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard">
                   <Rocket className="mr-2 h-4 w-4 lg:h-5 lg:w-5" /> Apply to Join Disha
                 </a>
               </Button>

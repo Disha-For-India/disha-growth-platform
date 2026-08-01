@@ -25,6 +25,7 @@ import {
   Sparkles,
   BookOpen,
   Heart,
+  HeartHandshake,
 } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
 import { Reveal } from "@/components/shared/Reveal";
@@ -444,8 +445,11 @@ function LeaderboardPage() {
             <p className="mb-8 text-lg text-muted-foreground">
               Whether you've volunteered for one hour or one hundred, every act of service creates positive change. Thank you for helping build a stronger community.
             </p>
-            <Button size="lg" className="bg-[#0056D6] hover:bg-[#0047B3] text-white rounded-full px-8 font-semibold shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all">
-              Become a Volunteer
+            <Button asChild size="lg" className="bg-[#F4B400] hover:bg-[#D99B00] text-white rounded-full px-8 font-semibold shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all">
+              <a href="https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard" className="inline-flex items-center gap-2">
+                <HeartHandshake className="h-5 w-5" />
+                <span>Be a Volunteer</span>
+              </a>
             </Button>
           </Reveal>
         </div>
