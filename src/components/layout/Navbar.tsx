@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown, Facebook, Instagram, Linkedin, Twitter, Mail, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Facebook, Instagram, Linkedin, Twitter, Mail, Phone, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -160,6 +160,7 @@ function MobileVolunteerAuthLink() {
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { user } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -193,7 +194,10 @@ export function Navbar() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <VolunteerAuthLink isScrolled={isScrolled} />
-          <a href="https://app-disha-for-indiaa.vercel.app" className="rounded-[14px] bg-dash-btn text-white px-6 py-2.5 text-base font-semibold transition-all duration-200 hover:bg-dash-hover hover:scale-[1.02] shadow-sm inline-flex items-center justify-center border-none">Dashboard</a>
+          <a href={user ? "https://app-disha-for-indiaa.vercel.app" : "https://app-disha-for-indiaa.vercel.app/signup"} className="group rounded-[14px] bg-dash-btn text-white px-6 py-2.5 text-base font-semibold transition-all duration-300 hover:bg-dash-hover hover:scale-[1.02] hover:shadow-md shadow-sm inline-flex items-center justify-center border-none">
+            <HeartHandshake className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:scale-110" />
+            Be a Volunteer
+          </a>
         </div>
 
         <Sheet open={open} onOpenChange={setOpen}>
@@ -227,8 +231,9 @@ export function Navbar() {
               <MobileVolunteerAuthLink />
 
               <SheetClose asChild>
-                <a href="https://app-disha-for-indiaa.vercel.app" className="rounded-[14px] bg-dash-btn text-white px-6 py-2.5 text-base font-semibold transition-all duration-200 hover:bg-dash-hover hover:scale-[1.02] shadow-sm inline-flex items-center justify-center w-full mt-4 border-none">
-                  Dashboard
+                <a href={user ? "https://app-disha-for-indiaa.vercel.app" : "https://app-disha-for-indiaa.vercel.app/signup"} className="group rounded-[14px] bg-dash-btn text-white px-6 py-2.5 text-base font-semibold transition-all duration-300 hover:bg-dash-hover hover:scale-[1.02] hover:shadow-md shadow-sm inline-flex items-center justify-center w-full mt-4 border-none">
+                  <HeartHandshake className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:scale-110" />
+                  Be a Volunteer
                 </a>
               </SheetClose>
             </div>
