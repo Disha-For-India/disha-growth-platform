@@ -72,7 +72,7 @@ export function OptimizedImage({
   }
 
   return (
-    <div className={cn("relative overflow-hidden bg-muted", wrapperClassName)}>
+    <div className={cn("relative overflow-hidden bg-muted", wrapperClassName)} style={{ transform: "translateZ(0)" }}>
       <img
         ref={imgRef}
         src={imageSrc}
@@ -81,6 +81,7 @@ export function OptimizedImage({
         alt={alt}
         onError={handleError}
         onLoad={handleLoad}
+        style={{ willChange: "opacity, transform" }}
         className={cn(
           (props.loading !== "eager" && !isHero) && "transition-opacity duration-500",
           (props.loading === "eager" || isHero || loaded) ? "opacity-100" : "opacity-0",

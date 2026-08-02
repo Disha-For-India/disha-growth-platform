@@ -65,7 +65,7 @@ export function Logo({ isScrolled }: { isScrolled?: boolean }) {
           Disha <span className="text-[#000000]">For India</span>
         </span>
         <span className="text-[10.5px] font-bold uppercase tracking-widest transition-colors text-[#1E3A5F]">
-          WE EMPOWER | WE MAKE THE DIFFERENCE
+          EMPOWERED SELF TO EMPOWER SOCIETY
         </span>
       </span>
     </Link>

@@ -5,16 +5,21 @@ import {
   createRootRouteWithContext,
   useRouter,
 } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 
 import "../styles.css";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
-import { CareerChatbot } from "../components/CareerChatbot";
 import { Toaster } from "../components/ui/sonner";
 import { AuthProvider } from "../hooks/use-auth";
 import { HelmetProvider, Helmet } from "react-helmet-async";
+
+const CareerChatbot = lazy(() =>
+  import("../components/CareerChatbot").then((mod) => ({
+    default: mod.CareerChatbot,
+  }))
+);
 
 function NotFoundComponent() {
   return (
@@ -118,7 +123,9 @@ function RootComponent() {
               <Outlet />
             </main>
             <Footer />
-            <CareerChatbot />
+            <Suspense fallback={null}>
+              <CareerChatbot />
+            </Suspense>
             <Toaster position="top-center" richColors />
           </div>
         </AuthProvider>

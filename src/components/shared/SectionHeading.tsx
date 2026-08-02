@@ -7,7 +7,7 @@ export function SectionHeading({
   align = "left",
   className,
 }: {
-  title: string;
+  title: React.ReactNode;
   description?: string;
   align?: "left" | "center";
   className?: string;
@@ -21,7 +21,7 @@ export function SectionHeading({
       )}
     >
 
-      <h2>
+      <h2 className="[text-wrap:balance]">
         {title}
       </h2>
       {description && (

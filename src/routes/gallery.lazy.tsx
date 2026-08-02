@@ -29,6 +29,7 @@ function Gallery() {
       </Helmet>
       <PageHero
         title="Moments from our journey"
+        titleClassName="whitespace-nowrap"
         description="A glimpse into the workshops, drives, events and smiles that make up the Disha For India story."
       />
       <section className="py-10 lg:py-16">

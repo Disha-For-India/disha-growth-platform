@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { SkeletonSection } from "@/components/shared/SkeletonSection";
 import { ProgramCard, BlogCard, StoryCard } from "@/components/cards";
 import {
   PROGRAMS,
@@ -71,12 +72,17 @@ function FullWidthHeroCarousel() {
     if (isHovered || !HERO_SLIDES?.length) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(timer);
-  }, [isHovered, currentSlide]);
+  }, [isHovered]);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? HERO_SLIDES.length - 1 : prev - 1));
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? HERO_SLIDES.length - 1 : prev - 1));
+  };
 
   const handleTouchStart = (e: any) => setTouchStart(e.targetTouches[0].clientX);
   const handleTouchEnd = (e: any) => {
@@ -104,35 +110,14 @@ function FullWidthHeroCarousel() {
       tabIndex={0}
       role="region"
       aria-label="Hero Carousel"
+      aria-live="polite"
     >
       <div className="absolute inset-0 bg-grid pointer-events-none opacity-50" />
 
-      {/* Main Layout Container */}
-      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-10 pb-16 lg:pt-16 lg:pb-24">
+      {/* Main Layout Container with CSS Grid Stacking */}
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-10 pb-16 lg:pt-16 lg:pb-24 grid grid-cols-1">
 
-        {/* Invisible Placeholder to maintain Grid Height properly */}
-        <div className="grid items-center gap-10 lg:grid-cols-2 invisible pointer-events-none">
-          <div className="flex flex-col justify-center">
-            <div className="text-[36px] md:text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-[#1E2F50] mb-5 line-clamp-3">
-              {HERO_SLIDES[0].headline}
-            </div>
-            <p className=" mb-7 max-w-xl">
-              {HERO_SLIDES[0].description}
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="h-12 px-7 text-base rounded-[14px]">Placeholder</Button>
-            </div>
-            <div className="mt-8 flex items-center gap-2 text-sm">
-              <Calendar className="h-4 w-4" />
-              <span>
-                <strong className="font-semibold">Established in 2017</strong>
-              </span>
-            </div>
-          </div>
-          <div className="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[380px]" />
-        </div>
-
-        {/* Absolute Slides with AnimatePresence */}
+        {/* Dynamic Slides stacked in same grid cell */}
         <AnimatePresence initial={false}>
           <motion.div
             key={currentSlide}
@@ -140,16 +125,16 @@ function FullWidthHeroCarousel() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="absolute inset-0 z-20 flex items-center pt-10 pb-16 lg:pt-16 lg:pb-24 px-5"
+            className="col-start-1 row-start-1 z-20 flex items-center"
           >
-            <div className="mx-auto w-full max-w-7xl grid items-center gap-10 lg:grid-cols-2">
+            <div className="mx-auto w-full grid items-center gap-10 lg:grid-cols-2">
 
               {/* Dynamic Heading Column */}
               <div className="flex flex-col justify-center pointer-events-auto">
-                <h1 className=" mb-5 line-clamp-3">
+                <h1 className="mb-5 [text-wrap:balance]">
                   {HERO_SLIDES[currentSlide].headline}
                 </h1>
-                <p className=" mb-7 max-w-xl">
+                <p className="mb-7 max-w-xl [text-wrap:balance]">
                   {HERO_SLIDES[currentSlide].description}
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -276,7 +261,7 @@ function Home() {
       <FullWidthHeroCarousel />
 
       {/* SECTION 2 — LAZY LOADED CONTENT */}
-      <Suspense fallback={<div className="h-96 w-full flex items-center justify-center text-muted-foreground">Loading sections...</div>}>
+      <Suspense fallback={<SkeletonSection />}>
         {/* SECTION 2 — Marketplace Summary */}
         <MarketplaceShowcase />
 

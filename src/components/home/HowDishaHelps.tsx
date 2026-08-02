@@ -40,7 +40,11 @@ export function HowDishaHelps() {
     <section className="py-12 lg:py-20 bg-background">
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeading
-          title="Why Disha Exists"
+          title={
+            <>
+              Creating the India <br /> We Want to Live In
+            </>
+          }
           description="Helping people discover opportunities, build skills, collaborate, and create meaningful impact in their communities."
           align="center"
         />
