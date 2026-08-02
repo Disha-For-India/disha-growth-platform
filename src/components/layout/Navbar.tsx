@@ -15,7 +15,6 @@ import { ORG } from "@/lib/site-data";
 const TOOLS = [
   { to: "/opportunity-hub", label: "Opportunity Hub" },
   { to: "/internship-program", label: "Internship Program" },
-  { to: "/volunteer", label: "Volunteer Hub" },
   { to: "/leaderboard", label: "Leaderboard" },
 ] as const;
 
@@ -175,23 +174,23 @@ export function Navbar() {
     <>
       <TopContactBar />
       <header className="sticky top-0 z-50 w-full bg-white border-b border-nav-border shadow-sm">
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5">
-        <Logo isScrolled={isScrolled} />
+        <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5">
+          <Logo isScrolled={isScrolled} />
 
-        <div className="hidden items-center gap-8 lg:flex">
-          <NavDropdown label="About" items={ABOUT} isScrolled={isScrolled} />
-          <NavDropdown label="Community Hub" items={TOOLS} isScrolled={isScrolled} />
-          {MAIN.map((it) => (
-            <Link
-              key={it.to}
-              to={it.to}
-              className="rounded-md px-3 py-2 text-base font-semibold transition-colors duration-200 text-nav hover:text-nav-hover"
-              activeProps={{ className: "text-nav-hover font-semibold" }}
-            >
-              {it.label}
-            </Link>
-          ))}
-        </div>
+          <div className="hidden items-center gap-8 lg:flex">
+            <NavDropdown label="About" items={ABOUT} isScrolled={isScrolled} />
+            <NavDropdown label="Community Hub" items={TOOLS} isScrolled={isScrolled} />
+            {MAIN.map((it) => (
+              <Link
+                key={it.to}
+                to={it.to}
+                className="rounded-md px-3 py-2 text-base font-semibold transition-colors duration-200 text-nav hover:text-nav-hover"
+                activeProps={{ className: "text-nav-hover font-semibold" }}
+              >
+                {it.label}
+              </Link>
+            ))}
+          </div>
 
         <div className="hidden items-center gap-4 lg:flex">
           <VolunteerAuthLink isScrolled={isScrolled} />
@@ -201,35 +200,35 @@ export function Navbar() {
           </a>
         </div>
 
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="icon" aria-label="Open menu" className="lg:hidden h-11 w-11 border-transparent bg-transparent hover:bg-gray-50 text-nav">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" hideClose className="w-[88vw] max-w-sm overflow-y-auto p-0 bg-white border-l border-nav-border shadow-2xl">
-            <div className="flex items-center justify-between border-b border-nav-border px-5 py-4 bg-white">
-              <Logo isScrolled={true} />
-              <SheetClose asChild>
-                <Button variant="ghost" size="icon" aria-label="Close menu" className="h-11 w-11 text-nav hover:bg-gray-50 hover:text-nav-hover">
-                  <X className="h-6 w-6" />
-                </Button>
-              </SheetClose>
-            </div>
-            <div className="px-5 py-4 bg-white min-h-full">
-              {[...ABOUT, ...TOOLS, ...MAIN].map((it) => (
-                <SheetClose asChild key={it.to}>
-                  <Link
-                    to={it.to}
-                    className="block rounded-lg px-3 py-2.5 text-base font-semibold text-nav transition-colors duration-200 hover:bg-gray-50 hover:text-nav-hover"
-                    activeProps={{ className: "text-nav-hover font-semibold" }}
-                  >
-                    {it.label}
-                  </Link>
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" aria-label="Open menu" className="lg:hidden h-11 w-11 border-transparent bg-transparent hover:bg-gray-50 text-nav">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" hideClose className="w-[88vw] max-w-sm overflow-y-auto p-0 bg-white border-l border-nav-border shadow-2xl">
+              <div className="flex items-center justify-between border-b border-nav-border px-5 py-4 bg-white">
+                <Logo isScrolled={true} />
+                <SheetClose asChild>
+                  <Button variant="ghost" size="icon" aria-label="Close menu" className="h-11 w-11 text-nav hover:bg-gray-50 hover:text-nav-hover">
+                    <X className="h-6 w-6" />
+                  </Button>
                 </SheetClose>
-              ))}
+              </div>
+              <div className="px-5 py-4 bg-white min-h-full">
+                {[...ABOUT, ...TOOLS, ...MAIN].map((it) => (
+                  <SheetClose asChild key={it.to}>
+                    <Link
+                      to={it.to}
+                      className="block rounded-lg px-3 py-2.5 text-base font-semibold text-nav transition-colors duration-200 hover:bg-gray-50 hover:text-nav-hover"
+                      activeProps={{ className: "text-nav-hover font-semibold" }}
+                    >
+                      {it.label}
+                    </Link>
+                  </SheetClose>
+                ))}
 
-              <MobileVolunteerAuthLink />
+                <MobileVolunteerAuthLink />
 
               <SheetClose asChild>
                 <a href={user ? "https://app-disha-for-indiaa.vercel.app" : "https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard"} className="group rounded-[14px] bg-dash-btn text-white px-6 py-2.5 text-base font-semibold transition-all duration-300 hover:bg-dash-hover hover:scale-[1.02] hover:shadow-md shadow-sm inline-flex items-center justify-center w-full mt-4 border-none">

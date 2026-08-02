@@ -17,7 +17,7 @@ export const setAuthToken = (token: string | null) => {
 };
 
 const redirectToLogin = () => {
-  const onAuthPage = window.location.pathname === '/login' || window.location.pathname === '/volunteer';
+  const onAuthPage = window.location.pathname === '/login';
   if (!onAuthPage) {
     window.dispatchEvent(new CustomEvent('auth-expired'));
   }

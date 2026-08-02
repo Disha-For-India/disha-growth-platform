@@ -21,13 +21,13 @@ export const Route = createFileRoute("/programs/$slug")({
     return { program };
   },
   notFoundComponent: () => (
-    <div className="mx-auto max-w-md px-5 py-32 text-center">
+    <div className="mx-auto max-w-md px-5 py-16 lg:py-10 lg:py-16 text-center">
       <h1 >Program not found</h1>
       <Button asChild className="mt-6"><Link to="/programs">Back to programs</Link></Button>
     </div>
   ),
   errorComponent: () => (
-    <div className="mx-auto max-w-md px-5 py-32 text-center">
+    <div className="mx-auto max-w-md px-5 py-16 lg:py-10 lg:py-16 text-center">
       <h1 >Something went wrong</h1>
       <Button asChild className="mt-6"><Link to="/programs">Back to programs</Link></Button>
     </div>
@@ -99,7 +99,7 @@ function ProgramDetail() {
                   </div>
                 ))}
               </div>
-              <Button asChild className="mt-6 w-full"><Link to="/volunteer">Support this program <ArrowRight className="ml-1 h-4 w-4" /></Link></Button>
+              <Button asChild className="mt-6 w-full"><a href="https://app-disha-for-indiaa.vercel.app/signup">Support this program <ArrowRight className="ml-1 h-4 w-4" /></a></Button>
             </div>
           </Reveal>
         </div>

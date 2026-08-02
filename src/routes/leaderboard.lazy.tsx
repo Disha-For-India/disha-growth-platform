@@ -184,7 +184,7 @@ function LeaderboardPage() {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-[80vh] md:min-h-0 bg-background">
       <Helmet>
         <title>Community Leaderboard | Disha For India</title>
         <meta name="description" content="Recognizing the top volunteers and contributors making meaningful changes across communities with Disha For India." />
@@ -209,18 +209,18 @@ function LeaderboardPage() {
       </section>
 
       {/* MAIN CONTENT SECTION */}
-      <section className="pt-12 pb-12 lg:pt-16 lg:pb-20">
+      <section className="pt-12 pb-12 lg:pt-16 lg:pb-10 lg:pb-16">
         <div className="mx-auto max-w-7xl px-5">
 
           {/* 2. TOP 3 VOLUNTEERS */}
           {listLoading ? (
-            <div className="mb-16 grid gap-6 sm:grid-cols-3 items-end">
+            <div className="mb-8 lg:mb-10 grid gap-6 sm:grid-cols-3 items-end">
               <div className="h-64 animate-pulse rounded-xl bg-slate-50 order-2 sm:order-1" />
               <div className="h-80 animate-pulse rounded-xl bg-slate-50 order-1 sm:order-2" />
               <div className="h-64 animate-pulse rounded-xl bg-slate-50 order-3 sm:order-3" />
             </div>
           ) : topThree.length >= 3 ? (
-            <div className="mb-10 lg:mb-16">
+            <div className="mb-10 lg:mb-8 lg:mb-10">
               <h2 className="mb-6 lg:mb-8 text-center">
                 Top Volunteers
               </h2>
@@ -433,7 +433,7 @@ function LeaderboardPage() {
       </section>
 
       {/* 6. MOTIVATIONAL SECTION */}
-      <section className="bg-[#F8FAFC] py-16 lg:py-24 border-t border-[#E5E7EB]">
+      <section className="bg-[#F8FAFC] py-16 lg:py-12 lg:py-16 border-t border-[#E5E7EB]">
         <div className="mx-auto max-w-3xl px-5 text-center">
           <Reveal>
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#FFF8E6] text-[#F4B400]">

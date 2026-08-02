@@ -23,7 +23,7 @@ const CareerChatbot = lazy(() =>
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-[80vh] md:min-h-0 items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 >404</h1>
         <h2 className="mt-4 ">Page not found</h2>
@@ -51,7 +51,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-[80vh] md:min-h-0 items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 >
           This page didn't load
@@ -116,7 +116,7 @@ function RootComponent() {
       </Helmet>
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
-          <div className="relative flex min-h-screen flex-col">
+          <div className="relative flex min-h-[80vh] md:min-h-0 flex-col">
             <Navbar />
             <main className="flex-1">
               {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}

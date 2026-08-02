@@ -14,13 +14,13 @@ export const Route = createFileRoute("/blogs/$slug")({
     return { blog, related: related.length ? related : BLOGS.filter((b) => b.slug !== blog.slug).slice(0, 3) };
   },
   notFoundComponent: () => (
-    <div className="mx-auto max-w-md px-5 py-32 text-center">
+    <div className="mx-auto max-w-md px-5 py-16 lg:py-10 lg:py-16 text-center">
       <h1 >Article not found</h1>
       <Button asChild className="mt-6"><Link to="/blogs">Back to blog</Link></Button>
     </div>
   ),
   errorComponent: () => (
-    <div className="mx-auto max-w-md px-5 py-32 text-center">
+    <div className="mx-auto max-w-md px-5 py-16 lg:py-10 lg:py-16 text-center">
       <h1 >Something went wrong</h1>
       <Button asChild className="mt-6"><Link to="/blogs">Back to blog</Link></Button>
     </div>
@@ -77,7 +77,7 @@ function BlogPost() {
       </div>
 
       <div className="mx-auto max-w-3xl px-5">
-        <div className="-mt-20 relative rounded-3xl border border-border bg-card p-7 shadow-card sm:p-10">
+        <div className="-mt-10 lg:mt-12 relative rounded-3xl border border-border bg-card p-7 shadow-card sm:p-10">
           <Button asChild variant="ghost" size="sm" className="mb-4 -ml-2">
             <Link to="/blogs"><ArrowLeft className="mr-1 h-4 w-4" /> All articles</Link>
           </Button>

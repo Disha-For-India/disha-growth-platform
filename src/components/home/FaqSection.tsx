@@ -79,7 +79,7 @@ export function FaqSection() {
   };
 
   return (
-    <section className="pt-16 pb-8 lg:pt-24 lg:pb-10 bg-background">
+    <section className="pt-16 pb-8 lg:pt-12 lg:pt-16 lg:pb-10 bg-background">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

@@ -4,7 +4,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { 
+import {
   HeartHandshake, BookOpen, Users, Globe, Rocket, ShieldCheck,
   CheckCircle2, ArrowRight, Laptop, Building, Play,
   Target, Lightbulb, PenTool, BarChart, MessageSquare, Code, UserPlus,
@@ -66,36 +66,36 @@ function InternshipProgram() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative pt-8 lg:pt-10 pb-16 px-5 bg-background-soft flex items-center overflow-hidden">
+      <section className="relative pt-12 lg:pt-16 pb-16 lg:pb-24 px-5 bg-background-soft overflow-hidden">
         {/* Soft Background Decorations */}
         <div className="absolute inset-0 bg-grid opacity-50 -z-10" />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -z-10 translate-x-1/3 -translate-y-1/3" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[100px] -z-10 -translate-x-1/3 translate-y-1/3" />
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-white to-transparent -z-10" />
         
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-12 items-center w-full z-10">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full z-10">
           {/* Left Column */}
-          <div className="flex flex-col items-start text-left pt-10 lg:pt-0">
+          <div className="flex flex-col items-start text-left pt-6 lg:pt-0">
             <Reveal>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold font-display text-heading leading-[1.05] tracking-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold font-display text-heading leading-[1.2] tracking-tight max-w-xl">
                 Work on Real Projects.<br/>Build Real Skills.<br/>Create <span className="text-primary relative inline-block">Real Impact.<svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/30" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7C49.5 2 122.5 1 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg></span>
               </h1>
               
-              <p className="mt-4 text-base lg:text-lg text-foreground max-w-xl leading-relaxed">
+              <p className="mt-6 text-base lg:text-lg text-foreground max-w-xl leading-relaxed">
                 Join a purpose-driven community to collaborate with passionate peers, receive mentorship, and apply skills to drive social change.
               </p>
             </Reveal>
 
-            <Reveal delay={0.1} className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+            <Reveal delay={0.1} className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5 w-full max-w-xl">
               {[
                 "Live Project Experience",
                 "Industry Mentorship",
                 "Portfolio Development",
                 "Community Impact"
               ].map((benefit, idx) => (
-                <div key={idx} className="flex items-center gap-2.5 text-heading font-medium text-sm lg:text-base">
-                  <div className="w-5 h-5 lg:w-6 lg:h-6 rounded-full bg-success-soft flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="w-3 h-3 lg:w-4 lg:h-4 text-success" />
+                <div key={idx} className="flex items-center gap-3 text-heading font-medium text-sm lg:text-base">
+                  <div className="w-5 h-5 rounded-full bg-success-soft flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3 h-3 text-success" />
                   </div>
                   {benefit}
                 </div>
@@ -109,8 +109,8 @@ function InternshipProgram() {
                 </a>
               </Button>
               <button className="group flex items-center gap-3 font-semibold text-heading text-sm lg:text-base hover:text-primary transition-colors">
-                <span className="flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-white shadow-soft group-hover:scale-110 transition-transform duration-300">
-                  <Play className="h-3 w-3 lg:h-4 lg:w-4 ml-0.5 text-primary" fill="currentColor" />
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-soft group-hover:scale-110 transition-transform duration-300">
+                  <Play className="h-3 w-3 ml-0.5 text-primary" fill="currentColor" />
                 </span>
                 Explore the Journey
               </button>
@@ -119,39 +119,39 @@ function InternshipProgram() {
           </div>
 
           {/* Right Column: Visual Collage */}
-          <Reveal delay={0.2} className="relative h-[320px] lg:h-[400px] w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto mt-10 lg:mt-0">
+          <Reveal delay={0.2} className="relative h-[320px] lg:h-[380px] w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto mt-10 lg:mt-0">
             {/* Background Shape */}
             <div className="absolute inset-4 bg-primary/5 rounded-[3rem] -z-10 rotate-3 transition-transform duration-700 hover:rotate-6" />
             
             {/* Main Image */}
-            <div className="absolute top-0 right-0 w-[75%] h-[70%] rounded-[2rem] overflow-hidden shadow-2xl z-10 border-4 border-white bg-muted">
+            <div className="absolute top-0 right-0 w-[75%] h-[70%] rounded-[1.5rem] overflow-hidden shadow-2xl z-10 border-4 border-white bg-muted">
               <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000" alt="Students collaborating and learning" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             
             {/* Secondary Image */}
-            <div className="absolute bottom-4 left-0 w-[60%] h-[55%] rounded-[2rem] overflow-hidden shadow-2xl z-20 border-4 border-white bg-muted">
+            <div className="absolute bottom-4 left-0 w-[60%] h-[55%] rounded-[1.5rem] overflow-hidden shadow-2xl z-20 border-4 border-white bg-muted">
               <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800" alt="Community service and mentorship" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             
             {/* Floating Card 1 */}
-            <div className="absolute top-[10%] -left-6 lg:-left-12 bg-white/80 backdrop-blur-md p-3 lg:p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-30 flex items-center gap-3 lg:gap-4 border border-white/50 animate-bounce-slow">
-              <div className="bg-primary/10 p-2 lg:p-3 rounded-xl text-primary shrink-0">
-                <Award strokeWidth={2} className="w-5 h-5 lg:w-6 lg:h-6" />
+            <div className="absolute top-[10%] -left-6 lg:-left-12 bg-white/80 backdrop-blur-md p-2.5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-30 flex items-center gap-2.5 border border-white/50 animate-bounce-slow">
+              <div className="bg-primary/10 p-2 rounded-xl text-primary shrink-0">
+                <Award strokeWidth={2} className="w-4 h-4 lg:w-5 lg:h-5" />
               </div>
               <div>
                 <p className="text-sm font-bold text-heading leading-tight">Certificate of Completion</p>
-                <p className="text-xs text-muted-foreground font-medium mt-0.5 hidden sm:block">Recognizing your contribution</p>
+                <p className="text-[10px] text-muted-foreground font-medium mt-0.5 hidden sm:block">Recognizing your contribution</p>
               </div>
             </div>
 
             {/* Floating Card 2 */}
-            <div className="absolute bottom-[15%] -right-6 lg:-right-10 bg-white/80 backdrop-blur-md p-3 lg:p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-30 flex items-center gap-3 lg:gap-4 border border-white/50 animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
-              <div className="bg-accent/10 p-2 lg:p-3 rounded-xl text-accent shrink-0">
-                <Briefcase strokeWidth={2} className="w-5 h-5 lg:w-6 lg:h-6" />
+            <div className="absolute bottom-[15%] -right-6 lg:-right-10 bg-white/80 backdrop-blur-md p-2.5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-30 flex items-center gap-2.5 border border-white/50 animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
+              <div className="bg-accent/10 p-2 rounded-xl text-accent shrink-0">
+                <Briefcase strokeWidth={2} className="w-4 h-4 lg:w-5 lg:h-5" />
               </div>
               <div>
                 <p className="text-sm font-bold text-heading leading-tight">Live NGO Projects</p>
-                <p className="text-xs text-muted-foreground font-medium mt-0.5 hidden sm:block">Work on meaningful initiatives</p>
+                <p className="text-[10px] text-muted-foreground font-medium mt-0.5 hidden sm:block">Work on meaningful initiatives</p>
               </div>
             </div>
           </Reveal>
@@ -176,16 +176,16 @@ function InternshipProgram() {
       </section>
 
       {/* Purpose Section */}
-      <section className="py-32 px-5 bg-background">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <section className="py-16 lg:py-10 lg:py-16 px-5 bg-background">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-10 lg:gap-12 lg:gap-8 lg:gap-10 items-center">
           <Reveal className="rounded-[2.5rem] overflow-hidden shadow-card h-[500px] lg:h-[650px] relative group">
-             <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-             <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=1200" alt="Volunteers working together" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=1200" alt="Volunteers working together" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </Reveal>
           <div>
             <Reveal>
               <h2 className="text-4xl lg:text-5xl font-bold font-display text-heading leading-tight">
-                When you grow, <br/> society grows. <span className="text-accent inline-block animate-pulse">♡</span>
+                When you grow, <br /> society grows. <span className="text-accent inline-block animate-pulse">♡</span>
               </h2>
               <p className="mt-6 text-lg text-foreground leading-relaxed max-w-lg">
                 At Disha for India, you don't just join — you belong. You'll work on real projects, learn from experienced mentors, collaborate with passionate peers and create impact that truly matters.
@@ -207,11 +207,11 @@ function InternshipProgram() {
       </section>
 
       {/* What You'll Gain */}
-      <section className="py-32 px-5 bg-background-soft border-y border-border">
+      <section className="py-16 lg:py-10 lg:py-16 px-5 bg-background-soft border-y border-border">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <SectionHeading 
-              title="What You'll Gain at Disha For India" 
+          <div className="text-center mb-8 lg:mb-10">
+            <SectionHeading
+              title="What You'll Gain at Disha For India"
               description="Joining Disha For India is more than participating in projects—it's an opportunity to grow personally, professionally, and socially while creating meaningful impact."
               align="center"
             />
@@ -233,9 +233,9 @@ function InternshipProgram() {
       </section>
 
       {/* The Journey (Timeline) */}
-      <section className="py-32 px-5 md:px-10 lg:px-12 bg-background overflow-hidden">
+      <section className="py-16 lg:py-10 lg:py-16 px-5 md:px-10 lg:px-12 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="text-center mb-24 lg:mb-28">
+          <div className="text-center mb-12 lg:mb-8 lg:mb-10 lg:mb-28">
             <h2 className="text-4xl lg:text-5xl font-bold font-display text-heading mb-4">
               Simple Steps. <span className="text-primary">Meaningful</span> Journey.
             </h2>
@@ -247,7 +247,7 @@ function InternshipProgram() {
           <div className="relative w-full">
             {/* Connecting Line for desktop */}
             <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-[2px] border-t-2 border-dashed border-border" />
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6 relative z-10 w-full">
               {JOURNEY_STEPS.map((step, i) => (
                 <Reveal key={i} delay={i * 0.1} className={cn("relative flex flex-col items-center text-center group", i === JOURNEY_STEPS.length - 1 ? "md:col-span-2 lg:col-span-1" : "col-span-1")}>
@@ -271,8 +271,8 @@ function InternshipProgram() {
       </section>
 
       {/* For Educational Institutions */}
-      <section className="py-32 px-5 bg-background-soft border-y border-border">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <section className="py-16 lg:py-10 lg:py-16 px-5 bg-background-soft border-y border-border">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-10 lg:gap-10 lg:gap-12 items-center">
           <div>
             <Reveal>
               <h2 className="text-3xl lg:text-4xl font-bold font-display text-heading leading-tight mb-6">
@@ -304,7 +304,7 @@ function InternshipProgram() {
             </Reveal>
           </div>
           <Reveal className="rounded-[2.5rem] overflow-hidden shadow-card h-[450px] lg:h-[600px] border border-border">
-             <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200" alt="Students in a classroom workshop" className="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200" alt="Students in a classroom workshop" className="w-full h-full object-cover" />
           </Reveal>
         </div>
       </section>
@@ -316,50 +316,50 @@ function InternshipProgram() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 group">
-               <div className="bg-background-soft p-3.5 rounded-2xl text-foreground group-hover:bg-primary-soft group-hover:text-primary transition-colors">
-                 <ShieldCheck strokeWidth={1.5} className="w-6 h-6" />
-               </div>
-               <div>
-                 <h5 className="font-bold font-display text-heading text-lg">100% Transparent</h5>
-                 <p className="text-sm text-muted-foreground mt-1">We are a non-profit committed to social good.</p>
-               </div>
+              <div className="bg-background-soft p-3.5 rounded-2xl text-foreground group-hover:bg-primary-soft group-hover:text-primary transition-colors">
+                <ShieldCheck strokeWidth={1.5} className="w-6 h-6" />
+              </div>
+              <div>
+                <h5 className="font-bold font-display text-heading text-lg">100% Transparent</h5>
+                <p className="text-sm text-muted-foreground mt-1">We are a non-profit committed to social good.</p>
+              </div>
             </div>
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 group">
-               <div className="bg-background-soft p-3.5 rounded-2xl text-foreground group-hover:bg-primary-soft group-hover:text-primary transition-colors">
-                 <HeartHandshake strokeWidth={1.5} className="w-6 h-6" />
-               </div>
-               <div>
-                 <h5 className="font-bold font-display text-heading text-lg">Safe & Inclusive</h5>
-                 <p className="text-sm text-muted-foreground mt-1">A respectful and inclusive space for everyone.</p>
-               </div>
+              <div className="bg-background-soft p-3.5 rounded-2xl text-foreground group-hover:bg-primary-soft group-hover:text-primary transition-colors">
+                <HeartHandshake strokeWidth={1.5} className="w-6 h-6" />
+              </div>
+              <div>
+                <h5 className="font-bold font-display text-heading text-lg">Safe & Inclusive</h5>
+                <p className="text-sm text-muted-foreground mt-1">A respectful and inclusive space for everyone.</p>
+              </div>
             </div>
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 group">
-               <div className="bg-background-soft p-3.5 rounded-2xl text-foreground group-hover:bg-primary-soft group-hover:text-primary transition-colors">
-                 <Target strokeWidth={1.5} className="w-6 h-6" />
-               </div>
-               <div>
-                 <h5 className="font-bold font-display text-heading text-lg">Impact First</h5>
-                 <p className="text-sm text-muted-foreground mt-1">Your time and talent go where it creates maximum good.</p>
-               </div>
+              <div className="bg-background-soft p-3.5 rounded-2xl text-foreground group-hover:bg-primary-soft group-hover:text-primary transition-colors">
+                <Target strokeWidth={1.5} className="w-6 h-6" />
+              </div>
+              <div>
+                <h5 className="font-bold font-display text-heading text-lg">Impact First</h5>
+                <p className="text-sm text-muted-foreground mt-1">Your time and talent go where it creates maximum good.</p>
+              </div>
             </div>
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 group">
-               <div className="bg-background-soft p-3.5 rounded-2xl text-foreground group-hover:bg-primary-soft group-hover:text-primary transition-colors">
-                 <Globe strokeWidth={1.5} className="w-6 h-6" />
-               </div>
-               <div>
-                 <h5 className="font-bold font-display text-heading text-lg">Together, We Build</h5>
-                 <p className="text-sm text-muted-foreground mt-1">Join thousands of young people driving change.</p>
-               </div>
+              <div className="bg-background-soft p-3.5 rounded-2xl text-foreground group-hover:bg-primary-soft group-hover:text-primary transition-colors">
+                <Globe strokeWidth={1.5} className="w-6 h-6" />
+              </div>
+              <div>
+                <h5 className="font-bold font-display text-heading text-lg">Together, We Build</h5>
+                <p className="text-sm text-muted-foreground mt-1">Join thousands of young people driving change.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="pt-32 pb-40 px-5 bg-background-soft">
+      <section className="pt-16 lg:pt-10 lg:pt-16 pb-40 px-5 bg-background-soft">
         <div className="max-w-3xl mx-auto">
           <SectionHeading title="Frequently Asked Questions" align="center" />
-          <div className="mt-16">
+          <div className="mt-8 lg:mt-10">
             <Accordion type="single" collapsible className="w-full space-y-4">
               {FAQS.map((faq, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="rounded-2xl border border-border/50 bg-card px-6 py-3 shadow-soft hover:shadow-card transition-shadow duration-300">

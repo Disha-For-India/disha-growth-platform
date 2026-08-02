@@ -37,7 +37,7 @@ const FEATURES = [
 
 export function HowDishaHelps() {
   return (
-    <section className="py-12 lg:py-20 bg-background">
+    <section className="py-12 lg:py-10 lg:py-16 bg-background">
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeading
           title={

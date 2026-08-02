@@ -35,7 +35,7 @@ function VisionMission() {
         description="The compass that guides everything we do at Disha For India Foundation & Educational Trust."
       />
 
-      <section className="py-12 lg:py-20">
+      <section className="py-12 lg:py-10 lg:py-16">
         <div className="mx-auto max-w-5xl space-y-6 px-5">
           {[
             { icon: Eye, label: "Vision", text: ORG.vision, accent: "bg-primary-soft text-primary" },
@@ -57,7 +57,7 @@ function VisionMission() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-gradient-section py-12 lg:py-20">
+      <section className="border-y border-border bg-gradient-section py-12 lg:py-10 lg:py-16">
         <div className="mx-auto max-w-6xl px-5">
           <SectionHeading title="The principles we stand on" align="center" />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

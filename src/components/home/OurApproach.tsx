@@ -27,7 +27,7 @@ const STEPS = [
 
 export function OurApproach() {
   return (
-    <section className="py-12 lg:py-20 bg-muted/30">
+    <section className="py-12 lg:py-10 lg:py-16 bg-muted/30">
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeading
           title="How We Create Impact"

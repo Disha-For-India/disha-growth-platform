@@ -8,8 +8,9 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
+import { createFileRoute } from '@tanstack/react-router'
+
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as VolunteerRouteImport } from './routes/volunteer'
 import { Route as VisionMissionRouteImport } from './routes/vision-mission'
 import { Route as SuccessStoriesRouteImport } from './routes/success-stories'
 import { Route as ProgramsRouteImport } from './routes/programs'
@@ -26,7 +27,9 @@ import { Route as BlogsIndexRouteImport } from './routes/blogs.index'
 import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as BlogsSlugRouteImport } from './routes/blogs.$slug'
 
-const VolunteerRoute = VolunteerRouteImport.update({
+const VolunteerLazyRouteImport = createFileRoute('/volunteer')()
+
+const VolunteerLazyRoute = VolunteerLazyRouteImport.update({
   id: '/volunteer',
   path: '/volunteer',
   getParentRoute: () => rootRouteImport,
@@ -127,7 +130,7 @@ export interface FileRoutesByFullPath {
   '/programs': typeof ProgramsRouteWithChildren
   '/success-stories': typeof SuccessStoriesRoute
   '/vision-mission': typeof VisionMissionRoute
-  '/volunteer': typeof VolunteerRoute
+  '/volunteer': typeof VolunteerLazyRoute
   '/blogs/$slug': typeof BlogsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/blogs/': typeof BlogsIndexRoute
@@ -143,7 +146,7 @@ export interface FileRoutesByTo {
   '/opportunity-hub': typeof OpportunityHubRoute
   '/success-stories': typeof SuccessStoriesRoute
   '/vision-mission': typeof VisionMissionRoute
-  '/volunteer': typeof VolunteerRoute
+  '/volunteer': typeof VolunteerLazyRoute
   '/blogs/$slug': typeof BlogsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/blogs': typeof BlogsIndexRoute
@@ -162,7 +165,7 @@ export interface FileRoutesById {
   '/programs': typeof ProgramsRouteWithChildren
   '/success-stories': typeof SuccessStoriesRoute
   '/vision-mission': typeof VisionMissionRoute
-  '/volunteer': typeof VolunteerRoute
+  '/volunteer': typeof VolunteerLazyRoute
   '/blogs/$slug': typeof BlogsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/blogs/': typeof BlogsIndexRoute
@@ -235,7 +238,7 @@ export interface RootRouteChildren {
   ProgramsRoute: typeof ProgramsRouteWithChildren
   SuccessStoriesRoute: typeof SuccessStoriesRoute
   VisionMissionRoute: typeof VisionMissionRoute
-  VolunteerRoute: typeof VolunteerRoute
+  VolunteerLazyRoute: typeof VolunteerLazyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -244,7 +247,7 @@ declare module '@tanstack/react-router' {
       id: '/volunteer'
       path: '/volunteer'
       fullPath: '/volunteer'
-      preLoaderRoute: typeof VolunteerRouteImport
+      preLoaderRoute: typeof VolunteerLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/vision-mission': {
@@ -393,7 +396,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProgramsRoute: ProgramsRouteWithChildren,
   SuccessStoriesRoute: SuccessStoriesRoute,
   VisionMissionRoute: VisionMissionRoute,
-  VolunteerRoute: VolunteerRoute,
+  VolunteerLazyRoute: VolunteerLazyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

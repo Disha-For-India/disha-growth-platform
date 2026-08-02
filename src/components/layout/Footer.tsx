@@ -18,7 +18,6 @@ const COLS: { title: string; links: { to: string; label: string }[] }[] = [
     title: "Community Hub",
     links: [
       { to: "/opportunity-hub", label: "Opportunity Hub" },
-      { to: "/volunteer", label: "Volunteer Hub" },
       { to: "/leaderboard", label: "Leaderboard" },
     ],
   },

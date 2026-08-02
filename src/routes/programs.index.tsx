@@ -54,7 +54,7 @@ function Programs() {
         title="Programs that build employable, conscious citizens"
         description="Each program is designed to raise the employability and skill quotient of India's youth — turning potential into opportunity."
       />
-      <section className="py-12 lg:py-20">
+      <section className="py-12 lg:py-10 lg:py-16">
         <div className="mx-auto max-w-7xl px-5">
           {isLoading ? (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

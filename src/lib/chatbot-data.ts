@@ -543,7 +543,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "• Community drives like tree plantations and wellness camps\n\n" +
            "Every hour you contribute earns points on our national leaderboard and a verified Volunteer Impact Certificate.",
     actions: [
-      { label: "Apply as Volunteer", url: "/volunteer" },
+      { label: "Apply as Volunteer", url: "https://app-disha-for-indiaa.vercel.app/signup" },
       { label: "View Volunteer Leaderboard", url: "/leaderboard" }
     ],
     suggestions: [
@@ -934,7 +934,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "Want to take part in our next green drive? You can sign up via our Volunteer Hub!",
     actions: [
       { label: "Read Climate Action Blog", url: "/blogs/youth-led-climate-action" },
-      { label: "Volunteer for Green Drives", url: "/volunteer" }
+      { label: "Volunteer for Green Drives", url: "https://app-disha-for-indiaa.vercel.app/signup" }
     ],
     suggestions: [
       "How to volunteer?",
@@ -996,7 +996,7 @@ export const CHATBOT_KNOWLEDGE_BASE: KnowledgeEntry[] = [
            "• Digital literacy sessions so everyone can safely use smartphones, UPI, and online services",
     actions: [
       { label: "Explore All Programs", url: "/programs" },
-      { label: "Volunteer in Community Drives", url: "/volunteer" }
+      { label: "Volunteer in Community Drives", url: "https://app-disha-for-indiaa.vercel.app/signup" }
     ],
     suggestions: [
       "How to volunteer?",
@@ -1214,7 +1214,7 @@ export function findChatbotResponse(userInput: string): {
            "You can also reach out to our team directly at +91-9888877722 or inaggarwal76@gmail.com!",
     actions: [
       { label: "Explore Internships", url: "/internship-program" },
-      { label: "Volunteer Hub", url: "/volunteer" },
+      { label: "Volunteer Hub", url: "https://app-disha-for-indiaa.vercel.app/signup" },
       { label: "Contact Us", url: "/about" }
     ],
     suggestions: [

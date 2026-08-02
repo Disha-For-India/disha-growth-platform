@@ -26,14 +26,21 @@ function About() {
         <meta property="og:url" content="https://dishaforindia.org/about" />
       </Helmet>
       <PageHero
-        title="We empower. We make the difference."
+        title={<>We empower.<br className="hidden sm:block" /> We make the difference.</>}
         description="Disha For India Foundation & Educational Trust is a youth-first movement skilling India's next generation for employability, entrepreneurship and a life of purpose."
       />
 
-      <section className="py-12 lg:py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
-          <Reveal delay={0.1}>
+      <section className="py-12 lg:py-10 lg:py-16">
+        <div className="mx-auto grid max-w-6xl items-start gap-12 px-5 lg:grid-cols-2">
+          <Reveal delay={0.1} className="flex flex-col gap-6">
             <OptimizedImage src={images.hero.about} alt="Indian youth learning together" width={1200} height={800} loading="eager" className="w-full rounded-3xl border border-border object-cover shadow-card" />
+            
+            <div className="rounded-2xl bg-[#AEC5E4] p-6 text-left">
+              <Quote className="h-8 w-8 text-[#0F3C7E] rotate-180 mb-3 fill-current" />
+              <p className="text-[17px] font-medium text-[#4A5B75] leading-relaxed">
+                "Guiding youth to discover their direction and unlock their true potential is our greatest commitment."
+              </p>
+            </div>
           </Reveal>
           <div>
             <SectionHeading
@@ -47,18 +54,12 @@ function About() {
               <p className="mt-4 ">
                 Through our structured student programs and emotional wellness coaching, we provide the direction and tools they need to live purposeful, successful, and impactful lives.
               </p>
-              <div className="mt-6 rounded-2xl border border-border bg-secondary/40 p-5">
-                <Quote className="h-6 w-6 text-primary" />
-                <p className="mt-2 ">
-                  "Guiding youth to discover their direction and unlock their true potential is our greatest commitment."
-                </p>
-              </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-border bg-gradient-section py-12 lg:py-20">
+      <section className="border-y border-border bg-gradient-section py-12 lg:py-10 lg:py-16">
         <div className="mx-auto max-w-6xl px-5">
           <div className="grid gap-6 md:grid-cols-3">
             {[
@@ -80,7 +81,7 @@ function About() {
         </div>
       </section>
 
-      <section className="py-12 lg:py-20">
+      <section className="py-12 lg:py-10 lg:py-16">
         <div className="mx-auto max-w-6xl px-5">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-5">
             {[

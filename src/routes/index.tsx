@@ -47,7 +47,7 @@ const HERO_SLIDES = [
   {
     headline: "Building a Stronger, More Connected India.",
     description: "When you volunteer with Disha For India, you don't just give time—you become part of a community dedicated to shaping a better tomorrow.",
-    primaryCta: { label: "Join the Community", href: "/volunteer" },
+    primaryCta: { label: "Join the Community", href: "https://app-disha-for-indiaa.vercel.app/signup" },
     image: images.gallery[1],
     alt: "A diverse group of people celebrating success",
   }
@@ -269,7 +269,7 @@ function Home() {
         <HowDishaHelps />
 
         {/* SECTION 4 — Overview of Key Programs */}
-        <section className="py-12 lg:py-20">
+        <section className="py-12 lg:py-10 lg:py-16">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
               align="center"
@@ -346,7 +346,7 @@ function Home() {
 
 
         {/* SECTION 8 — Success Stories Highlights */}
-        <section className="border-y border-border bg-card py-12 lg:py-20">
+        <section className="border-y border-border bg-card py-12 lg:py-10 lg:py-16">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
               align="center"
@@ -369,7 +369,7 @@ function Home() {
         </section>
 
         {/* SECTION 9 — Latest Insights (Blog) */}
-        <section className="py-12 lg:py-20">
+        <section className="py-12 lg:py-10 lg:py-16">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
               align="center"
@@ -392,7 +392,7 @@ function Home() {
         </section>
 
         {/* SECTION 10 — Testimonials Carousel */}
-        <section className="border-y border-border bg-gradient-section py-12 lg:py-20">
+        <section className="border-y border-border bg-gradient-section py-12 lg:py-10 lg:py-16">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
               title="Community Voices"
@@ -436,7 +436,7 @@ function Home() {
         <FaqSection />
 
         {/* SECTION 13 — Volunteer CTA */}
-        <section className="py-12 lg:py-20">
+        <section className="py-12 lg:py-10 lg:py-16">
           <div className="mx-auto max-w-7xl px-5">
             <Reveal>
               <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-hero px-6 py-10 lg:py-16 text-center text-foreground sm:px-12 border border-border">
