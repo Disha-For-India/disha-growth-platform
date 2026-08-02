@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/use-auth";
+import { ORG } from "@/lib/site-data";
 
 const TOOLS = [
   { to: "/opportunity-hub", label: "Opportunity Hub" },
@@ -40,8 +41,8 @@ function TopContactBar() {
           <a href="mailto:info@dishaforindia.org" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
             <Mail className="h-4 w-4" /> <span className="hidden sm:inline">info@dishaforindia.org</span>
           </a>
-          <a href="tel:+919876543210" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
-            <Phone className="h-4 w-4" /> <span className="hidden sm:inline">+91 98765 43210</span>
+          <a href={`tel:${ORG.phone}`} className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
+            <Phone className="h-4 w-4" /> <span className="hidden sm:inline">{ORG.phone}</span>
           </a>
         </div>
         <div className="flex items-center gap-3">
