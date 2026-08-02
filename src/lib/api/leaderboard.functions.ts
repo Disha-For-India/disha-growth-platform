@@ -109,7 +109,7 @@ export const getLeaderboardData = async (data: z.infer<typeof LeaderboardInputSc
       programsCompleted: 0,
       hours: 0,
       badge: v.level || "Beginner",
-      city: v.location || "Unknown",
+      city: (v.location && v.location.trim() && v.location.toLowerCase() !== "unknown") ? v.location : "India",
       state: "Unknown",
       college: "Unknown",
       category: "General",

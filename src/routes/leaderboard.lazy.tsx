@@ -360,11 +360,11 @@ function LeaderboardPage() {
                           </TableCell>
                           <TableCell>
                             <div className="flex items-center gap-3">
-                              <LeaderboardAvatar 
-                                src={v.photo} 
-                                name={v.name} 
-                                sizeClass="h-14 w-14" 
-                                isTop={false} 
+                              <LeaderboardAvatar
+                                src={v.photo}
+                                name={v.name}
+                                sizeClass="h-14 w-14"
+                                isTop={false}
                               />
                               <div>
                                 <span className="block font-medium text-[#1E2F50]">{v.name}</span>
@@ -474,11 +474,11 @@ function TopVolunteerCard({ volunteer, rank, isFirst = false }: { volunteer: any
         #{rank}
       </div>
 
-      <LeaderboardAvatar 
-        src={volunteer.photo} 
-        name={volunteer.name} 
-        sizeClass="h-24 w-24 mb-4" 
-        isTop={true} 
+      <LeaderboardAvatar
+        src={volunteer.photo}
+        name={volunteer.name}
+        sizeClass="h-24 w-24 mb-4"
+        isTop={true}
       />
 
       <h4 className={cn("text-xl font-bold text-heading text-center", isFirst ? "text-2xl" : "")}>
@@ -514,20 +514,20 @@ function getBadgeIcon(badge: string) {
 
 
 // Helper to render modern avatars with initials fallback
-function LeaderboardAvatar({ 
-  src, 
-  name, 
-  sizeClass = "h-14 w-14", 
-  isTop = false 
-}: { 
-  src: string; 
-  name: string; 
+function LeaderboardAvatar({
+  src,
+  name,
+  sizeClass = "h-14 w-14",
+  isTop = false
+}: {
+  src: string;
+  name: string;
   sizeClass?: string;
   isTop?: boolean;
 }) {
   const isDefault = !src || src.includes('dicebear.com');
   const size = isTop ? 96 : 56;
-  
+
   const getInitials = (n: string) => {
     const parts = n.trim().split(' ').filter(Boolean);
     if (parts.length === 0) return 'V';
@@ -537,7 +537,7 @@ function LeaderboardAvatar({
 
   const getBgColor = (n: string) => {
     const colors = [
-      'bg-blue-500', 'bg-teal-500', 'bg-purple-500', 'bg-indigo-500', 
+      'bg-blue-500', 'bg-teal-500', 'bg-purple-500', 'bg-indigo-500',
       'bg-rose-500', 'bg-amber-500', 'bg-emerald-500'
     ];
     let hash = 0;
@@ -566,12 +566,12 @@ function LeaderboardAvatar({
 
   return (
     <div className={containerClasses}>
-      <OptimizedImage 
-        src={src} 
-        alt={name} 
-        width={size} 
-        height={size} 
-        className="h-full w-full object-cover" 
+      <OptimizedImage
+        src={src}
+        alt={name}
+        width={size}
+        height={size}
+        className="h-full w-full object-cover"
       />
     </div>
   );
