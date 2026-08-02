@@ -272,6 +272,7 @@ function Home() {
         <section className="py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
+              align="center"
               title="Where your time creates real impact"
               description="From hands-on community service to specialized support, explore structured volunteering programs designed to empower individuals and uplift communities."
             />
@@ -348,6 +349,7 @@ function Home() {
         <section className="border-y border-border bg-card py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
+              align="center"
               title="Stories of transformation"
               description="Real stories from the volunteers, NGOs, and communities who make our movement possible. See the difference a single connection can make."
             />
@@ -370,6 +372,7 @@ function Home() {
         <section className="py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-5">
             <SectionHeading
+              align="center"
               title="Insights, news & resources"
               description="Stay updated with our latest thoughts on community development, volunteering, and youth empowerment."
             />
