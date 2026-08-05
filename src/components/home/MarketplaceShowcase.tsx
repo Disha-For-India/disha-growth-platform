@@ -87,90 +87,23 @@ export function MarketplaceShowcase() {
             </Reveal>
           </div>
 
-          {/* Right Side Browser Mockup — Unified Wall Hanging Assembly */}
-          <div className="relative order-1 lg:order-2 pt-2 lg:pt-4 pb-4">
-            <Reveal delay={0.3}>
-              {/* Entire Hanging Assembly (Logo Anchor + Lines + Card) moves together as one unit */}
-              <motion.div
-                animate={{ y: [0, -6, 0], rotate: [-0.6, 0.6, -0.6] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                whileHover={{ scale: 1.015, rotate: 0 }}
-                style={{ transformOrigin: "top center" }}
-                className="relative w-full max-w-[540px] mx-auto pt-10"
-              >
-                {/* 3-Part Header Banner directly above Marketplace Card (Exact Match to User Screenshot) */}
-                <div className="relative w-full mb-3">
-                  {/* Orange Dashed Arching SVG Line */}
-                  <svg className="absolute top-1/2 left-0 w-full h-10 -translate-y-1/2 pointer-events-none z-10" viewBox="0 0 400 40" fill="none">
-                    <path d="M 95 30 C 160 8, 240 8, 305 30" stroke="#ea580c" strokeWidth="2" strokeDasharray="5 4" />
-                  </svg>
-
-                  <div className="relative z-20 flex items-center justify-between gap-1.5 max-w-lg mx-auto px-1">
-                    
-                    {/* Left Pill Card: Earn Disha Coins */}
-                    <motion.div
-                      whileHover={{ scale: 1.04, rotate: 0 }}
-                      className="flex items-center gap-2.5 rounded-2xl bg-card border border-border/80 px-3.5 py-2 shadow-md -rotate-2 transform transition-all"
-                    >
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-500/15 text-amber-500 font-bold text-base shadow-xs">
-                        🪙
-                      </div>
-                      <div className="flex flex-col text-xs leading-tight">
-                        <span className="font-bold text-heading whitespace-nowrap">Earn Disha Coins</span>
-                        <span className="text-muted-foreground text-[11px] whitespace-nowrap">for your impact</span>
-                      </div>
-                    </motion.div>
-
-                    {/* Center Logo Badge */}
-                    <div className="h-12 w-12 shrink-0 rounded-full bg-white p-1 shadow-lg border border-border flex items-center justify-center ring-4 ring-background z-30">
-                      <img src="/logo.png" alt="Disha For India Logo" className="h-full w-full object-contain" />
-                    </div>
-
-                    {/* Right Pill Card: Redeem Rewards */}
-                    <motion.div
-                      whileHover={{ scale: 1.04, rotate: 0 }}
-                      className="flex items-center gap-2.5 rounded-2xl bg-purple-50/80 dark:bg-purple-950/40 border border-purple-200/80 dark:border-purple-900/60 px-3.5 py-2 shadow-md rotate-2 transform transition-all"
-                    >
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-500/15 text-purple-600 dark:text-purple-400 font-bold text-base shadow-xs">
-                        🏆
-                      </div>
-                      <div className="flex flex-col text-xs leading-tight">
-                        <span className="font-bold text-heading whitespace-nowrap">Redeem Rewards</span>
-                        <span className="text-purple-600/80 dark:text-purple-400/80 text-[11px] whitespace-nowrap">that empower you</span>
-                      </div>
-                    </motion.div>
-
-                  </div>
-                </div>
-
-                {/* Marketplace Browser Frame Mockup */}
-                <div className="relative z-20 mt-3 rounded-2xl border border-border bg-card shadow-[0_20px_50px_-10px_rgba(0,0,0,0.15)] overflow-hidden">
-                  {/* macOS Browser Header */}
-                  <div className="flex items-center justify-between border-b border-border bg-muted/40 px-4 py-2.5 backdrop-blur-md">
-                    <div className="flex gap-1.5">
-                      <div className="h-3 w-3 rounded-full bg-rose-400" />
-                      <div className="h-3 w-3 rounded-full bg-amber-400" />
-                      <div className="h-3 w-3 rounded-full bg-emerald-400" />
-                    </div>
-                    <div className="flex h-6 px-4 items-center justify-center rounded-full bg-background/80 text-[11px] text-muted-foreground border border-border/60 font-mono">
-                      app-disha-for-indiaa.vercel.app
-                    </div>
-                    <div className="w-10" />
-                  </div>
-
-                  {/* Browser Content */}
-                  <div className="relative bg-background overflow-hidden p-1">
-                    <OptimizedImage
-                      src="/optimized/gallery/marketplace.webp"
-                      alt="Disha Changemaker Hub Dashboard"
-                      className="w-full h-auto object-cover rounded-xl border border-border/40"
-                    />
-
-                    {/* Subtle glare effect */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10 pointer-events-none rounded-xl" />
-                  </div>
-                </div>
-              </motion.div>
+          {/* Right Side — 3D Illustration */}
+          <div className="relative order-1 lg:order-2 flex items-center justify-center py-10 lg:py-0">
+            <Reveal delay={0.3} className="w-full">
+              <div className="relative w-full max-w-[380px] md:max-w-[480px] lg:max-w-[600px] mx-auto">
+                {/* 3D Illustration with floating animation */}
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="relative z-10"
+                >
+                  <img
+                    src="/images/rewards-ecosystem.png"
+                    alt="Disha Rewards Ecosystem"
+                    className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.08)]"
+                  />
+                </motion.div>
+              </div>
             </Reveal>
           </div>
 
