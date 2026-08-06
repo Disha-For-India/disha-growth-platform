@@ -26,6 +26,8 @@ import {
   BookOpen,
   Heart,
   HeartHandshake,
+  Crown,
+  Medal,
 } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
 import { Reveal } from "@/components/shared/Reveal";
@@ -220,16 +222,20 @@ function LeaderboardPage() {
               <div className="h-64 animate-pulse rounded-xl bg-slate-50 order-3 sm:order-3" />
             </div>
           ) : topThree.length >= 3 ? (
-            <div className="mb-10 lg:mb-8 lg:mb-10">
-              <h2 className="mb-6 lg:mb-8 text-center">
+            <div className="mb-10 lg:mb-8 lg:mb-10 relative">
+              {/* Subtle background effects */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-4xl h-[120%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#F5C542]/[0.08] via-transparent to-transparent blur-3xl pointer-events-none -z-10" />
+              <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none -z-10" />
+
+              <h2 className="mb-6 lg:mb-8 text-center relative z-10">
                 Top Volunteers
               </h2>
 
-              <div className="flex flex-col sm:flex-row items-center sm:items-end justify-center gap-6 sm:gap-4 lg:gap-8">
+              <div className="flex flex-col sm:flex-row items-center sm:items-end justify-center gap-8 sm:gap-4 lg:gap-8 relative z-10 sm:pt-10">
                 {/* 2nd Place */}
                 <TopVolunteerCard volunteer={topThree[1]} rank={2} />
                 {/* 1st Place */}
-                <TopVolunteerCard volunteer={topThree[0]} rank={1} isFirst />
+                <TopVolunteerCard volunteer={topThree[0]} rank={1} />
                 {/* 3rd Place */}
                 <TopVolunteerCard volunteer={topThree[2]} rank={3} />
               </div>
@@ -459,46 +465,111 @@ function LeaderboardPage() {
 }
 
 // Helper for top volunteer cards
-function TopVolunteerCard({ volunteer, rank, isFirst = false }: { volunteer: any, rank: number, isFirst?: boolean }) {
+function TopVolunteerCard({ volunteer, rank }: { volunteer: any, rank: number }) {
   if (!volunteer) return null;
+
+  const isFirst = rank === 1;
+  const isSecond = rank === 2;
+  const isThird = rank === 3;
+
+  let borderClass = "border-[#E5E7EB]";
+  let shadowClass = "shadow-soft hover:shadow-md";
+  let badgeClass = "";
+  let badgeIcon = null;
+
+  if (isFirst) {
+    borderClass = "border-[#F5C542] border-[1.5px]";
+    shadowClass = "shadow-[0_12px_40px_-12px_rgba(245,197,66,0.25)] hover:shadow-[0_20px_50px_-12px_rgba(245,197,66,0.4)]";
+    badgeClass = "bg-gradient-to-br from-[#FCE18D] to-[#E5A800] text-white border-2 border-white shadow-[0_4px_12px_rgba(229,168,0,0.4)]";
+    badgeIcon = <Crown className="h-6 w-6 text-yellow-950" />;
+  } else if (isSecond) {
+    borderClass = "border-slate-300 border-[1.5px]";
+    shadowClass = "shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_35px_-12px_rgba(0,0,0,0.12)]";
+    badgeClass = "bg-gradient-to-br from-slate-100 to-slate-300 text-slate-700 border-2 border-white shadow-[0_4px_12px_rgba(148,163,184,0.3)]";
+    badgeIcon = <Medal className="h-5 w-5" />;
+  } else if (isThird) {
+    borderClass = "border-[#D4A373]/80 border-[1.5px]";
+    shadowClass = "shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_35px_-12px_rgba(0,0,0,0.12)]";
+    badgeClass = "bg-gradient-to-br from-[#F0D5B5] to-[#D4A373] text-amber-950 border-2 border-white shadow-[0_4px_12px_rgba(212,163,115,0.3)]";
+    badgeIcon = <Medal className="h-5 w-5" />;
+  }
+
   return (
     <motion.div
-      whileHover={{ y: -6 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: rank * 0.1 }}
       className={cn(
-        "relative flex w-full max-w-sm flex-col items-center rounded-2xl bg-white p-6 shadow-soft border border-[#E5E7EB] transition-shadow hover:shadow-card order-2 sm:order-none",
-        isFirst ? "sm:-translate-y-4 sm:scale-105 z-10 border-[#F4B400]/30 shadow-[0_8px_30px_rgb(0,0,0,0.08)] order-1 sm:order-none" : "z-0",
-        rank === 3 && "order-3 sm:order-none"
+        "relative flex w-full max-w-[280px] sm:max-w-[300px] flex-col justify-center",
+        isFirst ? "z-10 order-1 sm:order-none" : "z-0",
+        isSecond ? "order-2 sm:order-none" : "",
+        isThird ? "order-3 sm:order-none" : ""
       )}
     >
-      <div className="absolute -top-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8E6] font-bold text-[#F4B400] shadow-sm border border-[#F4B400]/20">
-        #{rank}
-      </div>
-
-      <LeaderboardAvatar
-        src={volunteer.photo}
-        name={volunteer.name}
-        sizeClass="h-24 w-24 mb-4"
-        isTop={true}
-      />
-
-      <h4 className={cn("text-xl font-bold text-heading text-center", isFirst ? "text-2xl" : "")}>
-        {volunteer.name}
-      </h4>
-
-      <span className="mt-2 inline-flex items-center rounded-full bg-[#EAF3FF] px-2.5 py-1 text-[11px] font-semibold text-[#0056D6]">
-        {getBadgeIcon(volunteer.badge)} <span className="ml-1.5">{volunteer.badge}</span>
-      </span>
-
-      <div className="mt-6 w-full grid grid-cols-2 gap-4 border-t border-[#E5E7EB] pt-4">
-        <div className="text-center">
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Points</p>
-          <p className="mt-1 text-lg font-bold text-[#0056D6]">{volunteer.allTimeScore}</p>
+      <motion.div
+        animate={isFirst ? { y: [0, -4, 0] } : {}}
+        transition={isFirst ? { duration: 4, repeat: Infinity, ease: "easeInOut" } : {}}
+        className={cn(
+          "group relative flex w-full flex-col items-center rounded-[24px] bg-white p-6 transition-all duration-300",
+          borderClass,
+          shadowClass,
+          isFirst ? "sm:-translate-y-6 sm:scale-[1.12] sm:hover:-translate-y-8" : "hover:-translate-y-2"
+        )}
+      >
+        {/* Rank Badge */}
+        <div className={cn("absolute -top-6 flex h-12 w-12 items-center justify-center rounded-full z-20", badgeClass)}>
+          {badgeIcon}
         </div>
-        <div className="text-center">
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Hours</p>
-          <p className="mt-1 text-lg font-bold text-heading">{volunteer.hours}h</p>
+
+        {/* Avatar */}
+        <div className="mb-4">
+          <LeaderboardAvatar
+            src={volunteer.photo}
+            name={volunteer.name}
+            sizeClass={isFirst ? "h-[108px] w-[108px]" : "h-24 w-24"}
+            isTop={true}
+          />
         </div>
-      </div>
+
+        <h4 className={cn("font-bold text-heading text-center line-clamp-1 w-full", isFirst ? "text-2xl" : "text-xl")}>
+          {volunteer.name}
+        </h4>
+
+        {isFirst && (
+          <span className="mt-1 font-semibold text-[#E5A800] text-[11px] tracking-widest uppercase">
+            Top Volunteer
+          </span>
+        )}
+
+        <span className={cn(
+          "mt-2 inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold",
+          isFirst ? "bg-[#FFF8E6] text-[#F4B400]" : "bg-[#EAF3FF] text-[#0056D6]"
+        )}>
+          {getBadgeIcon(volunteer.badge)} <span className="ml-1.5">{volunteer.badge}</span>
+        </span>
+
+        <div className="mt-6 w-full grid grid-cols-3 gap-2 border-t border-[#E5E7EB] pt-5">
+          <div className="text-center">
+            <p className="text-[10px] sm:text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Points</p>
+            <p className={cn("mt-1 font-bold", isFirst ? "text-[#E5A800] text-lg" : "text-[#0056D6] text-base")}>
+              {volunteer.allTimeScore}
+            </p>
+          </div>
+          <div className="text-center border-l border-r border-[#E5E7EB]/50">
+            <p className="text-[10px] sm:text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Hours</p>
+            <p className={cn("mt-1 font-bold text-heading", isFirst ? "text-lg" : "text-base")}>
+              {volunteer.hours}h
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-[10px] sm:text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Progs</p>
+            <p className={cn("mt-1 font-bold text-heading", isFirst ? "text-lg" : "text-base")}>
+              {volunteer.programsCompleted}
+            </p>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }
@@ -551,7 +622,7 @@ function LeaderboardAvatar({
   const bgColor = getBgColor(name);
 
   const containerClasses = cn(
-    "rounded-full flex items-center justify-center font-bold text-white shadow-md border-[3px] border-white transition-transform duration-200 hover:scale-[1.03] overflow-hidden flex-shrink-0",
+    "rounded-full flex items-center justify-center font-bold text-white shadow-md border-[3px] border-white transition-transform duration-300 overflow-hidden flex-shrink-0 group-hover:scale-[1.05]",
     sizeClass,
     isDefault ? bgColor : "bg-slate-100"
   );

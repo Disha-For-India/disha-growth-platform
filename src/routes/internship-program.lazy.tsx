@@ -72,15 +72,15 @@ function InternshipProgram() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -z-10 translate-x-1/3 -translate-y-1/3" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[100px] -z-10 -translate-x-1/3 translate-y-1/3" />
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-white to-transparent -z-10" />
-        
+
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full z-10">
           {/* Left Column */}
           <div className="flex flex-col items-start text-left pt-6 lg:pt-0">
             <Reveal>
               <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold font-display text-heading leading-[1.2] tracking-tight max-w-xl">
-                Work on Real Projects.<br/>Build Real Skills.<br/>Create <span className="text-primary relative inline-block">Real Impact.<svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/30" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7C49.5 2 122.5 1 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg></span>
+                Work on Real Projects.<br />Build Real Skills.<br />Create <span className="text-primary relative inline-block">Real Impact.<svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/30" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7C49.5 2 122.5 1 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" /></svg></span>
               </h1>
-              
+
               <p className="mt-6 text-base lg:text-lg text-foreground max-w-xl leading-relaxed">
                 Join a purpose-driven community to collaborate with passionate peers, receive mentorship, and apply skills to drive social change.
               </p>
@@ -122,17 +122,17 @@ function InternshipProgram() {
           <Reveal delay={0.2} className="relative h-[320px] lg:h-[380px] w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto mt-10 lg:mt-0">
             {/* Background Shape */}
             <div className="absolute inset-4 bg-primary/5 rounded-[3rem] -z-10 rotate-3 transition-transform duration-700 hover:rotate-6" />
-            
+
             {/* Main Image */}
             <div className="absolute top-0 right-0 w-[75%] h-[70%] rounded-[1.5rem] overflow-hidden shadow-2xl z-10 border-4 border-white bg-muted">
               <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000" alt="Students collaborating and learning" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
-            
+
             {/* Secondary Image */}
             <div className="absolute bottom-4 left-0 w-[60%] h-[55%] rounded-[1.5rem] overflow-hidden shadow-2xl z-20 border-4 border-white bg-muted">
               <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800" alt="Community service and mentorship" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
-            
+
             {/* Floating Card 1 */}
             <div className="absolute top-[10%] -left-6 lg:-left-12 bg-white/80 backdrop-blur-md p-2.5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-30 flex items-center gap-2.5 border border-white/50 animate-bounce-slow">
               <div className="bg-primary/10 p-2 rounded-xl text-primary shrink-0">

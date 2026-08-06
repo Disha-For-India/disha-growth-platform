@@ -291,54 +291,7 @@ function Home() {
           </div>
         </section>
 
-        {/* SECTION 5 — Volunteer & Support Call-to-Action */}
-        <section className="border-y border-border bg-gradient-section py-12 lg:py-20">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2">
-            <div>
-              <SectionHeading
-                title="Your skills can change a life"
-                description="We rely on passionate individuals to support our communities. You don't need a background in social work—just a willingness to help."
-              />
-              <ul className="mt-8 space-y-4">
-                {[
-                  { icon: Gift, text: "Use your professional skills for good" },
-                  { icon: Heart, text: "Participate in local community initiatives" },
-                  { icon: Sparkles, text: "Lead and support outreach programs" },
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-4">
-                    <Reveal delay={i * 0.05} className="flex items-center gap-4">
-                      <span className="grid h-10 w-10 place-items-center rounded-full bg-primary-soft text-primary">
-                        <item.icon className="h-5 w-5" />
-                      </span>
-                      <span className="font-medium text-foreground">{item.text}</span>
-                    </Reveal>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-[#F4B400] hover:bg-[#D99B00] text-white rounded-full px-7 h-12 text-base font-semibold shadow-sm transition-all border-none">
-                  <a href="https://app-disha-for-indiaa.vercel.app/login?redirect=%2Fdashboard" className="inline-flex items-center gap-2">
-                    <HeartHandshake className="h-5 w-5 text-white" />
-                    <span>Be a Volunteer</span>
-                  </a>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link to="/about">Learn More</Link>
-                </Button>
-              </div>
-            </div>
-            <Reveal delay={0.2}>
-              <OptimizedImage
-                src={images.gallery[5]}
-                alt="Volunteers interacting with students"
-                width={800}
-                height={600}
-                loading="lazy"
-                className="w-full rounded-3xl border border-border object-cover shadow-card"
-              />
-            </Reveal>
-          </div>
-        </section>
+
 
         {/* SECTION 6 — Our Core Approach */}
         <OurApproach />
